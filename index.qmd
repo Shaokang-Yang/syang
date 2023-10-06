@@ -1,5 +1,6 @@
 ---
 title: " Shaokang"
+output-dir: docs
 ---
 
 This is a Quarto website.
