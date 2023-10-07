@@ -1,6 +1,5 @@
 ---
 title: "About"
-output-dir: docs
 ---
 
 About this site

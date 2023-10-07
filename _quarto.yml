@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
 website:
-  title: " Quarto Web"
+  title: "Shaokang Yang"
   navbar:
     left:
       - href: index.qmd
