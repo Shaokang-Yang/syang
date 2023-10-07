@@ -9,8 +9,15 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Research",
     "section": "",
     "text": "About this site shaokang yang"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "About this blog"
   }
 ]
