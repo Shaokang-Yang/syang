@@ -1,5 +1,5 @@
 ---
-title: "Abortion"
+title: "Idea Development"
 date: 11/03/2024
 date-modified: last-modified
 date-format: full
