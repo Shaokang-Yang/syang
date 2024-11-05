@@ -1,6 +1,6 @@
 ---
 title: "Abortion"
-date: 10/29/2024
+date: 11/03/2024
 date-modified: last-modified
 date-format: full
 categories: [Others]
