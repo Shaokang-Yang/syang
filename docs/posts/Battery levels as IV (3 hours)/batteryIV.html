@@ -58,12 +58,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../Virginia_Tech_seal.svg.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -109,8 +109,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">My Website</span>
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../Horizontal_VT_Full_Color_RGB.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">Monday, March 25, 2024</p>
+        <p class="date-modified">Friday, November 8, 2024</p>
       </div>
     </div>
       
@@ -182,21 +182,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#social-network-control" id="toc-social-network-control" class="nav-link active" data-scroll-target="#social-network-control">Social Network Control</a></li>
-  <li><a href="#instrument-variable-for-screen-time" id="toc-instrument-variable-for-screen-time" class="nav-link" data-scroll-target="#instrument-variable-for-screen-time">Instrument Variable for Screen Time</a>
+  <li><a href="#social-network-control" id="toc-social-network-control" class="nav-link active" data-scroll-target="#social-network-control"><span class="header-section-number">1</span> Social Network Control</a></li>
+  <li><a href="#instrument-variable-for-screen-time" id="toc-instrument-variable-for-screen-time" class="nav-link" data-scroll-target="#instrument-variable-for-screen-time"><span class="header-section-number">2</span> Instrument Variable for Screen Time</a>
   <ul class="collapse">
-  <li><a href="#charging-as-instrument-variable" id="toc-charging-as-instrument-variable" class="nav-link" data-scroll-target="#charging-as-instrument-variable">Charging as Instrument Variable</a>
+  <li><a href="#charging-as-instrument-variable" id="toc-charging-as-instrument-variable" class="nav-link" data-scroll-target="#charging-as-instrument-variable"><span class="header-section-number">2.1</span> Charging as Instrument Variable</a>
   <ul class="collapse">
-  <li><a href="#impact-of-battery-level-on-screen-use" id="toc-impact-of-battery-level-on-screen-use" class="nav-link" data-scroll-target="#impact-of-battery-level-on-screen-use">Impact of Battery Level on Screen Use</a></li>
+  <li><a href="#impact-of-battery-level-on-screen-use" id="toc-impact-of-battery-level-on-screen-use" class="nav-link" data-scroll-target="#impact-of-battery-level-on-screen-use"><span class="header-section-number">2.1.1</span> Impact of Battery Level on Screen Use</a></li>
   </ul></li>
-  <li><a href="#battery-as-instrument-variable" id="toc-battery-as-instrument-variable" class="nav-link" data-scroll-target="#battery-as-instrument-variable">Battery as Instrument Variable</a>
+  <li><a href="#battery-as-instrument-variable" id="toc-battery-as-instrument-variable" class="nav-link" data-scroll-target="#battery-as-instrument-variable"><span class="header-section-number">2.2</span> Battery as Instrument Variable</a>
   <ul class="collapse">
-  <li><a href="#impact-of-battery-level-on-screen-use-1" id="toc-impact-of-battery-level-on-screen-use-1" class="nav-link" data-scroll-target="#impact-of-battery-level-on-screen-use-1">Impact of Battery Level on Screen Use</a></li>
-  <li><a href="#evaluation-of-iv" id="toc-evaluation-of-iv" class="nav-link" data-scroll-target="#evaluation-of-iv">Evaluation of IV</a></li>
-  <li><a href="#battery-iv-with-turning-point" id="toc-battery-iv-with-turning-point" class="nav-link" data-scroll-target="#battery-iv-with-turning-point">Battery IV with Turning Point</a></li>
+  <li><a href="#impact-of-battery-level-on-screen-use-1" id="toc-impact-of-battery-level-on-screen-use-1" class="nav-link" data-scroll-target="#impact-of-battery-level-on-screen-use-1"><span class="header-section-number">2.2.1</span> Impact of Battery Level on Screen Use</a></li>
+  <li><a href="#evaluation-of-iv" id="toc-evaluation-of-iv" class="nav-link" data-scroll-target="#evaluation-of-iv"><span class="header-section-number">2.2.2</span> Evaluation of IV</a></li>
+  <li><a href="#battery-iv-with-turning-point" id="toc-battery-iv-with-turning-point" class="nav-link" data-scroll-target="#battery-iv-with-turning-point"><span class="header-section-number">2.2.3</span> Battery IV with Turning Point</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#alternative-ivs-number-of-contacts" id="toc-alternative-ivs-number-of-contacts" class="nav-link" data-scroll-target="#alternative-ivs-number-of-contacts">Alternative IVs: Number of Contacts</a></li>
+  <li><a href="#alternative-ivs-number-of-contacts" id="toc-alternative-ivs-number-of-contacts" class="nav-link" data-scroll-target="#alternative-ivs-number-of-contacts"><span class="header-section-number">3</span> Alternative IVs: Number of Contacts</a></li>
   </ul>
 </nav>
     </div>
@@ -206,8 +206,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="social-network-control" class="level1">
-<h1>Social Network Control</h1>
+<section id="social-network-control" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Social Network Control</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-3769634593.png" class="img-fluid figure-img"></p>
@@ -355,12 +355,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="instrument-variable-for-screen-time" class="level1">
-<h1>Instrument Variable for Screen Time</h1>
-<section id="charging-as-instrument-variable" class="level2">
-<h2 class="anchored" data-anchor-id="charging-as-instrument-variable">Charging as Instrument Variable</h2>
-<section id="impact-of-battery-level-on-screen-use" class="level3">
-<h3 class="anchored" data-anchor-id="impact-of-battery-level-on-screen-use">Impact of Battery Level on Screen Use</h3>
+<section id="instrument-variable-for-screen-time" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Instrument Variable for Screen Time</h1>
+<section id="charging-as-instrument-variable" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="charging-as-instrument-variable"><span class="header-section-number">2.1</span> Charging as Instrument Variable</h2>
+<section id="impact-of-battery-level-on-screen-use" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="impact-of-battery-level-on-screen-use"><span class="header-section-number">2.1.1</span> Impact of Battery Level on Screen Use</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-2236990828.png" class="img-fluid figure-img"></p>
@@ -411,10 +411,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="battery-as-instrument-variable" class="level2">
-<h2 class="anchored" data-anchor-id="battery-as-instrument-variable">Battery as Instrument Variable</h2>
-<section id="impact-of-battery-level-on-screen-use-1" class="level3">
-<h3 class="anchored" data-anchor-id="impact-of-battery-level-on-screen-use-1">Impact of Battery Level on Screen Use</h3>
+<section id="battery-as-instrument-variable" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="battery-as-instrument-variable"><span class="header-section-number">2.2</span> Battery as Instrument Variable</h2>
+<section id="impact-of-battery-level-on-screen-use-1" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="impact-of-battery-level-on-screen-use-1"><span class="header-section-number">2.2.1</span> Impact of Battery Level on Screen Use</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-1091683936.png" class="img-fluid figure-img"></p>
@@ -425,8 +425,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/clipboard-1091683936.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<section id="visualization-of-the-u-shape-impact" class="level4">
-<h4 class="anchored" data-anchor-id="visualization-of-the-u-shape-impact">Visualization of the U-Shape Impact</h4>
+<section id="visualization-of-the-u-shape-impact" class="level4" data-number="2.2.1.1">
+<h4 data-number="2.2.1.1" class="anchored" data-anchor-id="visualization-of-the-u-shape-impact"><span class="header-section-number">2.2.1.1</span> Visualization of the U-Shape Impact</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/battery.png" class="img-fluid figure-img"></p>
@@ -456,8 +456,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>ivreghdfe $ylist $Fitness_Control $Network_Control $Other_Control $Call_Contro message_q unlock charging (c.screen_time<span class="co">##c.screen_time=c.battery##c.battery), absorb(egoid studyweeks) robust endog(screen_time)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="impact-of-screen-time-on-sleep-debt" class="level4">
-<h4 class="anchored" data-anchor-id="impact-of-screen-time-on-sleep-debt">Impact of Screen Time on Sleep Debt</h4>
+<section id="impact-of-screen-time-on-sleep-debt" class="level4" data-number="2.2.1.2">
+<h4 data-number="2.2.1.2" class="anchored" data-anchor-id="impact-of-screen-time-on-sleep-debt"><span class="header-section-number">2.2.1.2</span> Impact of Screen Time on Sleep Debt</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-2139860948.png" class="img-fluid figure-img"></p>
@@ -465,8 +465,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="evaluation-of-iv" class="level3">
-<h3 class="anchored" data-anchor-id="evaluation-of-iv">Evaluation of IV</h3>
+<section id="evaluation-of-iv" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="evaluation-of-iv"><span class="header-section-number">2.2.2</span> Evaluation of IV</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-3440018871.png" class="img-fluid figure-img"></p>
@@ -492,10 +492,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Therefore, based on these diagnostics, it appears that the instrument (battery levels) is both relevant (related to the endogenous variable screen time) and strong (provides sufficient information to estimate the causal effect reliably). This lends credibility to the IV estimates obtained from the model. However, remember that these tests do not address other potential issues such as exogeneity (whether the instruments are correlated with the error term) and overidentification (having more instruments than endogenous variables, which can be tested with a different set of tests). Always consider the theoretical justification for the instruments in addition to these statistical tests.</p>
 </section>
-<section id="battery-iv-with-turning-point" class="level3">
-<h3 class="anchored" data-anchor-id="battery-iv-with-turning-point">Battery IV with Turning Point</h3>
-<section id="iv-before-turning-point" class="level4">
-<h4 class="anchored" data-anchor-id="iv-before-turning-point">IV Before Turning Point</h4>
+<section id="battery-iv-with-turning-point" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="battery-iv-with-turning-point"><span class="header-section-number">2.2.3</span> Battery IV with Turning Point</h3>
+<section id="iv-before-turning-point" class="level4" data-number="2.2.3.1">
+<h4 data-number="2.2.3.1" class="anchored" data-anchor-id="iv-before-turning-point"><span class="header-section-number">2.2.3.1</span> IV Before Turning Point</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-769146924.png" class="img-fluid figure-img"></p>
@@ -507,14 +507,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="iv-after-turning-point" class="level4">
-<h4 class="anchored" data-anchor-id="iv-after-turning-point">IV After Turning Point</h4>
+<section id="iv-after-turning-point" class="level4" data-number="2.2.3.2">
+<h4 data-number="2.2.3.2" class="anchored" data-anchor-id="iv-after-turning-point"><span class="header-section-number">2.2.3.2</span> IV After Turning Point</h4>
 </section>
 </section>
 </section>
 </section>
-<section id="alternative-ivs-number-of-contacts" class="level1">
-<h1>Alternative IVs: Number of Contacts</h1>
+<section id="alternative-ivs-number-of-contacts" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Alternative IVs: Number of Contacts</h1>
 <p><img src="images/clipboard-2448270006.png" class="img-fluid"></p>
 
 

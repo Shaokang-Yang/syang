@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -65,13 +64,7 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -80,7 +73,6 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -93,43 +85,16 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../Horizontal_VT_Full_Color_RGB.png" alt="" class="navbar-logo">
     </a>
@@ -141,25 +106,25 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
-<span class="menu-text">Research</span></a>
+    <a class="nav-link" href="../../research.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching.html"> 
-<span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html"> 
-<span class="menu-text">Project Blog</span></a>
+    <a class="nav-link" href="../../posts.html" rel="" target="">
+ <span class="menu-text">Project Blog</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -175,7 +140,7 @@ window.Quarto = {
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
       <div>
@@ -188,7 +153,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">Wednesday, August 7, 2024</p>
+        <p class="date-modified">Friday, November 8, 2024</p>
       </div>
     </div>
       
@@ -235,7 +200,6 @@ window.Quarto = {
 
 
 
-
 <section id="test-of-u-shaped-relationship" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Test of U-Shaped Relationship</h1>
 <p>In this section, we discuss whether the U-shaped relationship is caused by outliers in the data. First of all, we take a look at the descriptive statistics of the main variables:</p>
@@ -248,7 +212,7 @@ window.Quarto = {
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -532,19 +496,19 @@ window.Quarto = {
 <p>Recall the model-free analysis about the relationship among sleep debt, screen time and message:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/model-free.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/model-free.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The margins plot based on fixed effect model with the above data is as follows:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/estimation.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/estimation.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>Considering the existence of outliers, the upwarding part of the U-shape might be caused by the outliers at the tail (the rightmost few bars). To check whether the U-shaped relationship is caused by outliers, we reviewed the literature about the treatement of outliers and identified the following outlier treatment strategies: <strong>winsorization, trimming, and interquartile range method</strong> <span class="citation" data-cites="leone2019 mitton2022 vinutha2018">(<a href="#ref-leone2019" role="doc-biblioref">Leone, Minutti-Meza, and Wasley 2019</a>; <a href="#ref-mitton2022" role="doc-biblioref">Mitton 2022</a>; <a href="#ref-vinutha2018" role="doc-biblioref">Vinutha, Poornima, and Sagar 2018</a> )</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-3892815503.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-3892815503.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -556,7 +520,7 @@ window.Quarto = {
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -632,7 +596,7 @@ window.Quarto = {
 <p>We can find that range of sleep debt changes to [-111, 224] minutes from [-778, 479] minutes; the maximum screen time decreased to 121.46 minutes from 179.99 minutes; the maximum unlock decreased to 40 from 817; the maximum message decreased to 95 from 1015, which are relatively normal. The following table shows the descriptive statistics with winsorization at cutoffs of 1st/99tth, 2.5th/97.5th, 5th/95th and 10th/90th.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-4106334890.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-4106334890.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -641,7 +605,7 @@ window.Quarto = {
 <p>Trimming deals with the outliers by simply dropping the observations with extreme values. Different from winsorization, trimming reduces the number of observations. We trim the data based on screen time at cutoffs of 1st/99tth, 2.5th/97.5th, 5th/95th and 10th/90th.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-407226497.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-407226497.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -664,7 +628,7 @@ window.Quarto = {
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -740,13 +704,13 @@ window.Quarto = {
 <p>We then estimate the sleep debt based on the data after winsorization, trimming and IQR method with the fixed effect model.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-36233801.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-36233801.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The results are as follows:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-3325119646.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-3325119646.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The estimated coefficients for screen time and its quadratic terms are significant suggesting that the existence of turning points. The following figure visualize the margin plot based on the above outlier treatment strategies:</p>
@@ -759,7 +723,7 @@ window.Quarto = {
 <h4 data-number="1.1.5.1" class="anchored" data-anchor-id="screen-time"><span class="header-section-number">1.1.5.1</span> Screen Time</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-2336158588.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-2336158588.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -767,7 +731,7 @@ window.Quarto = {
 <h4 data-number="1.1.5.2" class="anchored" data-anchor-id="deviation-measure-of-screen-time"><span class="header-section-number">1.1.5.2</span> Deviation Measure of Screen Time</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-1329186503.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-1329186503.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -778,19 +742,19 @@ window.Quarto = {
 <p>Spline regressions estimate the coefficients of screen time on sleep debt piecewisely. Spline regressions are widely used to test the existence of U- and inverted U-Shaped relationships <span class="citation" data-cites="kesavan2014 huang2023 tan2019 xu2022 zou2023">(<a href="#ref-kesavan2014" role="doc-biblioref">Kesavan, Staats, and Gilland 2014</a>; <a href="#ref-huang2023" role="doc-biblioref">Huang et al. 2023</a>; <a href="#ref-tan2019" role="doc-biblioref">Tan and Netessine 2019</a>; <a href="#ref-xu2022" role="doc-biblioref">Xu, Tan, and Netessine 2022</a>; <a href="#ref-zou2023" role="doc-biblioref">Zou et al. 2023</a>)</span>. For example, the following equation estimated the coefficients with 4 knots.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-4088933022.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-4088933022.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>We vary the number of knots from 1 to 5 and obtained the following results:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-3259393049.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-3259393049.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>We observe that the estimated coefficient transit from negative to positive regardless of the number of spline knots. The following figure visualize the transition for the spline regression with 5 knots, which supports the U-Shaped relationship.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-1164654317.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-1164654317.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -811,7 +775,7 @@ window.Quarto = {
 <p>In this section, we compare the performance of various models based on Akaike information criterion (AIC) and Bayesian information criterion (BIC) <span class="citation" data-cites="karhade2021">(<a href="#ref-karhade2021" role="doc-biblioref">Karhade and Qi Dong 2021</a>)</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-2996370340.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-2996370340.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>Based on the estimation results above, the AIC and BIC values in the curvilinear model are smaller than those of the control and linear models, suggesting that the curvilinear model outperforms the control and linear models.</p>
@@ -822,7 +786,7 @@ window.Quarto = {
 <p>To address this concern, we create a deviation measure for screen time:&nbsp;<strong>Screen Time Deviation = Screen Time - Unit Average Screen Time</strong><span class="citation" data-cites="ho2017 karhade2021">(<a href="#ref-ho2017" role="doc-biblioref">Ho et al. 2017</a>; <a href="#ref-karhade2021" role="doc-biblioref">Karhade and Qi Dong 2021</a>)</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-163764688.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-163764688.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The estimation results above support the existence of U-shaped relationship and curvilinear model outperforms the control and linear models.</p>
@@ -833,7 +797,7 @@ window.Quarto = {
 <section id="introduction" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
 <p>In the blog <a href="https://shaokang-yang.net/posts/Selection%20Issue/selection.html">selection issues</a>, we discussed the confounders that may threaten the causal relationship in the study. In this section, we discuss the different types of causes of endogeneity and their corresponding remedy strategies . Overall, there are four types of causes of endogeneity: omitted variable, simultaneity, measurement Error, and selection (of treatment and/or into sample)<span class="citation" data-cites="hill2021">(<a href="#ref-hill2021" role="doc-biblioref">Hill et al. 2021</a>)</span>.</p>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 4%">
 <col style="width: 39%">
@@ -879,37 +843,37 @@ window.Quarto = {
 <p>One’s sleep debt today may be influenced by the sleep debt <strong>yesterday</strong> and even the sleep debt of previous few days. For example, an individual may need to sleep more and reduce phone use to make up sleep today if she/he had significant high sleep debt yesterday.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Dynamic Panel Model.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/Dynamic Panel Model.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>To control for the dynamic endogeneity, we introduce the dynamic panel model by adding the lagged dependent variables:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-1927004410.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-1927004410.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>However, adding lagged dependent variables may introduce extra endogeneity as lagged dependent variables may be correlated with error term<span class="citation" data-cites="nickell1981">(<a href="#ref-nickell1981" role="doc-biblioref">Nickell 1981</a>)</span>. To overcome this issue, we apply the Arellano–Bond estimator, which is a general method of moments (GMM) estimator based on dynamic panel data with first differences <span class="citation" data-cites="huang2023">(<a href="#ref-huang2023" role="doc-biblioref">Huang et al. 2023</a>)</span>. Arellano–Bond estimator uses the lagged variables as instruments to address the endogeneity bias. For example, suppose that the sleep debt today is affected by the sleep debt yesterday but not the one of the day before yesterday. In another word, <span class="math inline">\(Sleep\ Debt_{i,t-2}\)</span> only affect <span class="math inline">\(Sleep\ Debt_{i,t}\)</span> by affecting <span class="math inline">\(Sleep\ Debt_{i,t-1}\)</span>. Thus, <span class="math inline">\(Sleep\ Debt_{i,t-2}\)</span> can work as an instrument variable for <span class="math inline">\(Sleep\ Debt_{i,t-1}\)</span>, namely “internal instrument” <span class="citation" data-cites="roodman2009">(<a href="#ref-roodman2009" role="doc-biblioref">Roodman 2009</a>)</span> which is shown in the following figure.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/AB.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/AB.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The situation becomes complicated if the <span class="math inline">\(Sleep\ Debt_{i,t-2}\)</span> can directly affect <span class="math inline">\(Sleep\ Debt_{i,t}\)</span>, as shown below:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/AB2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/AB2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>We can identify the <span class="math inline">\(Sleep\ Debt_{i,t-n}\)</span> that does not affect <span class="math inline">\(Sleep\ Debt_{i,t}\)</span> directly and take it as instrument for variables from <span class="math inline">\(Sleep\ Debt_{i,t-1}\)</span> to <span class="math inline">\(Sleep\ Debt_{i,t-n-1}\)</span>. The Arellano–Bond test checks the exogeneity assumption and can tell us whether the lagged variables are correlated with error term. A Sargan test tells us whether the instruments are correctly specified.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-1903385873.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-1903385873.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The Arellano–Bond test above for AR (1) is significant while AR(2) is not, indicating that the lagged one period of sleep debt is a significant estimator for the current sleep debt. We include lagged (1) sleep debt into our main estimation and obtained the following results:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-761639513.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clipboard-761639513.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -946,7 +910,7 @@ window.Quarto = {
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-haans2016" class="csl-entry" role="listitem">
 Haans, Richard F. J., Constant Pieters, and Zi-Lin He. 2016. <span>“Thinking about U: Theorizing and Testing U- and Inverted U-Shaped Relationships in Strategy Research.”</span> <em>Strategic Management Journal</em> 37 (7): 1177–95. <a href="https://doi.org/10.1002/smj.2399">https://doi.org/10.1002/smj.2399</a>.
 </div>
@@ -1072,27 +1036,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1102,17 +1049,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1124,130 +1062,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -1291,7 +1106,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1317,32 +1131,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1403,7 +1191,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-
 
 
 

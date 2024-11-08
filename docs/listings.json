@@ -2,49 +2,27 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/Algorithmic Nudge/nudge.html",
       "/posts/Abortion/abortion.html",
-      "/posts/Paper 2/paper2.html",
+      "/posts/screen time/screentime.html",
+      "/posts/outline/outline.html",
+      "/posts/Selection Issue/selection.html",
+      "/posts/Survey Overlap/index.html",
       "/posts/Hypotheses/hypo.html",
       "/posts/Review/review.html",
-      "/posts/screen time/screentime.html",
-      "/posts/outline/outline.html",
-      "/posts/CHITA/chita.html",
       "/posts/Robustness Checks/Robustness.html",
-      "/posts/Selection Issue/selection.html",
       "/posts/Daylight Saving Time/daylight.html",
-      "/posts/Algorithmic Nudge/nudge.html",
-      "/posts/IV/IV.html",
-      "/posts/SP2 Review Response/ReviewResponse.html",
-      "/posts/Battery levels as IV (3 hours)/batteryIV.html",
-      "/posts/Meidation/Mediation.html",
-      "/posts/Network Looking up/lookup.html",
-      "/posts/Frame Theory/index.html",
-      "/posts/Survey Overlap/index.html",
-      "/posts/Clustering Anlysis/cluster.html",
-      "/posts/Mediation Effect of Steps/index.html",
-      "/posts/Paper 1/paper1.html"
-    ]
-  },
-  {
-    "listing": "/research.html",
-    "items": [
-      "/posts/Algorithmic Nudge/nudge.html",
-      "/posts/Clustering Anlysis/cluster.html",
       "/posts/CHITA/chita.html",
-      "/posts/Meidation/Mediation.html",
-      "/posts/Network Looking up/lookup.html",
-      "/posts/Daylight Saving Time/daylight.html",
-      "/posts/Frame Theory/index.html",
-      "/posts/IV/IV.html",
       "/posts/Battery levels as IV (3 hours)/batteryIV.html",
+      "/posts/Network Looking up/lookup.html",
+      "/posts/IV/IV.html",
       "/posts/Mediation Effect of Steps/index.html",
-      "/posts/screen time/screentime.html",
-      "/posts/Survey Overlap/index.html",
-      "/posts/outline/outline.html",
+      "/posts/Frame Theory/index.html",
+      "/posts/Meidation/Mediation.html",
       "/posts/SP2 Review Response/ReviewResponse.html",
-      "/posts/Selection Issue/selection.html",
-      "/posts/Paper 1/paper1.html",
-      "/posts/Paper 2/paper2.html"
+      "/posts/Clustering Anlysis/cluster.html",
+      "/posts/Paper 2/paper2.html",
+      "/posts/Paper 1/paper1.html"
     ]
   }
 ]

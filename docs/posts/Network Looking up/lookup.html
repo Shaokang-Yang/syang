@@ -24,12 +24,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../Virginia_Tech_seal.svg.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -90,8 +90,8 @@ require(['plotly'], function(Plotly) {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">My Website</span>
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../Horizontal_VT_Full_Color_RGB.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -148,7 +148,7 @@ require(['plotly'], function(Plotly) {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">Monday, March 25, 2024</p>
+        <p class="date-modified">Friday, November 8, 2024</p>
       </div>
     </div>
       
@@ -163,14 +163,14 @@ require(['plotly'], function(Plotly) {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#original-contacts-without-look-up" id="toc-original-contacts-without-look-up" class="nav-link active" data-scroll-target="#original-contacts-without-look-up">Original Contacts (Without Look Up)</a></li>
-  <li><a href="#look-up-with-limitation-to-1-neighbor" id="toc-look-up-with-limitation-to-1-neighbor" class="nav-link" data-scroll-target="#look-up-with-limitation-to-1-neighbor">Look Up With Limitation to 1 Neighbor</a></li>
-  <li><a href="#look-up-with-full-network" id="toc-look-up-with-full-network" class="nav-link" data-scroll-target="#look-up-with-full-network">Look Up With Full Network</a></li>
-  <li><a href="#estimation-results-with-different-lookup-scopes" id="toc-estimation-results-with-different-lookup-scopes" class="nav-link" data-scroll-target="#estimation-results-with-different-lookup-scopes">Estimation Results with Different Lookup Scopes</a>
+  <li><a href="#original-contacts-without-look-up" id="toc-original-contacts-without-look-up" class="nav-link active" data-scroll-target="#original-contacts-without-look-up"><span class="header-section-number">1</span> Original Contacts (Without Look Up)</a></li>
+  <li><a href="#look-up-with-limitation-to-1-neighbor" id="toc-look-up-with-limitation-to-1-neighbor" class="nav-link" data-scroll-target="#look-up-with-limitation-to-1-neighbor"><span class="header-section-number">2</span> Look Up With Limitation to 1 Neighbor</a></li>
+  <li><a href="#look-up-with-full-network" id="toc-look-up-with-full-network" class="nav-link" data-scroll-target="#look-up-with-full-network"><span class="header-section-number">3</span> Look Up With Full Network</a></li>
+  <li><a href="#estimation-results-with-different-lookup-scopes" id="toc-estimation-results-with-different-lookup-scopes" class="nav-link" data-scroll-target="#estimation-results-with-different-lookup-scopes"><span class="header-section-number">4</span> Estimation Results with Different Lookup Scopes</a>
   <ul class="collapse">
-  <li><a href="#main-results-without-lookup-3-hrs" id="toc-main-results-without-lookup-3-hrs" class="nav-link" data-scroll-target="#main-results-without-lookup-3-hrs">Main Results without Lookup (3 Hrs)</a></li>
-  <li><a href="#main-results-with-lookup-in-neighbor-1-network-3-hrs" id="toc-main-results-with-lookup-in-neighbor-1-network-3-hrs" class="nav-link" data-scroll-target="#main-results-with-lookup-in-neighbor-1-network-3-hrs">Main Results with Lookup in Neighbor 1 Network (3 Hrs)</a></li>
-  <li><a href="#main-results-with-lookup-in-full-network-3-hrs" id="toc-main-results-with-lookup-in-full-network-3-hrs" class="nav-link" data-scroll-target="#main-results-with-lookup-in-full-network-3-hrs">Main Results with Lookup in Full Network (3 Hrs)</a></li>
+  <li><a href="#main-results-without-lookup-3-hrs" id="toc-main-results-without-lookup-3-hrs" class="nav-link" data-scroll-target="#main-results-without-lookup-3-hrs"><span class="header-section-number">4.1</span> Main Results without Lookup (3 Hrs)</a></li>
+  <li><a href="#main-results-with-lookup-in-neighbor-1-network-3-hrs" id="toc-main-results-with-lookup-in-neighbor-1-network-3-hrs" class="nav-link" data-scroll-target="#main-results-with-lookup-in-neighbor-1-network-3-hrs"><span class="header-section-number">4.2</span> Main Results with Lookup in Neighbor 1 Network (3 Hrs)</a></li>
+  <li><a href="#main-results-with-lookup-in-full-network-3-hrs" id="toc-main-results-with-lookup-in-full-network-3-hrs" class="nav-link" data-scroll-target="#main-results-with-lookup-in-full-network-3-hrs"><span class="header-section-number">4.3</span> Main Results with Lookup in Full Network (3 Hrs)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -183,8 +183,8 @@ require(['plotly'], function(Plotly) {
 
 <p>In the aggregation of communication events of Paper 1, we only match the communication events with the contacts reported in the <strong>current</strong>&nbsp;wave of social network surveys. However, the current social network surveys are <strong>not</strong>&nbsp;enough to cover all the contacts in the communication events. For example, let’s say an individual communicated with contact <strong>C</strong>&nbsp;on a day in the spring semester of 2016. However, contact C was not reported in the survey of the 2016 spring; instead, contact C was reported in the survey of the 2015 Fall. Contact C is taken as <strong>relation unknown</strong>&nbsp;or <strong>closeness unknown</strong>&nbsp;if we only match communication with the current surveys. In paper 2, we meet the same issue while constructing an individual’s social networks. We solve it by looking up the missed contacts in a broaden pool of surveys. Specifically, we looking up the missed contacts in: 1) <strong>complete</strong>&nbsp;social network surveys in which the focal person participated; or, 2) surveys with limitations to the closest <strong>N</strong>&nbsp;neighboring waves. In this example, we can identify contact C’s social relationship and closeness in the survey of the fall of 2015.</p>
 <p>In this update, we applied a similar look-up strategy for Paper 1. By doing this, the communication events from closeness unknown contacts and relationship unknown contacts decreased. In contrast, those from identified contacts increased. The following figures illustrate a comparison of the proportions of communication categories with different look-up strategies.</p>
-<section id="original-contacts-without-look-up" class="level2">
-<h2 class="anchored" data-anchor-id="original-contacts-without-look-up">Original Contacts (Without Look Up)</h2>
+<section id="original-contacts-without-look-up" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="original-contacts-without-look-up"><span class="header-section-number">1</span> Original Contacts (Without Look Up)</h2>
 <p>The following figure shows the categories of messages (SMS, MMS and WhatsApp) without look up 3 hours prior to sleep. The left column are the messages categorized by social closeness. We observe that <strong>10.83</strong> messages are from close unknown contacts, which accounts for <strong>over 50%</strong> of the total messages (20.36). The middle column shows the messages categorized by message type: SMS, MMS and WhatsApp. We find that the majority of the messages are SMS. The right column shows the messages categorized by social relationships. It suggests that <strong>10.83</strong> messages are from relation unknown contacts, which accounts for <strong>over 50%</strong> of the total messages (20.36). They are the same messages whose social closeness is unidentified in the left column.</p>
 <div class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
@@ -217,8 +217,8 @@ if (outputEl) {{
 </div>
 </div>
 </section>
-<section id="look-up-with-limitation-to-1-neighbor" class="level2">
-<h2 class="anchored" data-anchor-id="look-up-with-limitation-to-1-neighbor">Look Up With Limitation to 1 Neighbor</h2>
+<section id="look-up-with-limitation-to-1-neighbor" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="look-up-with-limitation-to-1-neighbor"><span class="header-section-number">2</span> Look Up With Limitation to 1 Neighbor</h2>
 <p>The following figure shows the categories of messages (SMS, MMS and WhatsApp) with <strong>look up limited to closest one wave</strong> of surveys three hours prior to sleep. We observe that messages with unidentified contacts decreased from <strong>10.83</strong> to <strong>8.27.</strong> The categories of identified contacts increased correspondingly.</p>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
@@ -251,8 +251,8 @@ if (outputEl) {{
 </div>
 </div>
 </section>
-<section id="look-up-with-full-network" class="level2">
-<h2 class="anchored" data-anchor-id="look-up-with-full-network">Look Up With Full Network</h2>
+<section id="look-up-with-full-network" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="look-up-with-full-network"><span class="header-section-number">3</span> Look Up With Full Network</h2>
 <p>The following figure shows the categories of messages (SMS, MMS and WhatsApp) with look up in <strong>full</strong> social network surveys three hours prior to sleep. We observe that messages with unidentified contacts further decreased from <strong>8.27</strong> to <strong>6.73.</strong> The categories of identified contacts increased correspondingly.</p>
 <div class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
@@ -285,11 +285,11 @@ if (outputEl) {{
 </div>
 </div>
 </section>
-<section id="estimation-results-with-different-lookup-scopes" class="level2">
-<h2 class="anchored" data-anchor-id="estimation-results-with-different-lookup-scopes">Estimation Results with Different Lookup Scopes</h2>
+<section id="estimation-results-with-different-lookup-scopes" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="estimation-results-with-different-lookup-scopes"><span class="header-section-number">4</span> Estimation Results with Different Lookup Scopes</h2>
 <p>In this section, we show the estimation results with different lookup scopes.</p>
-<section id="main-results-without-lookup-3-hrs" class="level3">
-<h3 class="anchored" data-anchor-id="main-results-without-lookup-3-hrs">Main Results without Lookup (3 Hrs)</h3>
+<section id="main-results-without-lookup-3-hrs" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="main-results-without-lookup-3-hrs"><span class="header-section-number">4.1</span> Main Results without Lookup (3 Hrs)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/original.png" class="img-fluid figure-img"></p>
@@ -297,8 +297,8 @@ if (outputEl) {{
 </figure>
 </div>
 </section>
-<section id="main-results-with-lookup-in-neighbor-1-network-3-hrs" class="level3">
-<h3 class="anchored" data-anchor-id="main-results-with-lookup-in-neighbor-1-network-3-hrs">Main Results with Lookup in Neighbor 1 Network (3 Hrs)</h3>
+<section id="main-results-with-lookup-in-neighbor-1-network-3-hrs" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="main-results-with-lookup-in-neighbor-1-network-3-hrs"><span class="header-section-number">4.2</span> Main Results with Lookup in Neighbor 1 Network (3 Hrs)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/neighbor1.png" class="img-fluid figure-img"></p>
@@ -306,8 +306,8 @@ if (outputEl) {{
 </figure>
 </div>
 </section>
-<section id="main-results-with-lookup-in-full-network-3-hrs" class="level3">
-<h3 class="anchored" data-anchor-id="main-results-with-lookup-in-full-network-3-hrs">Main Results with Lookup in Full Network (3 Hrs)</h3>
+<section id="main-results-with-lookup-in-full-network-3-hrs" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="main-results-with-lookup-in-full-network-3-hrs"><span class="header-section-number">4.3</span> Main Results with Lookup in Full Network (3 Hrs)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/full.png" class="img-fluid figure-img"></p>
