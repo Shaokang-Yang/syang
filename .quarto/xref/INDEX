@@ -1,0 +1,83 @@
+{
+  "index.qmd": {
+    "index.html": "a752607f"
+  },
+  "about.qmd": {
+    "about.html": "31e868f0"
+  },
+  "blog.qmd": {
+    "blog.html": "63052452"
+  },
+  "posts.qmd": {
+    "posts.html": "20e2b6f8"
+  },
+  "posts/Selection Issue/selection.qmd": {
+    "selection.html": "c315f919"
+  },
+  "posts/Paper 2/paper2.qmd": {
+    "paper2.html": "8dcb2266"
+  },
+  "posts/Mediation Effect of Steps/index.qmd": {
+    "index.html": "667db2d3"
+  },
+  "posts/Frame Theory/index.qmd": {
+    "index.html": "731cb744"
+  },
+  "posts/SP2 Review Response/ReviewResponse.qmd": {
+    "ReviewResponse.html": "b0622e87"
+  },
+  "posts/Paper 1/paper1.qmd": {
+    "paper1.html": "1f8d7663"
+  },
+  "posts/Survey Overlap/index.qmd": {
+    "index.html": "a587fa5c"
+  },
+  "posts/Clustering Anlysis/cluster.qmd": {
+    "cluster.html": "98bb9daa"
+  },
+  "posts/IV/IV.qmd": {
+    "IV.html": "25d1cd50"
+  },
+  "posts/Network Looking up/lookup.qmd": {
+    "lookup.html": "972ff5ed"
+  },
+  "posts/Battery levels as IV (3 hours)/batteryIV.qmd": {
+    "batteryIV.html": "acd016f5"
+  },
+  "posts/Meidation/Mediation.qmd": {
+    "Mediation.html": "1ee435e8"
+  },
+  "teaching.qmd": {
+    "teaching.html": "29f4b0be"
+  },
+  "research.qmd": {
+    "research.html": "427a6e74"
+  },
+  "posts/Algorithmic Nudge/nudge.qmd": {
+    "nudge.html": "6676543a"
+  },
+  "posts/CHITA/chita.qmd": {
+    "chita.html": "dfe0aed3"
+  },
+  "posts/Daylight Saving Time/daylight.qmd": {
+    "daylight.html": "661628d6"
+  },
+  "posts/outline/outline.qmd": {
+    "outline.html": "0ee519bf"
+  },
+  "posts/screen time/screentime.qmd": {
+    "screentime.html": "62246adf"
+  },
+  "posts/Robustness Checks/Robustness.qmd": {
+    "Robustness.html": "2823c01d"
+  },
+  "posts/Hypotheses/hypo.qmd": {
+    "hypo.html": "fe45e5e7"
+  },
+  "posts/Review/review.qmd": {
+    "review.html": "5d804b78"
+  },
+  "posts/Abortion/abortion.qmd": {
+    "abortion.html": "37aaf095"
+  }
+}

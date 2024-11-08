@@ -1,0 +1,103 @@
+---
+title: "Idea Development"
+date: 10/29/2024
+date-modified: last-modified
+date-format: full
+categories: [Others]
+website:
+  comments: 
+    utterances:
+      repo: quarto-dev/quarto-web
+#image: "cluster1.png"
+tbl-colwidths: [5,30,125]
+format: 
+  html:
+    page-layout: full
+bibliography: references.bib
+---
+
+## Impact of Medicaid Expansion on Wait Time in the Hospitals
+
+Timely treatment is crucial for healthcare outcome. The expansion of Medicaid lowered the barrier to receive healthcare service and could induce more patients to hospitals.
+
+A compelling body of research have studies the impact of Medicaid expansion on the waiting time in the emergency room. [@wang2022] find that Medicaid expansion increases ED wait time by 10.4% (or 3.5 minutes) However, it is not clear how Medicaid expansion impact waiting time of non-urgent hospitals.
+
+We conjecture that the expansion of Medicaid could attract patients withnon-urgent conditions to healthcare providers, yielding in an increase in waiting time for treatments.
+
+## Impact of Covid-19 on Organ Donations
+
+Organs from motor vehicle crashes is the largest organ transplant pool and accounts for **1 in 3** organ transplantation.
+
+The stay-at-home rules significantly reduced the fatal traffic collisions, resulting in decrease in organ supply [@dembosky2020]. On the other hand, the pandemic also caused an decrease in public transportation usage and increase in personal vehicle usage [@ebrahimshaik2022]. The increase in personal vehicle usage could increase traffic collisions, which potentially leads to an increase in organ supply.
+
+Our objective is examine the effects of Covid-19 on organ supplies.
+
+## Impact of Medicaid Expansion on Length of Stay at Hospitals
+
+Test
+
+## Impact of Medicaid Expansion on Abortion Rates
+
+### Introduction
+
+The expansion of Medicaid reduced the cost of abortion and related care services, which may have increased the demand for abortion services. However, the expansion of Medicaid also increased access to contraception, which may have reduced the number of unwanted pregnancies and the demand for abortion services. Therefore, the impact of Medicaid expansion on abortion rates is ambiguous[@eliason2022]. To investigate the impact of Medicaid expansion on abortion rates, we plan to use a difference-in-differences approach to compare changes in abortion rates in states that expanded Medicaid to those that did not.
+
+[![](images/clipboard-1560225122.png){fig-align="center"}](https://www.pewresearch.org/short-reads/2024/03/25/what-the-data-says-about-abortion-in-the-us/sr_24-03-26_abortion_1-png/)
+
+### Data
+
+#### Abortion Statistics
+
+![](images/clipboard-3841962446.png)
+
+#### Medicaid Expansion
+
+**Expansion Timeline**
+
+The following table shows the expansion timeline for Medicaid [@maclean2019a].
+
+![](images/clipboard-665024476.png)
+
+**Expansion Map**
+
+[![](images/clipboard-174034814.png){fig-alt="MACPAC" fig-align="center"}](https://www.macpac.gov/subtopic/medicaid-expansion/)
+
+## Impact of Telehealth on Abortion Rates
+
+1 in 5 abortion cases are through Telehealth in June 2024, which increased significantly compared to the 1 in 25 in April 2022 [@mulvihill2024]. Telehealth abortion is a safe and effective way to access abortion services. Medication abortion accounted for 39% of all abortions in 2017. This number increased to 63% in 2022 [@jones2024a]. Telehealth abortion has been shown to increase access to abortion services, reduce the abortion stigma.
+
+[![](images/clipboard-890055587.png){fig-align="center"}](https://www.guttmacher.org/2024/03/medication-abortion-accounted-63-all-us-abortions-2023-increase-53-2020)
+
+To investigate the impact of telehealth abortion on abortion rates, we plan to use a difference-in-differences approach to compare changes in abortion rates in states that expanded telehealth abortion to those that did not.
+
+-   “All telehealth abortions are counted according to **the state the medications are mailed to**.” This approach of defining and counting telehealth aborting is used by [WeCount](https://societyfp.org/research/wecount/ "https://societyfp.org/research/wecount/"), an institution for studying abortion. In the state official report (all types of abortion), I found abortions are counted by the occurrence location of the abortion procedure or residence identity (in or out of state residents). I did not find very consistent rules for counting telehealth abortions.
+
+Some milestones for telehealth abortion:
+
+-   In April 2020, the F.D.A. removed[ the in-person requirement ](https://www.nytimes.com/2021/04/13/health/covid-abortion-pills-mailed.html "https://www.nytimes.com/2021/04/13/health/covid-abortion-pills-mailed.html")for the duration of the pandemic, allowing pills to be mailed.
+-   On December 16^th^ 2021, a new F.D.A. decision made the suspension permanent.
+-   On June 24, 2022, the US Supreme Court overturned Roe v. Wade.
+
+ 
+
+The states that applied the abortion shield laws, which protect providers to prescribe abortion pills to states where abortion is banned:
+
+-   California
+
+-   Colorado 
+
+-   Connecticut 
+
+-   Massachusetts 
+
+-   New York 
+
+-   Vermont 
+
+-   Washington
+
+ 
+
+**Issues**
+
+Nevertheless, the data of county or facility-level abortion reports are very limited. [Minnesota](https://www.health.state.mn.us/data/mchs/pubs/abrpt/index.html "https://www.health.state.mn.us/data/mchs/pubs/abrpt/index.html") is one of the few states that provides month-level abortion data, but the identifier of providers is not provided. Thus, it is not possible to build a panel data set. Virginia provides annual county-level abortion reports but not monthly.
