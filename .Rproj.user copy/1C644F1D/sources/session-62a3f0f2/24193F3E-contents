@@ -1,0 +1,250 @@
+---
+title: "Robustness Checks"
+date: 07/27/2024
+date-modified: last-modified
+date-format: full
+categories: [Paper1]
+image: "images/clipboard-1164654317.png"
+tbl-colwidths: [5,50,75]
+format: 
+  html:
+    toc: true
+    toc-location: right
+    page-layout: full
+bibliography: references.bib
+---
+
+# Test of U-Shaped Relationship
+
+In this section, we discuss whether the U-shaped relationship is caused by outliers in the data. First of all, we take a look at the descriptive statistics of the main variables:
+
+## Treatment of Outliers
+
+### Raw Data
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+import time;import pandas as pd;import numpy as np;import datetime
+from datetime import datetime;from datetime import timedelta;import sqlite3;import warnings
+import matplotlib.pyplot as plt;import seaborn as sns;warnings.filterwarnings('ignore')
+
+df=pd.read_csv("/Users/shaokangyang/Library/CloudStorage/GoogleDrive-sky.ang510@gmail.com/My Drive/Nethealth/Data/CNSA/combine/7/df7_3hr.csv")
+
+df[['sleep_debt','screen_time','unlock','message','message_q','screen_com','screen_nocom','sms','mms','whatsapp','length','bytes','sc_com_pct','screen_com_level2','com_level']].describe(percentiles=[.05, .10, .15, .20,  .25, .50, .75, .90,.95]).round(2)
+```
+
+We observe that there are some outliers in the data. For example, the maximum value of sleep debt is about 8 hours (479 minutes), suggesting that one did not sleep at all on that day. The minimal value of sleep debt is -12.96 hours (-778 minutes), suggesting that one slept for 20.96 hours, which is quite unusual. Moreover, the maximum screen time is 179.99 minutes; the maximum message is 1015 and the maximum unlock actions is 817 times, which could barely happen.
+
+Recall the model-free analysis about the relationship among sleep debt, screen time and message:
+
+![](images/model-free.png){fig-align="center"}
+
+The margins plot based on fixed effect model with the above data is as follows:
+
+![](images/estimation.png){fig-align="center"}
+
+Considering the existence of outliers, the upwarding part of the U-shape might be caused by the outliers at the tail (the rightmost few bars). To check whether the U-shaped relationship is caused by outliers, we reviewed the literature about the treatement of outliers and identified the following outlier treatment strategies: **winsorization, trimming, and interquartile range method** [@leone2019; @mitton2022; @vinutha2018 ].
+
+![](images/clipboard-3892815503.png){fig-align="center"}
+
+### Winsorization
+
+Winsorization replaces the extreme values with values at certain quartile cutoffs. The most commonly used cutoffs in business research is 1st and 99th percentiles, 5th/95th and 10th/90th are used as well [@mitton2022]. We winsorize the continuous variables in our specification at cutoffs of 1st/99tth, 2.5th/97.5th, 5th/95th and 10th/90th. The following table shows the descriptive statistics after winsorization at cutoffs of 5th/95th.
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+df=pd.read_csv("/Users/shaokangyang/Library/CloudStorage/GoogleDrive-sky.ang510@gmail.com/My Drive/Nethealth/Data/CNSA/combine/7/df7_3hr-winsor95.csv")
+df[['sleep_debt','screen_time','unlock','message']].describe().round(2)
+```
+
+We can find that range of sleep debt changes to \[-111, 224\] minutes from \[-778, 479\] minutes; the maximum screen time decreased to 121.46 minutes from 179.99 minutes; the maximum unlock decreased to 40 from 817; the maximum message decreased to 95 from 1015, which are relatively normal. The following table shows the descriptive statistics with winsorization at cutoffs of 1st/99tth, 2.5th/97.5th, 5th/95th and 10th/90th.
+
+![](images/clipboard-4106334890.png){fig-align="center"}
+
+### Trimming
+
+Trimming deals with the outliers by simply dropping the observations with extreme values. Different from winsorization, trimming reduces the number of observations. We trim the data based on screen time at cutoffs of 1st/99tth, 2.5th/97.5th, 5th/95th and 10th/90th.
+
+![](images/clipboard-407226497.png){fig-align="center"}
+
+### Variable Ranks
+
+The interquartile range (IQR) method is a variable rank strategy that rules out the outliers by calculating the upper and lower fence based on quartile values ([link](https://www.scribbr.com/statistics/outliers/)).
+
+-   Interquartile Range (IQR)=Q3-Q1
+
+-   Upper fence = Q3+1.5×IQR
+
+-   Lower fence = Q1-1.5×IQR
+
+Recall the descriptive statistics of raw data, the IQR for screen time = Q3-Q1 = 58.32 - 8.23 = 50.09 minutes. Thus, the upper and lower fences for screen time are calculated as:
+
+-   Upper fence = 58.32+1.5×50.09 = 133.455 minutes
+
+-   Lower fence = 8.23-1.5×50.09 = -66.891 minutes
+
+Considering that screen time should a non-negative value, the range for screen time is **\[0, 133. 455\]** minutes. The descriptive statistics for the main variables are as follows:
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+df=pd.read_csv("/Users/shaokangyang/Library/CloudStorage/GoogleDrive-sky.ang510@gmail.com/My Drive/Nethealth/Data/CNSA/combine/7/df7_3hr-IQR.csv")
+df[['sleep_debt','screen_time','unlock','message']].describe().round(2)
+```
+
+We then estimate the sleep debt based on the data after winsorization, trimming and IQR method with the fixed effect model.
+
+![](images/clipboard-36233801.png){fig-align="center"}
+
+The results are as follows:
+
+![](images/clipboard-3325119646.png){fig-align="center"}
+
+The estimated coefficients for screen time and its quadratic terms are significant suggesting that the existence of turning points. The following figure visualize the margin plot based on the above outlier treatment strategies:
+
+![](images/combined_graph.png)
+
+The margins plot supports the existence of U-shaped relationship and the turning point are within the range of measurement windows (180 minutes).
+
+### Outlier Treatment Based on Individual Average
+
+#### Screen Time
+
+![](images/clipboard-2336158588.png){fig-align="center"}
+
+#### Deviation Measure of Screen Time
+
+![](images/clipboard-1329186503.png){fig-align="center"}
+
+## Spline Regressions
+
+Spline regressions estimate the coefficients of screen time on sleep debt piecewisely. Spline regressions are widely used to test the existence of U- and inverted U-Shaped relationships [@kesavan2014; @huang2023; @tan2019; @xu2022; @zou2023]. For example, the following equation estimated the coefficients with 4 knots.
+
+![](images/clipboard-4088933022.png){fig-align="center"}
+
+We vary the number of knots from 1 to 5 and obtained the following results:
+
+![](images/clipboard-3259393049.png){fig-align="center"}
+
+We observe that the estimated coefficient transit from negative to positive regardless of the number of spline knots. The following figure visualize the transition for the spline regression with 5 knots, which supports the U-Shaped relationship.
+
+![](images/clipboard-1164654317.png){fig-align="center"}
+
+## Addition Checks
+
+In addition to the above checks for U-Shaped relationships, [@haans2016] sgguested the following checks:
+
+1.  The turning point should be within the range of observations. We can observe that both the turning points above are within the measurement window.
+
+2.  Theoretical support for the U-shaped relationship. Moderate smartphone use makes users relax and reduces sleep debt. After the turning point, the crowding out effect of screen time and blue light effects dominate the impact of screen time and increases sleep debt.
+
+The above checks support the U-Shaped relationship in our main specification.
+
+# **Model Selection.**
+
+## **Evaluation of Model Fit**
+
+In this section, we compare the performance of various models based on Akaike information criterion (AIC) and Bayesian information criterion (BIC) [@karhade2021]
+
+![](images/clipboard-2996370340.png){fig-align="center"}
+
+Based on the estimation results above, the AIC and BIC values in the curvilinear model are smaller than those of the control and linear models, suggesting that the curvilinear model outperforms the control and linear models.
+
+## **Deviation Measure of Screen Time**
+
+In this section, we consider individuals' different levels of smartphone use or use habits since individuals' dependence levels on smartphone may differ. For example, one's smartphone use amount may be systematically above the population's average while his use level is below her/his own use level on a particular day. 
+
+To address this concern, we create a deviation measure for screen time: **Screen Time Deviation = Screen Time - Unit Average Screen Time**[@ho2017; @karhade2021]
+
+![](images/clipboard-163764688.png){fig-align="center"}
+
+The estimation results above support the existence of U-shaped relationship and curvilinear model outperforms the control and linear models.
+
+# Endogeneity
+
+## Introduction
+
+In the blog [selection issues](https://shaokang-yang.net/posts/Selection%20Issue/selection.html), we discussed the confounders that may threaten the causal relationship in the study. In this section, we discuss the different types of causes of endogeneity and their corresponding remedy strategies . Overall, there are four types of causes of endogeneity: omitted variable, simultaneity, measurement Error, and selection (of treatment and/or into sample)[@hill2021].
+
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+| Endogeneity Cause                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Threaten Lvel |
++=============================================+=============================================================================================================================================================================================================================================================================================================================================================================================================================================================================+===============+
+| Omitted Variable                            | There could be factors that are `missed` in the model. For example:                                                                                                                                                                                                                                                                                                                                                                                                         | High          |
+|                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |               |
+|                                             | -   Sleep debt of previous day. An individual may need to make up sleep today if she/he had more sleep debt than average yesterday.                                                                                                                                                                                                                                                                                                                                         |               |
+|                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |               |
+|                                             | -   Party. Participating in a party may impact smartphone use and sleep simultaneously.                                                                                                                                                                                                                                                                                                                                                                                     |               |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+| Simultaneity                                | Smartphone users play smartphones as they cannot fall asleep.                                                                                                                                                                                                                                                                                                                                                                                                               | High          |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+| Measurement Error                           | Since subjects in the study wear the same devices (Fitbit) and primarly use same phones (iPhones), the measurement errors are supposed to be **systematic** if there were. This might not impact the causal effects of our argument.                                                                                                                                                                                                                                        | Low           |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+| Selection (of treatment and/or into sample) | For the Nethealth project, students were informed that the research team would collect their social networks, physical activity and sleep obtained from Fitbit devices, physical and mental health, social-psychological states, tastes and various self-reported behaviours, and demographics and background traits through surveys. There seems not likely to be significant selection bias in terms of sleep quality and smartphone use amount when recruiting students. | Low           |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+
+## Dynamic Panel Model
+
+One's sleep debt today may be influenced by the sleep debt **yesterday** and even the sleep debt of previous few days. For example, an individual may need to sleep more and reduce phone use to make up sleep today if she/he had significant high sleep debt yesterday.
+
+![](images/Dynamic%20Panel%20Model.png){fig-align="center"}
+
+To control for the dynamic endogeneity, we introduce the dynamic panel model by adding the lagged dependent variables:
+
+![](images/clipboard-1927004410.png){fig-align="center"}
+
+However, adding lagged dependent variables may introduce extra endogeneity as lagged dependent variables may be correlated with error term[@nickell1981]. To overcome this issue, we apply the Arellano–Bond estimator, which is a general method of moments (GMM) estimator based on dynamic panel data with first differences [@huang2023]. Arellano–Bond estimator uses the lagged variables as instruments to address the endogeneity bias. For example, suppose that the sleep debt today is affected by the sleep debt yesterday but not the one of the day before yesterday. In another word, $Sleep\ Debt_{i,t-2}$ only affect $Sleep\ Debt_{i,t}$ by affecting $Sleep\ Debt_{i,t-1}$. Thus, $Sleep\ Debt_{i,t-2}$ can work as an instrument variable for $Sleep\ Debt_{i,t-1}$, namely "internal instrument" [@roodman2009] which is shown in the following figure.
+
+![](images/AB.png){fig-align="center"}
+
+The situation becomes complicated if the $Sleep\ Debt_{i,t-2}$ can directly affect $Sleep\ Debt_{i,t}$, as shown below:
+
+![](images/AB2.png){fig-align="center"}
+
+We can identify the $Sleep\ Debt_{i,t-n}$ that does not affect $Sleep\ Debt_{i,t}$ directly and take it as instrument for variables from $Sleep\ Debt_{i,t-1}$ to $Sleep\ Debt_{i,t-n-1}$. The Arellano–Bond test checks the exogeneity assumption and can tell us whether the lagged variables are correlated with error term. A Sargan test tells us whether the instruments are correctly specified.
+
+![](images/clipboard-1903385873.png){fig-align="center"}
+
+The Arellano–Bond test above for AR (1) is significant while AR(2) is not, indicating that the lagged one period of sleep debt is a significant estimator for the current sleep debt. We include lagged (1) sleep debt into our main estimation and obtained the following results:
+
+![](images/clipboard-761639513.png){fig-align="center"}
+
+-   **Arellano-Bond test for AR(1) in first differences**:
+
+    -   z = -5.76
+
+    -   p-value = 0.000
+
+    -   Interpretation: This test checks for the presence of first-order serial correlation. The null hypothesis of no first-order serial correlation is rejected because the p-value is less than 0.05. This suggests that there is first-order serial correlation in the differenced errors, which is expected in first-differenced models.
+
+-   **Arellano-Bond test for AR(2) in first differences**:
+
+    -   z = 0.53
+
+    -   p-value = 0.594
+
+    -   Interpretation: This test checks for the presence of second-order serial correlation. The null hypothesis of no second-order serial correlation cannot be rejected because the p-value is greater than 0.05. This suggests that there is no second-order serial correlation in the differenced errors.
+
+-   **Sargan test of overidentifying restrictions**:
+
+    -   chi2(2) = 45.42
+
+    -   p-value = 0.000
+
+    -   Interpretation: This test checks the overall validity of the instruments. The null hypothesis is that the instruments are valid (i.e., they are not correlated with the error term). The p-value is less than 0.05, so the null hypothesis is rejected, indicating that the instruments may be invalid.
+
+-   **Hansen test of overidentifying restrictions**:
+
+    -   chi2(2) = 0.00
+
+    -   p-value = 1.000
+
+    -   Interpretation: Similar to the Sargan test, but robust to heteroskedasticity. The p-value is much greater than 0.05, so the null hypothesis cannot be rejected, indicating that the instruments are valid.
+
+We find that one minute increase in the sleep debt of the previous day can lead to **0.095** minute decrease in the current sleep debt. We also observe that the estimation for screen time terms are significant, supporting the existence of U-shaped relationship between sleep debt and screen time.
+
+The above process shows how GMM address endogeneity caused by **omitted variable**. In addition, The GMM model removes other **reverse causality** by “internally transforming the data”-taking the first difference of variables in the model[@ullah2018].

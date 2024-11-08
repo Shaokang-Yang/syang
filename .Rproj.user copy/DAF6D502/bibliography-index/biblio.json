@@ -1,0 +1,271 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1089/jwh.2021.0451",
+            "URL": "https://www.liebertpub.com/doi/10.1089/jwh.2021.0451",
+            "author": [
+                {
+                    "family": "Eliason",
+                    "given": "Erica L."
+                },
+                {
+                    "family": "Daw",
+                    "given": "Jamie R."
+                },
+                {
+                    "family": "Allen",
+                    "given": "Heidi L."
+                }
+            ],
+            "container-title": "Journal of Women’s Health",
+            "id": "eliason2022",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        7
+                    ]
+                ]
+            },
+            "note": "3 citations (Crossref/DOI) [2024-10-29] Publisher: Mary Ann Liebert, Inc., publishers",
+            "page": "949-956",
+            "title": "Association of affordable care act medicaid expansions with births among low-income women of reproductive age",
+            "type": "article-journal",
+            "volume": "31"
+        },
+        {
+            "URL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7071834/",
+            "author": [
+                {
+                    "family": "Maclean",
+                    "given": "Johanna Catherine"
+                },
+                {
+                    "family": "Saloner",
+                    "given": "Brendan"
+                }
+            ],
+            "container-title": "Journal of policy analysis and management : [the journal of the Association for Public Policy Analysis and Management]",
+            "id": "maclean2019",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "PMID: 30882195",
+            "page": "366",
+            "title": "The effect of public insurance expansions on substance use disorder treatment: Evidence from the Affordable Care Act",
+            "title-short": "The effect of public insurance expansions on substance use disorder treatment",
+            "type": "article-journal",
+            "volume": "38"
+        },
+        {
+            "URL": "https://apnews.com/article/abortion-numbers-telehealth-wecount-pills-bans-663be20ac1a40345ec5c8fe23ab43a60",
+            "id": "womenin2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024,
+                        10,
+                        22
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Section: U.S. News",
+            "title": "Women in states with bans are getting abortions at similar rates as under Roe, report says",
+            "type": ""
+        },
+        {
+            "URL": "https://apnews.com/article/abortion-numbers-telehealth-wecount-pills-bans-663be20ac1a40345ec5c8fe23ab43a60",
+            "author": [
+                {
+                    "family": "Mulvihill",
+                    "given": "Geoff"
+                }
+            ],
+            "id": "mulvihill2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024,
+                        10,
+                        22
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Section: U.S. News",
+            "title": "Women in states with bans are getting abortions at similar rates as under Roe, report says",
+            "type": ""
+        },
+        {
+            "URL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7071834/",
+            "author": [
+                {
+                    "family": "Maclean",
+                    "given": "Johanna Catherine"
+                },
+                {
+                    "family": "Saloner",
+                    "given": "Brendan"
+                }
+            ],
+            "container-title": "Journal of policy analysis and management",
+            "id": "maclean2019a",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "PMID: 30882195",
+            "page": "366",
+            "title": "The effect of public insurance expansions on substance use disorder treatment: Evidence from the Affordable Care Act",
+            "title-short": "The effect of public insurance expansions on substance use disorder treatment",
+            "type": "article-journal",
+            "volume": "38"
+        },
+        {
+            "URL": "https://www.guttmacher.org/2024/03/medication-abortion-accounted-63-all-us-abortions-2023-increase-53-2020",
+            "author": [
+                {
+                    "family": "Jones",
+                    "given": "Rachel"
+                },
+                {
+                    "family": "Friedrich-Karnik",
+                    "given": "Amy"
+                }
+            ],
+            "id": "jones2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        12
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Medication Abortion Accounted for 63",
+            "type": ""
+        },
+        {
+            "URL": "https://www.guttmacher.org/2024/03/medication-abortion-accounted-63-all-us-abortions-2023-increase-53-2020",
+            "author": [
+                {
+                    "family": "Jones",
+                    "given": "Rachel"
+                },
+                {
+                    "family": "Friedrich-Karnik",
+                    "given": "Amy"
+                }
+            ],
+            "id": "jones2024a",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        12
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Medication Abortion Accounted for 63",
+            "type": ""
+        },
+        {
+            "DOI": "10.1287/mnsc.2021.4239",
+            "URL": "https://pubsonline.informs.org/doi/10.1287/mnsc.2021.4239",
+            "author": [
+                {
+                    "family": "Wang",
+                    "given": "Guihua"
+                }
+            ],
+            "container-title": "Management Science",
+            "id": "wang2022",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "10 citations (Crossref/DOI) [2024-09-07] GSCC: 0000014",
+            "page": "6648-6665",
+            "title": "The Effect of Medicaid Expansion on Wait Time in the Emergency Department",
+            "type": "article-journal",
+            "volume": "68"
+        },
+        {
+            "URL": "https://www.npr.org/sections/health-shots/2020/05/20/858712314/organ-transplants-down-as-stay-at-home-rules-reduce-fatal-traffic-collisions",
+            "author": [
+                {
+                    "family": "Dembosky",
+                    "given": "April"
+                }
+            ],
+            "container-title": "NPR",
+            "id": "dembosky2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        5,
+                        20
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Organ Transplants Down As Stay-At-Home Rules Reduce Fatal Traffic Collisions",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1016/j.treng.2022.100119",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2666691X22000173",
+            "author": [
+                {
+                    "family": "Ebrahim Shaik",
+                    "given": "Md."
+                },
+                {
+                    "family": "Ahmed",
+                    "given": "Samsuddin"
+                }
+            ],
+            "container-title": "Transportation Engineering",
+            "id": "ebrahimshaik2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "25 citations (Crossref/DOI) [2024-11-07]",
+            "page": "100119",
+            "title": "An overview of the impact of COVID-19 on road traffic safety and travel behavior",
+            "type": "article-journal",
+            "volume": "9"
+        }
+    ],
+    "project_biblios": []
+}
