@@ -17,6 +17,7 @@ bibliography: references.bib
 ---
 
 ## Impact of Medicaid Expansion on Wait Time in the Hospitals
+test
 
 Timely treatment is crucial for healthcare outcome. The expansion of Medicaid lowered the barrier to receive healthcare service and could induce more patients to hospitals.
 
