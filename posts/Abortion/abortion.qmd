@@ -17,8 +17,6 @@ bibliography: references.bib
 ---
 
 ## Impact of Medicaid Expansion on Wait Time in the Hospitals
-test
-
 Timely treatment is crucial for healthcare outcome. The expansion of Medicaid lowered the barrier to receive healthcare service and could induce more patients to hospitals.
 
 A compelling body of research have studies the impact of Medicaid expansion on the waiting time in the emergency room. [@wang2022] find that Medicaid expansion increases ED wait time by 10.4% (or 3.5 minutes) However, it is not clear how Medicaid expansion impact waiting time of non-urgent hospitals.
