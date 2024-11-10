@@ -17,6 +17,7 @@ bibliography: references.bib
 ---
 
 ## Impact of Medicaid Expansion on Wait Time in the Hospitals
+
 Timely treatment is crucial for healthcare outcome. The expansion of Medicaid lowered the barrier to receive healthcare service and could induce more patients to hospitals.
 
 A compelling body of research have studies the impact of Medicaid expansion on the waiting time in the emergency room. [@wang2022] find that Medicaid expansion increases ED wait time by 10.4% (or 3.5 minutes) However, it is not clear how Medicaid expansion impact waiting time of non-urgent hospitals.
@@ -69,7 +70,7 @@ The following table shows the expansion timeline for Medicaid [@maclean2019a].
 
 To investigate the impact of telehealth abortion on abortion rates, we plan to use a difference-in-differences approach to compare changes in abortion rates in states that expanded telehealth abortion to those that did not.
 
--   “All telehealth abortions are counted according to **the state the medications are mailed to**.” This approach of defining and counting telehealth aborting is used by [WeCount](https://societyfp.org/research/wecount/ "https://societyfp.org/research/wecount/"), an institution for studying abortion. In the state official report (all types of abortion), I found abortions are counted by the occurrence location of the abortion procedure or residence identity (in or out of state residents). I did not find very consistent rules for counting telehealth abortions.
+-   “All telehealth abortions are counted according to **the state the medications are mailed to**.” This approach of defining and counting telehealth aborting is used by WeCount, an institution for studying abortion. In the state official report (all types of abortion), I found abortions are counted by the occurrence location of the abortion procedure or residence identity (in or out of state residents). I did not find very consistent rules for counting telehealth abortions.
 
 Some milestones for telehealth abortion:
 
