@@ -101,3 +101,23 @@ The states that applied the abortion shield laws, which protect providers to pre
 **Issues**
 
 Nevertheless, the data of county or facility-level abortion reports are very limited. [Minnesota](https://www.health.state.mn.us/data/mchs/pubs/abrpt/index.html "https://www.health.state.mn.us/data/mchs/pubs/abrpt/index.html") is one of the few states that provides month-level abortion data, but the identifier of providers is not provided. Thus, it is not possible to build a panel data set. Virginia provides annual county-level abortion reports but not monthly.
+
+### References
+
+-   Ozer et al. - 2023 - Digital Multisided Platforms and Women’s Health An Empirical Analysis of Peer-to-Peer Lending and Abortion Rates
+
+    <iframe src="PDF/Ozer et al. - 2023 - Digital Multisided Platforms and Women’s Health An Empirical Analysis of Peer-to-Peer Lending and A.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+    </iframe>
+
+-   Augustine and Piazza - 2022 - Category Evolution Under Conditions of Stigma The Segregation of Abortion Provision into Specialist Clinics in the United States
+
+    <iframe src="PDF/Augustine and Piazza - 2022 - Category Evolution Under Conditions of Stigma The Segregation of Abortion Provision into Specialist.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+    </iframe>
+
+-   Thomadsen et al. - 2023 - The Impact of a Supreme Court Decision on the Preferences of Americans Regarding Abortion Policy
+
+    <iframe src="PDF/Thomadsen et al. - 2023 - The Impact of a Supreme Court Decision on the Preferences of Americans Regarding Abortion Policy.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+    </iframe>
