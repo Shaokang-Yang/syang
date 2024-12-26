@@ -1,8 +1,10 @@
 ---
 title: "Shaokang Yang"
+mainfont: Lato
+monofont: Roboto
 ---
 
--   **Ph.D. in Business Information Technology**
+-   **Ph.D. in Business Information Technology (Expected)**
 
 Virginia Polytechnic Institute and State University
 
@@ -10,6 +12,6 @@ Virginia Polytechnic Institute and State University
 
 University of Milan
 
--   **Bachelor of Engineering in Ship Electrical and Electronic Engineering/Bachelor of Economics in Finance**
+-   **Bachelor of Engineering/Bachelor of Economics**
 
 Jimei University
