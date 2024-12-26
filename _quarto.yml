@@ -31,6 +31,8 @@ website:
 format:
   html:
     theme: cosmo
+    mainfont: Lato
+    monofont: Roboto
     css: styles.css
     toc: true
     number-sections: true

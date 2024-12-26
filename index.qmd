@@ -1,7 +1,6 @@
 ---
 title: "Shaokang Yang"
-mainfont: Lato
-monofont: Roboto
+
 ---
 
 -   **Ph.D. in Business Information Technology (Expected)**
