@@ -2,6 +2,7 @@
 title: "Idea Development"
 date: 10/29/2024
 date-modified: last-modified
+visibility: hidden
 date-format: full
 categories: [Others]
 website:
@@ -14,7 +15,6 @@ format:
   html:
     page-layout: full
 bibliography: references.bib
-visibility: hidden
 ---
 
 ## Impact of Medicaid Expansion on Wait Time in the Hospitals
