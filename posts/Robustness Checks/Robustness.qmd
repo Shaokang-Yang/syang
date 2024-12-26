@@ -45,7 +45,7 @@ The margins plot based on fixed effect model with the above data is as follows:
 
 ![](images/estimation.png){fig-align="center"}
 
-Considering the existence of outliers, the upwarding part of the U-shape might be caused by the outliers at the tail (the rightmost few bars). To check whether the U-shaped relationship is caused by outliers, we reviewed the literature about the treatement of outliers and identified the following outlier treatment strategies: **winsorization, trimming, and interquartile range method** [@leone2019; @mitton2022; @vinutha2018 ].
+Considering the existence of outliers, the upwarding part of the U-shape might be caused by the outliers at the tail (the rightmost few bars). To check whether the U-shaped relationship is caused by outliers, we reviewed the literature about the treatement of outliers and identified the following outlier treatment strategies: **winsorization, trimming, and interquartile range method** [@leone2019; @mitton2022; @vinutha2018].
 
 ![](images/clipboard-3892815503.png){fig-align="center"}
 
