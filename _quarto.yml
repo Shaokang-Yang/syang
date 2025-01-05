@@ -24,10 +24,10 @@ website:
       - research.qmd
       - teaching.qmd
       - posts.qmd # add your posts.qmd file to your navbar!
-      - icon: github
-        href: https://github.com/
-      - icon: linkedin
-        href: https://www.linkedin.com/in/shaokang-y-52b633162/
+      # - icon: github
+      #   href: https://github.com/
+      # - icon: linkedin
+      #   href: https://www.linkedin.com/in/shaokang-y-52b633162/
 format:
   html:
     theme: cosmo
