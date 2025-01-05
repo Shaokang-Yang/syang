@@ -1,0 +1,1164 @@
+---
+title: "Behavior Segmentation for Smartphone Use "
+date: 12/09/2023
+date-modified: last-modified
+date-format: full
+categories: [Paper1]
+image: "cluster1.png"
+tbl-colwidths: [5,30,125]
+format: 
+  html:
+    page-layout: full
+---
+
+We cluster the smartphone use behaviors based on the three major metrics of smartphone use actions: Screen time, unlock frequency and message.
+
+## Descriptive Statistics
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+import time;import pandas as pd;import numpy as np;import datetime
+from datetime import datetime;from datetime import timedelta;import sqlite3;import warnings
+import matplotlib.pyplot as plt;import seaborn as sns;warnings.filterwarnings('ignore')
+
+df=pd.read_csv("/Users/shaokangyang/Library/CloudStorage/GoogleDrive-sky.ang510@gmail.com/My Drive/Nethealth/Data/CNSA/combine/7/df7_3hr.csv")
+df1 = df
+df1[['sleep_debt','sleep_duration','screen_time','message','unlock','especiallyclose_m','family_m','friend_m','romantic_m','naps','naps_dur']].describe(percentiles=[.10,.15,.20,.25,.50,.55,.60,.65,.70, .75,.80,.85,.90,.95]).round(2)
+```
+
+## Trend Analysis
+
+First, we explore the relationships among variables of sleep debt, screen time (\>15 min) and message with measurement window of three hours:
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+# Creating a special bin for 0
+df1=df[df['screen_time']>15]
+bins = [-np.inf, 0.001] + list(range(15, 185, 5))  # 0.1 to include 0 in the first bin exclusively
+df1['screen_time_bin'] = pd.cut(df1['screen_time'], bins=bins, right=False, include_lowest=True)
+# Recalculating the aggregated data
+grouped = df1.groupby('screen_time_bin').agg({'sleep_debt':'mean', 'message':'mean', 'screen_time':'count'}).reset_index()
+# Replotting with the adjusted bins
+fig, ax1 = plt.subplots(figsize=(14, 8))
+# Line plot for sleep debt trend
+line1, = ax1.plot(grouped['screen_time_bin'].astype(str), grouped['sleep_debt'], color='blue', linestyle='-', marker='o', label='Sleep Debt')
+# Adding labels for sleep debt
+for x, y in zip(grouped['screen_time_bin'].astype(str), grouped['sleep_debt']):
+    ax1.text(x, y, f'{y:.2f}', va='bottom', ha='center', color='blue')
+# Setting the left y-axis for sleep debt
+ax1.set_xlabel('Screen Time (minutes)')
+ax1.set_ylabel('Average Sleep Debt')
+ax1.set_title('Sleep Debt, Screen Time and Message')
+ax1.tick_params(axis='x', rotation=45)
+# Line plot for message count on a secondary y-axis
+ax2 = ax1.twinx()
+line2, = ax2.plot(grouped['screen_time_bin'].astype(str), grouped['message'], color='darkorange', linestyle='--', marker='o', label='Message')
+# Adding labels for message count
+for i, txt in enumerate(grouped['message']):
+    ax2.annotate(f'{txt:.2f}', (grouped['screen_time_bin'].astype(str)[i], grouped['message'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+ax2.set_ylabel('Message')
+# Bar plot for the number of observations on a secondary y-axis
+ax3 = ax1.twinx()
+bars = ax3.bar(grouped['screen_time_bin'].astype(str), grouped['screen_time'], width=0.4, color='lightgrey', alpha=0.5, label='Number of Observations')
+ax3.spines['right'].set_position(('outward', 60))  # Offset the right spine of ax3
+ax3.set_ylabel('Number of Observations')
+# Labeling the number of observations above each bar
+for bar in bars:
+    yval = bar.get_height()
+    ax3.text(bar.get_x() + bar.get_width() / 2, yval, f'{int(yval)}', va='bottom', ha='center', color='black')
+# Adjusting the plot
+ax1.grid(True, which='both', linestyle='--', linewidth=0.5)
+ax2.grid(False)
+ax3.grid(False)
+# Adding legends
+fig.legend(loc='upper right')
+fig.tight_layout()
+plt.show()
+```
+
+## Clustering Analysis
+
+### Cluster=11
+
+#### Front view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=11,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#c27ba0',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b',   # Brown
+    '#c27ba0'
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 12):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=11)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+plt.show()
+```
+
+#### Rear view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=11,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#c27ba0',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b',   # Brown
+    '#c27ba0'
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 12):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=11)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+ax.view_init(30, 120)
+plt.show()
+
+```
+
+### Descriptive Statistics by Cluster
+
+#### Sleep Debt
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+summary = df.groupby('cluster')['sleep_debt'].describe().round(2)
+print(summary)
+```
+
+The above summary suggests that **cluster 2** has the minimal sleep debt of **31.53** minutes. In comparison, **cluster 10** has the maximal sleep debt of **54.76** minutes.
+
+#### Screen Time
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['screen_time'].describe().round(2)
+print(summary)
+
+```
+
+#### Unlock
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['unlock'].describe().round(2)
+print(summary)
+```
+
+#### Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['message'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 2 has the **second highest message frequency**, 79.57. It implies that message might reduce sleep debt.
+
+#### Close Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['especiallyclose_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 2 has the **highest close message frequency**, 49.06. It implies that close message might reduce sleep debt.
+
+#### Family Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['family_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 2 has the **highest family message frequency**, 5.89. It implies that family message might reduce sleep debt.
+
+#### Friend Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['friend_m'].describe().round(2)
+print(summary)
+```
+
+#### Romantic Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['romantic_m'].describe().round(2)
+print(summary)
+```
+
+#### Steps
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['steps'].describe().round(1)
+print(summary)
+```
+
+### Cluster=10
+
+#### Front view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=10,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#FFC300',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b'   # Brown
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 11):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=10)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+plt.show()
+```
+
+#### Rear view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=10,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#FFC300',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b'   # Brown
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 11):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=10)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+ax.view_init(30, 60)
+plt.show()
+```
+
+### Descriptive Statistics by Cluster
+
+#### Sleep Debt
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+summary = df.groupby('cluster')['sleep_debt'].describe().round(2)
+print(summary)
+```
+
+The above summary suggests that **cluster 6** has the minimal sleep debt of **31.41** minutes. In comparison, **cluster 4** has the maximal sleep debt of **54.50** minutes.
+
+#### Screen Time
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['screen_time'].describe().round(2)
+print(summary)
+
+```
+
+#### Unlock
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['unlock'].describe().round(2)
+print(summary)
+```
+
+#### Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['message'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 4 has the **second highest message frequency, 78.15**. It implies that message might reduce sleep debt.
+
+#### Close Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['especiallyclose_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 6 has the **highest close message frequency, 47.81**. It implies that close message might reduce sleep debt.
+
+#### Family Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['family_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 6 has the **highest family message frequency, 5.83**. It implies that family message might reduce sleep debt.
+
+#### Friend Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['friend_m'].describe().round(2)
+print(summary)
+```
+
+#### Romantic Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['romantic_m'].describe().round(2)
+print(summary)
+```
+
+#### Steps
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['steps'].describe().round(1)
+print(summary)
+```
+
+### Cluster=9
+
+#### Front view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=9,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#FFC300',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b'   # Brown
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 10):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=9)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+plt.show()
+```
+
+#### Rear view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=9,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#FFC300',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b'   # Brown
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 10):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=9)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+ax.view_init(30, 60)
+plt.show()
+```
+
+### Descriptive Statistics by Cluster
+
+#### Sleep Debt
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+summary = df.groupby('cluster')['sleep_debt'].describe().round(2)
+print(summary)
+```
+
+The above summary suggests that **cluster 5** has the minimal sleep debt of **31.47** minutes. In comparison, **cluster 8** has the maximal sleep debt of **54.61** minutes.
+
+#### Screen Time
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['screen_time'].describe().round(2)
+print(summary)
+
+```
+
+#### Unlock
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['unlock'].describe().round(2)
+print(summary)
+```
+
+#### Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['message'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 5 has the **second highest message frequency, 77.59**. It implies that message might reduce sleep debt.
+
+#### Close Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['especiallyclose_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 5 has the **highest close message frequency, 47.44**. It implies that close message might reduce sleep debt.
+
+#### Family Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['family_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 5 has the **highest family message frequency, 5.76**. It implies that family message might reduce sleep debt.
+
+#### Friend Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['friend_m'].describe().round(2)
+print(summary)
+```
+
+#### Romantic Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['romantic_m'].describe().round(2)
+print(summary)
+```
+
+#### Steps
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['steps'].describe().round(1)
+print(summary)
+```
+
+### Cluster=8
+
+#### Front view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=8,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#FFC300',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b'   # Brown
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 9):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=8)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+plt.show()
+```
+
+#### Rear view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=8,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#FFC300',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b'   # Brown
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 9):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=8)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+ax.view_init(30, 60)
+plt.show()
+
+```
+
+### Descriptive Statistics by Cluster
+
+#### Sleep Debt
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+summary = df.groupby('cluster')['sleep_debt'].describe().round(2)
+print(summary)
+```
+
+The above summary suggests that **cluster 5** has the minimal sleep debt of **31.47** minutes. In comparison, **cluster 8** has the maximal sleep debt of **54.61** minutes.
+
+#### Screen Time
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['screen_time'].describe().round(2)
+print(summary)
+
+```
+
+#### Unlock
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['unlock'].describe().round(2)
+print(summary)
+```
+
+#### Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['message'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 5 has the **second highest message frequency, 77.59**. It implies that message might reduce sleep debt.
+
+#### Close Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['especiallyclose_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 5 has the **highest close message frequency, 47.44**. It implies that close message might reduce sleep debt.
+
+#### Family Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['family_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 5 has the **highest family message frequency, 5.76**. It implies that family message might reduce sleep debt.
+
+#### Friend Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['friend_m'].describe().round(2)
+print(summary)
+```
+
+#### Romantic Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['romantic_m'].describe().round(2)
+print(summary)
+```
+
+#### Steps
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['steps'].describe().round(1)
+print(summary)
+```
+
+### Cluster=7
+
+#### Front view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=7,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#FFC300',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b'   # Brown
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 8):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=7)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+plt.show()
+```
+
+#### Rear view
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+random_seed = 1
+#df1 = df[df['message'] < 240]
+df1=df
+df1.loc[df1['unlock'] > 41, 'unlock'] = 41;df1.loc[df1['message'] > 96, 'message'] = 96
+# Normalizing the data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df1[['screen_time', 'unlock', 'message']])
+# KMeans clustering on normalized data
+kmeans = KMeans(n_clusters=7,random_state=random_seed)
+clusters = kmeans.fit_predict(df_scaled)
+# Adding the cluster data to the original dataframe
+df1['cluster'] = clusters+1
+# Visualizing the clusters in 3D with normalized data
+# Custom colors for each cluster (12 in total)
+nature_colors = [
+    '#1f77b4',  # Blue
+    '#ff7f0e',  # Orange
+    '#2ca02c',  # Green
+    '#d62728',  # Red
+    '#9467bd',  # Purple
+    '#ffbb78',  # Light Orange
+    '#7a876f',  # Pink
+    '#17becf',  # Gray
+    '#bcbd22',  # Olive
+    '#FFC300',  # Yellow
+    '#aec7e8',  # Light Blue
+    '#8c564b'   # Brown
+]
+fig = plt.figure(figsize=(16, 9.6))
+ax = fig.add_subplot(111, projection='3d')
+# Plotting each cluster with a custom color
+for i in range(1, 8):  # Cluster numbers now range from 1 to 12
+    cluster_data = df1[df1['cluster'] == i]
+    ax.scatter(cluster_data['screen_time'], cluster_data['unlock'], cluster_data['message'], 
+               color=nature_colors[i - 1], label=f'Cluster {i}', marker='o')
+ax.set_title('Behavior Segmentation for Smartphone Use (Cluster=7)')
+ax.set_xlabel('Screen Time (minutes)')
+ax.set_ylabel('Unlock Frequency')
+ax.set_zlabel('Number of Messages')
+# Legend
+ax.legend(title="Clusters")
+ax.view_init(30, 60)
+plt.show()
+
+```
+
+### Descriptive Statistics by Cluster
+
+#### Sleep Debt
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+
+summary = df.groupby('cluster')['sleep_debt'].describe().round(2)
+print(summary)
+```
+
+The above summary suggests that **cluster 3** has the minimal sleep debt of **35.79** minutes. In comparison, **cluster 6** has the maximal sleep debt of **53.48** minutes.
+
+#### Screen Time
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['screen_time'].describe().round(2)
+print(summary)
+
+```
+
+#### Unlock
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['unlock'].describe().round(2)
+print(summary)
+```
+
+#### Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['message'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 3 has the **a message frequency of 7.56**. It implies that message level is not necessarily associated with sleep debt level.
+
+#### Close Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['especiallyclose_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 3 has the **a close message frequency of 2.90**. It implies that close message level is not necessarily associated with sleep debt level.
+
+#### Family Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['family_m'].describe().round(2)
+print(summary)
+```
+
+The table above suggests the cluster 3 has the **a family message frequency of 0.74**. It implies that family message might reduce sleep debt.
+
+#### Friend Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['friend_m'].describe().round(2)
+print(summary)
+```
+
+#### Romantic Message
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['romantic_m'].describe().round(2)
+print(summary)
+```
+
+#### Steps
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+summary = df.groupby('cluster')['steps'].describe().round(1)
+print(summary)
+```
