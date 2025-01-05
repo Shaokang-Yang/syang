@@ -59,6 +59,16 @@
   {
     "listing": "/ProjectBlog/paper2.html",
     "items": [
+      "/ProjectBlog/paper2/Network Looking up/lookup.html",
+      "/ProjectBlog/paper2/Mediation Effect of Steps/index.html",
+      "/ProjectBlog/paper2/Survey Overlap/index.html",
+      "/ProjectBlog/paper2/SP2 Review Response/ReviewResponse.html",
+      "/ProjectBlog/paper2/Paper 2/paper2.html"
+    ]
+  },
+  {
+    "listing": "/ProjectBlog/paper1.html",
+    "items": [
       "/ProjectBlog/paper1/IV/IV.html",
       "/ProjectBlog/paper1/Clustering Anlysis/cluster.html",
       "/ProjectBlog/paper1/Robustness Checks/Robustness.html",
@@ -70,16 +80,6 @@
       "/ProjectBlog/paper1/Battery levels as IV (3 hours)/batteryIV.html",
       "/ProjectBlog/paper1/Selection Issue/selection.html",
       "/ProjectBlog/paper1/Paper 1/paper1.html"
-    ]
-  },
-  {
-    "listing": "/ProjectBlog/paper1.html",
-    "items": [
-      "/ProjectBlog/paper2/Network Looking up/lookup.html",
-      "/ProjectBlog/paper2/Mediation Effect of Steps/index.html",
-      "/ProjectBlog/paper2/Survey Overlap/index.html",
-      "/ProjectBlog/paper2/SP2 Review Response/ReviewResponse.html",
-      "/ProjectBlog/paper2/Paper 2/paper2.html"
     ]
   }
 ]
