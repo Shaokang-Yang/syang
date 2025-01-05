@@ -10,6 +10,10 @@ listing:
   sort-ui: [date-modified, title]
   fields: [image, date-modified, title, description, date, author]
   page-size: 6
+format:
+  html:
+    css: styles2.css
+class: custom-font-pos
 website:
   favicon: Virginia_Tech_seal.svg.png
   image: Horizontal_VT_Full_Color_RGB.png

@@ -444,71 +444,71 @@
     "objectID": "posts/Paper 1/paper1.html#falling-asleep-hours-distribution",
     "href": "posts/Paper 1/paper1.html#falling-asleep-hours-distribution",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "",
-    "text": "Normal Sleep: fall asleep from 22 pm to 6 am. (95.99 % of Total.)"
+    "section": "Falling Asleep Hours Distribution",
+    "text": "Falling Asleep Hours Distribution\n\nNormal Sleep: fall asleep from 22 pm to 6 am. (95.99 % of Total.)"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#falling-wake-hours-distribution",
     "href": "posts/Paper 1/paper1.html#falling-wake-hours-distribution",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "2 Falling Wake Hours Distribution",
-    "text": "2 Falling Wake Hours Distribution"
+    "section": "Falling Wake Hours Distribution",
+    "text": "Falling Wake Hours Distribution"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#interaction-of-time-terms",
     "href": "posts/Paper 1/paper1.html#interaction-of-time-terms",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "3 Interaction of Time terms",
-    "text": "3 Interaction of Time terms\n\n\nInsession x Day of Week x Go2Bed Hour:\n1 x 5 x 2: 2 am on Friday of a Semester\nAbnormal Screen Time Threshold: 12 -&gt; 3.5 hours\nScreen time as control: We focus on Technology impact under the influence of Human factors"
+    "section": "Interaction of Time terms",
+    "text": "Interaction of Time terms\n\n\nInsession x Day of Week x Go2Bed Hour:\n1 x 5 x 2: 2 am on Friday of a Semester\nAbnormal Screen Time Threshold: 12 -&gt; 3.5 hours\nScreen time as control: We focus on Technology impact under the influence of Human factors"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#conclusion",
     "href": "posts/Paper 1/paper1.html#conclusion",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "4 Conclusion",
-    "text": "4 Conclusion\n\n\nSocial interaction via smartphone can benefit sleep quality\nInteraction with close contacts prolong sleep\nInteraction with certain relationships of contacts (e.g. family) prolong sleep"
+    "section": "Conclusion",
+    "text": "Conclusion\n\n\nSocial interaction via smartphone can benefit sleep quality\nInteraction with close contacts prolong sleep\nInteraction with certain relationships of contacts (e.g. family) prolong sleep"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#moderating-impact-the-way-of-interaction",
     "href": "posts/Paper 1/paper1.html#moderating-impact-the-way-of-interaction",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "5 Moderating Impact: The Way of Interaction",
-    "text": "5 Moderating Impact: The Way of Interaction\n\n\nMessage: Positive moderation\nCall: Depends on the relationship and closeness"
+    "section": "Moderating Impact: The Way of Interaction",
+    "text": "Moderating Impact: The Way of Interaction\n\n\nMessage: Positive moderation\nCall: Depends on the relationship and closeness"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#result-1-social-closeness-via-message",
     "href": "posts/Paper 1/paper1.html#result-1-social-closeness-via-message",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "6 Result 1: Social Closeness via Message",
-    "text": "6 Result 1: Social Closeness via Message"
+    "section": "Result 1: Social Closeness via Message",
+    "text": "Result 1: Social Closeness via Message"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#result-2-social-closeness-via-call",
     "href": "posts/Paper 1/paper1.html#result-2-social-closeness-via-call",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "7 Result 2: Social Closeness via Call",
-    "text": "7 Result 2: Social Closeness via Call"
+    "section": "Result 2: Social Closeness via Call",
+    "text": "Result 2: Social Closeness via Call"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#result-3-relationship-via-message",
     "href": "posts/Paper 1/paper1.html#result-3-relationship-via-message",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "8 Result 3: Relationship via Message",
-    "text": "8 Result 3: Relationship via Message"
+    "section": "Result 3: Relationship via Message",
+    "text": "Result 3: Relationship via Message"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#result-4-relationship-via-call",
     "href": "posts/Paper 1/paper1.html#result-4-relationship-via-call",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "9 Result 4: Relationship via Call",
-    "text": "9 Result 4: Relationship via Call"
+    "section": "Result 4: Relationship via Call",
+    "text": "Result 4: Relationship via Call"
   },
   {
     "objectID": "posts/Paper 1/paper1.html#result-5-pre-sleep-communication-benefit-sleep-quality",
     "href": "posts/Paper 1/paper1.html#result-5-pre-sleep-communication-benefit-sleep-quality",
     "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "10 Result 5: Pre-Sleep Communication benefit Sleep Quality",
-    "text": "10 Result 5: Pre-Sleep Communication benefit Sleep Quality"
+    "section": "Result 5: Pre-Sleep Communication benefit Sleep Quality",
+    "text": "Result 5: Pre-Sleep Communication benefit Sleep Quality"
   },
   {
     "objectID": "posts/Survey Overlap/index.html",
@@ -600,33 +600,5 @@
     "title": "Shaokang Yang",
     "section": "",
     "text": "Ph.D. in Business Information Technology (Expected)\n\nVirginia Polytechnic Institute and State University\n\nM.Sc. in Data Science and Economics\n\nUniversity of Milan\n\nBachelor of Engineering/Bachelor of Economics\n\nJimei University"
-  },
-  {
-    "objectID": "posts/Paper 2/paper2.html",
-    "href": "posts/Paper 2/paper2.html",
-    "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "",
-    "text": "Humans are inherently social beings.\n\nSocial engagement ➟ belongingness, social fulfillment, etc (Luo et al. 2020).\nSocial isolation ➟ anxiety, depression (Robb et al. 2020), and suicide (Garnett F. and Curtin C. 2023)."
-  },
-  {
-    "objectID": "posts/Paper 2/paper2.html#section",
-    "href": "posts/Paper 2/paper2.html#section",
-    "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "1 ",
-    "text": "1 \n\n1.1"
-  },
-  {
-    "objectID": "posts/Paper 2/paper2.html#section-2",
-    "href": "posts/Paper 2/paper2.html#section-2",
-    "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "22 ",
-    "text": "22"
-  },
-  {
-    "objectID": "posts/Paper 1/paper1.html",
-    "href": "posts/Paper 1/paper1.html",
-    "title": "Smartphone Use, Social Support, and Sleep Health",
-    "section": "",
-    "text": "Normal Sleep: fall asleep from 22 pm to 6 am. (95.99 % of Total.)"
   }
 ]
