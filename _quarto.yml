@@ -23,7 +23,7 @@ website:
         text: Home
       - research.qmd
       - teaching.qmd
-      - posts.qmd # add your posts.qmd file to your navbar!
+      # - posts.qmd # add your posts.qmd file to your navbar!
       # - icon: github
       #   href: https://github.com/
       # - icon: linkedin
