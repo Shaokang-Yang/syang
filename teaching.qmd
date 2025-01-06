@@ -1,9 +1,0 @@
----
-title: "Teaching"
-format:
-  html:
-    css: styles2.css
-class: custom-font-pos
----
-
-

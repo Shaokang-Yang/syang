@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Restricted Area"
-AuthUserFile /Users/shaokangyang/Downloads/.htpasswd
-Require valid-user
