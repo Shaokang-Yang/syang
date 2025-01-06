@@ -1061,7 +1061,7 @@
     "href": "ProjectBlog/others.html",
     "title": "Others",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nIdea Development\n\n\n\n\n\n\n\n\n\nOct 29, 2024\n\n\n\n\n\n\nModified\n\n\nJan 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlgorithmic Nudging: An Application in Curbing Problematic Smartphone Use\n\n\n\n\n\n\n\n\n\nApr 16, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrame Theory\n\n\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nDobbs’ Decision And Abortion\n\n\n\n\n\n\n\n\n\nJan 5, 2025\n\n\n\n\n\n\nModified\n\n\nJan 6, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdea Development\n\n\n\n\n\n\n\n\n\nOct 29, 2024\n\n\n\n\n\n\nModified\n\n\nJan 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlgorithmic Nudging: An Application in Curbing Problematic Smartphone Use\n\n\n\n\n\n\n\n\n\nApr 16, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrame Theory\n\n\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ProjectBlog/others/Algorithmic Nudge/nudge.html",
@@ -1153,5 +1153,19 @@
     "title": "Idea Development",
     "section": "5 Impact of Telehealth on Abortion Rates",
     "text": "5 Impact of Telehealth on Abortion Rates\n1 in 5 abortion cases are through Telehealth in June 2024, which increased significantly compared to the 1 in 25 in April 2022 (Mulvihill 2024). Telehealth abortion is a safe and effective way to access abortion services. Medication abortion accounted for 39% of all abortions in 2017. This number increased to 63% in 2022 (Jones and Friedrich-Karnik 2024). Telehealth abortion has been shown to increase access to abortion services, reduce the abortion stigma.\n\n\n\n\n\nTo investigate the impact of telehealth abortion on abortion rates, we plan to use a difference-in-differences approach to compare changes in abortion rates in states that expanded telehealth abortion to those that did not.\n\n“All telehealth abortions are counted according to the state the medications are mailed to.” This approach of defining and counting telehealth aborting is used by WeCount, an institution for studying abortion. In the state official report (all types of abortion), I found abortions are counted by the occurrence location of the abortion procedure or residence identity (in or out of state residents). I did not find very consistent rules for counting telehealth abortions.\n\nSome milestones for telehealth abortion:\n\nIn April 2020, the F.D.A. removed the in-person requirement for the duration of the pandemic, allowing pills to be mailed.\nOn December 16th 2021, a new F.D.A. decision made the suspension permanent.\nOn June 24, 2022, the US Supreme Court overturned Roe v. Wade.\n\n \nThe states that applied the abortion shield laws, which protect providers to prescribe abortion pills to states where abortion is banned:\n\nCalifornia\nColorado \nConnecticut \nMassachusetts \nNew York \nVermont \nWashington\n\n \nIssues\nNevertheless, the data of county or facility-level abortion reports are very limited. Minnesota is one of the few states that provides month-level abortion data, but the identifier of providers is not provided. Thus, it is not possible to build a panel data set. Virginia provides annual county-level abortion reports but not monthly.\n\n5.1 References\n\nOzer et al. - 2023 - Digital Multisided Platforms and Women’s Health An Empirical Analysis of Peer-to-Peer Lending and Abortion Rates\n\n\nAugustine and Piazza - 2022 - Category Evolution Under Conditions of Stigma The Segregation of Abortion Provision into Specialist Clinics in the United States\n\n\nThomadsen et al. - 2023 - The Impact of a Supreme Court Decision on the Preferences of Americans Regarding Abortion Policy"
+  },
+  {
+    "objectID": "ProjectBlog/others/Natality/natality.html",
+    "href": "ProjectBlog/others/Natality/natality.html",
+    "title": "Dobbs’ Decision And Abortion",
+    "section": "",
+    "text": "Restrictions on abortion have rendered significant impact on abortion decision and the number of births. Texas launched two abortion policies:\nSenate Bill 8 of Texas is a bill that forbidden abortions for pregnancy over six weeks."
+  },
+  {
+    "objectID": "ProjectBlog/others/Natality/natality.html#background",
+    "href": "ProjectBlog/others/Natality/natality.html#background",
+    "title": "Dobbs’ Decision And Abortion",
+    "section": "",
+    "text": "Restrictions on abortion have rendered significant impact on abortion decision and the number of births. Texas launched two abortion policies:\nSenate Bill 8 of Texas is a bill that forbidden abortions for pregnancy over six weeks."
   }
 ]

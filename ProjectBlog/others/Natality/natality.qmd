@@ -1,0 +1,24 @@
+---
+title: "Dobbs' Decision And Abortion"
+date: 01/05/2025
+date-modified: last-modified
+draft: false
+date-format: full
+categories: [Others]
+website:
+  comments: 
+    utterances:
+      repo: quarto-dev/quarto-web
+#image: "cluster1.png"
+tbl-colwidths: [5,30,125]
+format: 
+  html:
+    page-layout: full
+bibliography: references.bib
+---
+
+## Background
+
+Restrictions on abortion have rendered significant impact on abortion decision and the number of births. Texas launched two abortion policies:
+
+Senate Bill 8 of Texas is a bill that forbidden abortions for pregnancy over six weeks.
