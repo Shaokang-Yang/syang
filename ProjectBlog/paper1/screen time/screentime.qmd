@@ -1,0 +1,218 @@
+---
+title: "RQ2: Effects of Communication-Driven Use"
+date: 05/21/2024
+date-modified: last-modified
+date-format: full
+categories: [Paper1]
+image: "images/msg_level-mean_winsor_screen.png"
+tbl-colwidths: [5,50,75]
+format: 
+  html:
+    toc: true
+    toc-location: right
+    page-layout: full
+bibliography: references.bib
+---
+
+# Hypothesis Development
+
+For the hypotheses development, I referred to the  paper  “Thinking about U: Theorizing and testing U- and inverted U-shaped relationships in strategy research” [@haans2016]to motivate and develop our paper. he measure- ment of smartphone usage can be measured by:
+
+1.  Duration
+
+2.  Frequency [@marciano2022]
+
+## The Effects of Overall Smartphone Usage
+
+### Positive Effects (Increasing pathway)
+
+1.  Crowding-out effect on sleep time
+
+2.  Increases exposure time to blue light
+
+### Negative Effects (Decreasing pathway)
+
+Using smartphones for leisure activities increases psycho- logical detachment from work/study [@hülsheger2014]. In addition, “The dose makes the poison.” The impact of overall smartphone use on sleep debt may depend on the amount of use, and moderate smartphone use could benefit sleep:
+
+![](images/U-Shape.png){fig-align="center"}
+
+We hypothesize that:
+
+**Hypothesis 1:** There exists a U-shaped relationship between sleep debt and the amount of smartphone use before sleep.
+
+## Moderating Effects of Social Interaction Usage
+
+We measure social interaction usage by two indicators: message count and network size (contact count). We create a moderator Message Level: The message level is created based on the mean of message frequency(1 if \> mean, 0 if $<$ mean). Same for Network Size Level.
+
+[![Topologies of Socialization](images/clipboard-1010489237.png){fig-alt="Source: flickr" fig-align="center"}](https://www.flickr.com/photos/joelogs/89627794/)
+
+[![Technology and Relationships](images/Relationship_Tech.png){fig-align="center"}](https://andrewsobel.com/article/technology-and-relationships-where-should-you-spend-your-time/)
+
+Based on the topologies about interaction and intimacy, we propose that:
+
+![](images/clipboard-3692274076.png){fig-align="center"}
+
+We estimate the moderating effects of message level and network size with the following specifications:
+
+![](images/clipboard-3930394300.png){fig-align="center"}
+
+The estimation results are as follow:
+
+![](images/clipboard-681847467.png){fig-align="center"}
+
+### Social Interaction as Moderator
+
+![](images/message_moderator.png){fig-align="center"}
+
+### Social Intimacy as Moderator
+
+![](images/Intimacy_moderator.png){fig-align="center"}
+
+### Social Intimacy as Moderator
+
+![](images/Socialization_Moderator.png){fig-align="center"}
+
+## Robustness Checks
+
+![](images/clipboard-2673833856.png)
+
+### ![](images/clipboard-874171734.png)
+
+### ![](images/clipboard-2840737469.png)
+
+### Contact Level as Moderator
+
+![](images/contact_moderator.png){fig-align="center"}
+
+### InnerContact Level as Moderator
+
+![](images/InnerContact-Moderator.png){fig-align="center"}
+
+### Socialization as Moderator
+
+![](images/AlterSocialization_Moderator.png){fig-align="center"}
+
+### Family as Moderator
+
+![](images/contact_family50mp.png)
+
+# Model and Results
+
+## Descriptive Statistics
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+import time;import pandas as pd;import numpy as np;import datetime
+from datetime import datetime;from datetime import timedelta;import sqlite3;import warnings
+import matplotlib.pyplot as plt;import seaborn as sns;warnings.filterwarnings('ignore')
+
+df=pd.read_csv("/Users/shaokangyang/Library/CloudStorage/GoogleDrive-sky.ang510@gmail.com/My Drive/Nethealth/Data/CNSA/combine/7/df7_3hr.csv")
+
+df[['sms','mms','whatsapp','message','length','bytes','screen_time','screen_com','screen_nocom','sc_com_pct','screen_com_level2','com_level']].describe(percentiles=[.10,.15,.20,.25,.50,.55,.60,.65,.70, .75,.80,.85,.90,.95]).round(2)
+```
+
+1.  **sms:** SMS message
+
+2.  **mms:** MMS message
+
+3.  **whatsapp:** Whatsapp message
+
+4.  **message:** sms+mms+whatsapp
+
+5.  **length:** Total Length of message in characters within 3 hours
+
+6.  **bytes (KB):** Total Size of image (MMS) in bytes within 3 hours
+
+7.  **screen_time:** overall screen time (minutes) within 3 hours
+
+8.  **screen_com:** communication screen time (minutes) within 3 hours
+
+9.  **screen_nocom:** non-communication screen time (minutes) within 3 hours
+
+10. **sc_com_pct:** percentage of communication screen time (screen_com/screen_time, 0-100)
+
+11. **screen_com_level2:** dummy variable for communication screen time (0: sc_com_pct\<50 %; 1: sc_com_pct ≥ 50 %)
+
+12. **com_level:** dummy variable for message frequency (0: message \<average message ; 1: message ≥ average message)
+
+Since the communication screen time depends on SMS messaging time and MMS messaging time. We calculate the approximate communication time as follow:
+
+![](images/clipboard-3772066647.png){fig-align="center"}
+
+SMS messaging time depends on
+
+-   the text characters (length),
+
+-   SMS texting speed (the number of characters one can text per minute),
+
+-   SMS (the number of SMSs within 3 hours).
+
+MMS messaging time depends on
+
+-   the size of MMS (Bytes),
+
+-   MMS messaging speed (the Bytes one can communicate per minute),
+
+-   MMS (the number of MMSs within 3 hours).
+
+## Communication Vs No-Communication (with Assumptions)
+
+### Impact of Overall Screen Time
+
+![](images/clipboard-1725006988.png){fig-align="center"}
+
+The predicted sleep debt is based on the third column (highlighted), the turning pint for the overall screen time is **90.348** minutes.
+
+![](images/overall_10-01.png){fig-align="center"}
+
+### Comm. vs Non-Comm.
+
+![](images/clipboard-1663320982.png){fig-align="center"}
+
+### Predicted Sleep Debt by NoComm. Screen Time (Interval = 10 min)
+
+![](images/clipboard-3848216028.png){fig-align="center"}
+
+### Predicted Sleep Debt by Comm. Screen Time(Interval = 10 min)
+
+![](images/clipboard-2518025618.png){fig-align="center"}
+
+![](images/ComNocom-02.png){fig-align="center"}
+
+We observe that:
+
+1.  The turning pint of communication screen time comes **later** than that of non-communication screen time, which suggests that communication screen time becomes problematic later than that of non-communication screen time.
+
+2.  The predicted sleep debt of communication screen time is **lower** than that of non-communication screen time
+
+## Moderating Effect of Communication (without Assumptions)
+
+In the the second column, we add an interaction term Message(High/Low) for screen time variables. The predicted sleep debt under low and high message levels are shown as follow:
+
+![](images/msg_level-mean_winsor_screen.png){fig-align="center"}
+
+We observe that:
+
+1.  The turning pint of screen time with **high** message level **later** than that with **low** message level, which suggests that screen time with **high** message level becomes problematic later than that with **low** message level.
+
+2.  The predicted sleep debt of screen time with **high** message level is **lower** than that with **low** message level.
+
+The message level is created based on the mean of message frequency(1 if \> mean, 0 if \< mean). We can observe that message level moderates the impact of screen time by
+
+1) **moving the turning point right**, and
+
+2) **flattening the curve,** which are the two ways of moderation effects in U-shape effects [@haans2016].
+
+## Appendix
+
+### Predicted Sleep Debt by Screen Time Intervals
+
+![](images/clipboard-2036136209.png)
+
+### Predicted Sleep Debt with Moderating Effects by Screen Time Intervals
+
+![](images/clipboard-1013317902.png)
+
+![](images/clipboard-2164487531.png)

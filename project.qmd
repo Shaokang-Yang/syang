@@ -1,0 +1,13 @@
+---
+title: "Project"
+format:
+  html:
+    css: styles2.css
+class: custom-font-pos
+---
+
+1.  [**Smartphone Use, Social Support, and Sleep Health**](ProjectBlog/paper1.qmd)
+
+2.  [**Social Network Activation: An Application to Reduce Smartphone Overuse**](ProjectBlog/paper2.qmd)
+
+3.  [**Others**](ProjectBlog/others.qmd)
