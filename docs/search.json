@@ -1061,7 +1061,7 @@
     "href": "ProjectBlog/others.html",
     "title": "Others",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nAlgorithmic Nudging: An Application in Curbing Problematic Smartphone Use\n\n\n\n\n\n\n\n\n\nApr 16, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrame Theory\n\n\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\nIdea Development\n\n\n\n\n\n\n\n\n\nOct 29, 2024\n\n\n\n\n\n\nModified\n\n\nJan 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlgorithmic Nudging: An Application in Curbing Problematic Smartphone Use\n\n\n\n\n\n\n\n\n\nApr 16, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrame Theory\n\n\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ProjectBlog/others/Algorithmic Nudge/nudge.html",
@@ -1111,5 +1111,47 @@
     "title": "Project",
     "section": "",
     "text": "Smartphone Use, Social Support, and Sleep Health\n\nPaper 1.\n\nSocial Network Activation: An Application to Reduce Smartphone Overuse\n\nPaper 2.\n\nOthers\n\nMiscellaneous."
+  },
+  {
+    "objectID": "ProjectBlog/others/Abortion/abortion.html",
+    "href": "ProjectBlog/others/Abortion/abortion.html",
+    "title": "Idea Development",
+    "section": "",
+    "text": "Timely treatment is crucial for healthcare outcome. The expansion of Medicaid lowered the barrier to receive healthcare service and could induce more patients to hospitals.\nA compelling body of research have studies the impact of Medicaid expansion on the waiting time in the emergency room. (Wang 2022) find that Medicaid expansion increases ED wait time by 10.4% (or 3.5 minutes) However, it is not clear how Medicaid expansion impact waiting time of non-urgent hospitals.\nWe conjecture that the expansion of Medicaid could attract patients withnon-urgent conditions to healthcare providers, yielding in an increase in waiting time for treatments."
+  },
+  {
+    "objectID": "ProjectBlog/others/Abortion/abortion.html#impact-of-medicaid-expansion-on-wait-time-in-the-hospitals",
+    "href": "ProjectBlog/others/Abortion/abortion.html#impact-of-medicaid-expansion-on-wait-time-in-the-hospitals",
+    "title": "Idea Development",
+    "section": "",
+    "text": "Timely treatment is crucial for healthcare outcome. The expansion of Medicaid lowered the barrier to receive healthcare service and could induce more patients to hospitals.\nA compelling body of research have studies the impact of Medicaid expansion on the waiting time in the emergency room. (Wang 2022) find that Medicaid expansion increases ED wait time by 10.4% (or 3.5 minutes) However, it is not clear how Medicaid expansion impact waiting time of non-urgent hospitals.\nWe conjecture that the expansion of Medicaid could attract patients withnon-urgent conditions to healthcare providers, yielding in an increase in waiting time for treatments."
+  },
+  {
+    "objectID": "ProjectBlog/others/Abortion/abortion.html#impact-of-covid-19-on-organ-donations",
+    "href": "ProjectBlog/others/Abortion/abortion.html#impact-of-covid-19-on-organ-donations",
+    "title": "Idea Development",
+    "section": "2 Impact of Covid-19 on Organ Donations",
+    "text": "2 Impact of Covid-19 on Organ Donations\nOrgans from motor vehicle crashes is the largest organ transplant pool and accounts for 1 in 3 organ transplantation.\nThe stay-at-home rules significantly reduced the fatal traffic collisions, resulting in decrease in organ supply (Dembosky 2020). On the other hand, the pandemic also caused an decrease in public transportation usage and increase in personal vehicle usage (Ebrahim Shaik and Ahmed 2022). The increase in personal vehicle usage could increase traffic collisions, which potentially leads to an increase in organ supply.\nOur objective is examine the effects of Covid-19 on organ supplies."
+  },
+  {
+    "objectID": "ProjectBlog/others/Abortion/abortion.html#impact-of-medicaid-expansion-on-length-of-stay-at-hospitals",
+    "href": "ProjectBlog/others/Abortion/abortion.html#impact-of-medicaid-expansion-on-length-of-stay-at-hospitals",
+    "title": "Idea Development",
+    "section": "3 Impact of Medicaid Expansion on Length of Stay at Hospitals",
+    "text": "3 Impact of Medicaid Expansion on Length of Stay at Hospitals\nTest"
+  },
+  {
+    "objectID": "ProjectBlog/others/Abortion/abortion.html#impact-of-medicaid-expansion-on-abortion-rates",
+    "href": "ProjectBlog/others/Abortion/abortion.html#impact-of-medicaid-expansion-on-abortion-rates",
+    "title": "Idea Development",
+    "section": "4 Impact of Medicaid Expansion on Abortion Rates",
+    "text": "4 Impact of Medicaid Expansion on Abortion Rates\n\n4.1 Introduction\nThe expansion of Medicaid reduced the cost of abortion and related care services, which may have increased the demand for abortion services. However, the expansion of Medicaid also increased access to contraception, which may have reduced the number of unwanted pregnancies and the demand for abortion services. Therefore, the impact of Medicaid expansion on abortion rates is ambiguous(Eliason, Daw, and Allen 2022). To investigate the impact of Medicaid expansion on abortion rates, we plan to use a difference-in-differences approach to compare changes in abortion rates in states that expanded Medicaid to those that did not.\n\n\n\n\n\n\n\n4.2 Data\n\n4.2.1 Abortion Statistics\n\n\n\n4.2.2 Medicaid Expansion\nExpansion Timeline\nThe following table shows the expansion timeline for Medicaid (Maclean and Saloner 2019).\n\nExpansion Map"
+  },
+  {
+    "objectID": "ProjectBlog/others/Abortion/abortion.html#impact-of-telehealth-on-abortion-rates",
+    "href": "ProjectBlog/others/Abortion/abortion.html#impact-of-telehealth-on-abortion-rates",
+    "title": "Idea Development",
+    "section": "5 Impact of Telehealth on Abortion Rates",
+    "text": "5 Impact of Telehealth on Abortion Rates\n1 in 5 abortion cases are through Telehealth in June 2024, which increased significantly compared to the 1 in 25 in April 2022 (Mulvihill 2024). Telehealth abortion is a safe and effective way to access abortion services. Medication abortion accounted for 39% of all abortions in 2017. This number increased to 63% in 2022 (Jones and Friedrich-Karnik 2024). Telehealth abortion has been shown to increase access to abortion services, reduce the abortion stigma.\n\n\n\n\n\nTo investigate the impact of telehealth abortion on abortion rates, we plan to use a difference-in-differences approach to compare changes in abortion rates in states that expanded telehealth abortion to those that did not.\n\n“All telehealth abortions are counted according to the state the medications are mailed to.” This approach of defining and counting telehealth aborting is used by WeCount, an institution for studying abortion. In the state official report (all types of abortion), I found abortions are counted by the occurrence location of the abortion procedure or residence identity (in or out of state residents). I did not find very consistent rules for counting telehealth abortions.\n\nSome milestones for telehealth abortion:\n\nIn April 2020, the F.D.A. removed the in-person requirement for the duration of the pandemic, allowing pills to be mailed.\nOn December 16th 2021, a new F.D.A. decision made the suspension permanent.\nOn June 24, 2022, the US Supreme Court overturned Roe v. Wade.\n\n \nThe states that applied the abortion shield laws, which protect providers to prescribe abortion pills to states where abortion is banned:\n\nCalifornia\nColorado \nConnecticut \nMassachusetts \nNew York \nVermont \nWashington\n\n \nIssues\nNevertheless, the data of county or facility-level abortion reports are very limited. Minnesota is one of the few states that provides month-level abortion data, but the identifier of providers is not provided. Thus, it is not possible to build a panel data set. Virginia provides annual county-level abortion reports but not monthly.\n\n5.1 References\n\nOzer et al. - 2023 - Digital Multisided Platforms and Women’s Health An Empirical Analysis of Peer-to-Peer Lending and Abortion Rates\n\n\nAugustine and Piazza - 2022 - Category Evolution Under Conditions of Stigma The Segregation of Abortion Provision into Specialist Clinics in the United States\n\n\nThomadsen et al. - 2023 - The Impact of a Supreme Court Decision on the Preferences of Americans Regarding Abortion Policy"
   }
 ]

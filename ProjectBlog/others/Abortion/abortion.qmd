@@ -2,7 +2,7 @@
 title: "Idea Development"
 date: 10/29/2024
 date-modified: last-modified
-draft: true
+draft: false
 date-format: full
 categories: [Others]
 website:
