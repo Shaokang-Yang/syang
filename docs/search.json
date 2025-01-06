@@ -1159,20 +1159,27 @@
     "href": "ProjectBlog/others/Natality/natality.html",
     "title": "Dobbs’ Decision And Abortion",
     "section": "",
-    "text": "Restrictions on abortion have rendered significant impact on abortion decision and the number of births. For example, Texas launched two abortion policies:\n\nSenate Bill 8 of Texas: The bill launched on September 2021 forbidden abortions for pregnancy over six weeks.\nDobbs’ decision: The decision passed on June 22, 2022 allows states to make their own abortion policies.\n\nAny impact on the number of abortions will be captured by the number of births around ten months later.\nAs the paralle trend assumption is hard to satisfy in this study, I made a synthetic Texas with states with abortion free policies to examine the effects of the two policies on abortions."
+    "text": "Restrictions on abortion have rendered significant impact on abortion decision and the number of births. For example, Texas launched two abortion policies:\n\nSenate Bill 8 of Texas: The bill launched on September 2021 forbidden abortions for pregnancy over six weeks.\nDobbs’ decision: The decision passed on June 22, 2022 allows states to make their own abortion policies.\n\nAny impact on the number of abortions will be captured by the number of births around ten months later."
   },
   {
     "objectID": "ProjectBlog/others/Natality/natality.html#background",
     "href": "ProjectBlog/others/Natality/natality.html#background",
     "title": "Dobbs’ Decision And Abortion",
     "section": "",
-    "text": "Restrictions on abortion have rendered significant impact on abortion decision and the number of births. For example, Texas launched two abortion policies:\n\nSenate Bill 8 of Texas: The bill launched on September 2021 forbidden abortions for pregnancy over six weeks.\nDobbs’ decision: The decision passed on June 22, 2022 allows states to make their own abortion policies.\n\nAny impact on the number of abortions will be captured by the number of births around ten months later.\nAs the paralle trend assumption is hard to satisfy in this study, I made a synthetic Texas with states with abortion free policies to examine the effects of the two policies on abortions."
+    "text": "Restrictions on abortion have rendered significant impact on abortion decision and the number of births. For example, Texas launched two abortion policies:\n\nSenate Bill 8 of Texas: The bill launched on September 2021 forbidden abortions for pregnancy over six weeks.\nDobbs’ decision: The decision passed on June 22, 2022 allows states to make their own abortion policies.\n\nAny impact on the number of abortions will be captured by the number of births around ten months later."
   },
   {
     "objectID": "ProjectBlog/others/Natality/natality.html#results",
     "href": "ProjectBlog/others/Natality/natality.html#results",
     "title": "Dobbs’ Decision And Abortion",
-    "section": "2 Results",
-    "text": "2 Results\nMy preliminary anticipation is that Dobbs’ decision make one third of women that would chose to terminate pregnancy change their mind to give birth to a baby."
+    "section": "3 Results",
+    "text": "3 Results\nMy preliminary anticipation is that Dobbs’ decision make one third of women that would chose to terminate pregnancy change their mind to give birth to a baby."
+  },
+  {
+    "objectID": "ProjectBlog/others/Natality/natality.html#methodology",
+    "href": "ProjectBlog/others/Natality/natality.html#methodology",
+    "title": "Dobbs’ Decision And Abortion",
+    "section": "2 Methodology",
+    "text": "2 Methodology\n\n2.1 Data\nCounty by month level natality observations.\n\n\n2.2 Model\nAs the parall trend assumption is hard to satisfy in this study, I made a synthetic Texas with states (e.g., New York and California) with abortion free policies and take it as control group. I use a synthetic difference-in-difference estimator to examine the effects of the two policies on abortions."
   }
 ]

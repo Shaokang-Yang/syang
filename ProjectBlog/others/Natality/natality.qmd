@@ -27,7 +27,15 @@ Restrictions on abortion have rendered significant impact on abortion decision a
 
 Any impact on the number of abortions will be captured by the number of births around ten months later.
 
-As the paralle trend assumption is hard to satisfy in this study, I made a synthetic Texas with states with abortion free policies to examine the effects of the two policies on abortions.
+## Methodology
+
+### Data
+
+County by month level natality observations.
+
+### Model
+
+As the parall trend assumption is hard to satisfy in this study, I made a synthetic Texas with states (e.g., New York and California) with abortion free policies and take it as control group. I use a synthetic difference-in-difference estimator to examine the effects of the two policies on abortions.
 
 ## Results
 
