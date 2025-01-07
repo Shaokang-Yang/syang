@@ -1,0 +1,83 @@
+---
+title: "Smartphone Use, Social Support, and Sleep Health"
+date: 01/07/2025
+date-modified: last-modified
+date-format: full
+categories: [Paper2]
+image: "search.png"
+tbl-colwidths: [5,50,75]
+format: 
+  html:
+    page-layout: full
+bibliography: references.bib
+---
+
+We thank Dr.Adjerid, Dr.Liu, and Dr.Aljafari for your insightful and valuable feedback.
+
+::: panel-tabset
+## Dr.Idris Adjerid {#sec-dr.idris-adjerid}
+
+Thank you for your valuable comments and feedback. Please refer to the manuscript for the writing update.
+
+| No. | Comments | Responses |
+|-----|----------|-----------|
+| 1   |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+
+: Review Response for Dr.Idris Adjerid
+
+## Dr.Jiayi Liu {#sec-dr.jiayi-liu}
+
+Thank you for your valuable comments and feedback.
+
+| No. | Comments | Responses |
+|-----|----------|-----------|
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+
+: Review Response for Dr.Jiayi Liu
+
+## Dr.Ruba Aljafari {#sec-dr.ruba-aljafari}
+
+Thank you for your valuable comments and feedback.
+
+| No. | Comments | Responses |
+|-----|----------|-----------|
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+|     |          |           |
+
+: Review Response for Dr.Ruba Aljafari
+:::
