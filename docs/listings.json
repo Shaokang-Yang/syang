@@ -52,8 +52,10 @@
   {
     "listing": "/ProjectBlog/others.html",
     "items": [
-      "/ProjectBlog/others/Natality/natality.html",
+      "/ProjectBlog/others/Ipynb/hello.html",
       "/ProjectBlog/others/Abortion/abortion.html",
+      "/ProjectBlog/others/Ipynb/ipynb.html",
+      "/ProjectBlog/others/Natality/natality.html",
       "/ProjectBlog/others/Algorithmic Nudge/nudge.html",
       "/ProjectBlog/others/Frame Theory/index.html"
     ]
