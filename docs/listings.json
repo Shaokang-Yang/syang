@@ -52,8 +52,6 @@
   {
     "listing": "/ProjectBlog/others.html",
     "items": [
-      "/ProjectBlog/others/Ipynb/hello.html",
-      "/ProjectBlog/others/Ipynb/ipynb.html",
       "/ProjectBlog/others/Abortion/abortion.html",
       "/ProjectBlog/others/Natality/natality.html",
       "/ProjectBlog/others/Algorithmic Nudge/nudge.html",
@@ -73,9 +71,9 @@
   {
     "listing": "/ProjectBlog/paper1.html",
     "items": [
+      "/ProjectBlog/paper1/Clustering Anlysis/cluster.html",
       "/ProjectBlog/paper1/P1 Review Response/ReviewResponse.html",
       "/ProjectBlog/paper1/IV/IV.html",
-      "/ProjectBlog/paper1/Clustering Anlysis/cluster.html",
       "/ProjectBlog/paper1/Robustness Checks/Robustness.html",
       "/ProjectBlog/paper1/Hypotheses/hypo.html",
       "/ProjectBlog/paper1/screen time/screentime.html",

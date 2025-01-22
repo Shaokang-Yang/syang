@@ -81,6 +81,10 @@ fig.tight_layout()
 plt.show()
 ```
 
+### **Marginal effect estimates with multiplicative interaction models**
+
+![](images/nonparametric%20rela.svg){fig-align="center"}
+
 ## Clustering Analysis
 
 ### Cluster=11
