@@ -37,47 +37,86 @@ First, we explore the relationships among variables of sleep debt, screen time (
 #| warning: false
 #| output: true
 
-# Creating a special bin for 0
-df1=df[df['screen_time']>15]
-bins = [-np.inf, 0.001] + list(range(15, 185, 5))  # 0.1 to include 0 in the first bin exclusively
-df1['screen_time_bin'] = pd.cut(df1['screen_time'], bins=bins, right=False, include_lowest=True)
-# Recalculating the aggregated data
-grouped = df1.groupby('screen_time_bin').agg({'sleep_debt':'mean', 'message':'mean', 'screen_time':'count'}).reset_index()
-# Replotting with the adjusted bins
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+
+# Assuming df1 is already defined as df
+df1 = df
+
+# Data preparation steps (as per your instructions)
+df1['screen_time_bin'] = None
+
+# Creating bins as [0, 10), [10, 20), ...
+bins = list(range(0, 190, 10))  # Define bins from 0 to 180 in steps of 10
+labels = [f"[{bins[i]},{bins[i+1]})" for i in range(len(bins)-1)]  # Create labels like '[0,10)', '[10,20)', etc.
+
+# Creating screen_time_bin column using pd.cut
+df1['screen_time_bin'] = pd.cut(df1['screen_time'], bins=bins, labels=labels, right=False, include_lowest=True)
+
+# Aggregating data for each bin
+grouped = df1.groupby('screen_time_bin').agg({
+    'sleep_debt': 'mean',
+    'message': 'mean',
+    'screen_time': 'count'
+}).reset_index()
+
+# Plotting
+plt.rcParams['font.family'] = 'Times New Roman'
 fig, ax1 = plt.subplots(figsize=(14, 8))
+
 # Line plot for sleep debt trend
-line1, = ax1.plot(grouped['screen_time_bin'].astype(str), grouped['sleep_debt'], color='blue', linestyle='-', marker='o', label='Sleep Debt')
-# Adding labels for sleep debt
-for x, y in zip(grouped['screen_time_bin'].astype(str), grouped['sleep_debt']):
-    ax1.text(x, y, f'{y:.2f}', va='bottom', ha='center', color='blue')
-# Setting the left y-axis for sleep debt
-ax1.set_xlabel('Screen Time (minutes)')
-ax1.set_ylabel('Average Sleep Debt')
-ax1.set_title('Sleep Debt, Screen Time and Message')
-ax1.tick_params(axis='x', rotation=45)
-# Line plot for message count on a secondary y-axis
+line1, = ax1.plot(grouped['screen_time_bin'], grouped['sleep_debt'], color='purple',
+                  linestyle='-', marker='o', label='Sleep Debt')
+for x, y in zip(grouped['screen_time_bin'], grouped['sleep_debt']):
+    ax1.annotate(f'{y:.2f}', (x, y), textcoords="offset points", xytext=(0, 10), ha='center', color='purple')
+
+# X and Y labels
+ax1.set_xlabel('Screen Time (minutes)', fontsize=14, color='black')
+ax1.set_ylabel('Sleep Debt (minutes)', fontsize=14, color='black')
+ax1.tick_params(axis='x', rotation=30, labelcolor='black', labelsize=10)
+ax1.tick_params(axis='y', labelcolor='black', labelsize=12)
+# ax1.set_title('Sleep Debt, Screen Time and Message')
+
+# Secondary axis for message count
 ax2 = ax1.twinx()
-line2, = ax2.plot(grouped['screen_time_bin'].astype(str), grouped['message'], color='darkorange', linestyle='--', marker='o', label='Message')
-# Adding labels for message count
+line2, = ax2.plot(grouped['screen_time_bin'], grouped['message'], color='darkorange',
+                  linestyle='-', marker='o', label='Message')
 for i, txt in enumerate(grouped['message']):
-    ax2.annotate(f'{txt:.2f}', (grouped['screen_time_bin'].astype(str)[i], grouped['message'][i]), textcoords="offset points", xytext=(0,10), ha='center')
-ax2.set_ylabel('Message')
-# Bar plot for the number of observations on a secondary y-axis
+    ax2.annotate(f'{txt:.2f}', (grouped['screen_time_bin'][i], grouped['message'][i]),
+                 textcoords="offset points", xytext=(0, 10), ha='center', color='darkorange')
+ax2.set_ylabel('Message', fontsize=14, color='black')
+ax2.tick_params(axis='y', labelcolor='black', labelsize=12)
+
+# Tertiary axis for bar plot of observations
 ax3 = ax1.twinx()
-bars = ax3.bar(grouped['screen_time_bin'].astype(str), grouped['screen_time'], width=0.4, color='lightgrey', alpha=0.5, label='Number of Observations')
-ax3.spines['right'].set_position(('outward', 60))  # Offset the right spine of ax3
-ax3.set_ylabel('Number of Observations')
-# Labeling the number of observations above each bar
+bars = ax3.bar(grouped['screen_time_bin'], grouped['screen_time'], width=0.4, color='lightblue',
+               alpha=0.3, label='Number of Observations')
+ax3.spines['right'].set_position(('outward', 60))
+
+# Hide the axis for Number of Observations
+ax3.get_yaxis().set_visible(False)
+ax3.spines['right'].set_visible(False)
+
+# Draw connection lines from bar bottoms to the x-axis range
+for bar, bin_label in zip(bars, grouped['screen_time_bin']):
+    bar_x = bar.get_x() + bar.get_width() / 2
+    bar_bottom = bar.get_y()
+    ax1.add_line(Line2D([bar_x, bar_x], [bar_bottom, -10], color='gray', linestyle='-'))
+
 for bar in bars:
     yval = bar.get_height()
     ax3.text(bar.get_x() + bar.get_width() / 2, yval, f'{int(yval)}', va='bottom', ha='center', color='black')
-# Adjusting the plot
-ax1.grid(True, which='both', linestyle='--', linewidth=0.5)
-ax2.grid(False)
-ax3.grid(False)
-# Adding legends
-fig.legend(loc='upper right')
+
+# Legend
+lines = [line1, line2]
+bars_proxy = plt.Line2D([0], [0], color='lightblue', alpha=0.3, lw=8)
+labels = ['Sleep Debt', 'Message', 'Number of Observations']
+fig.legend(lines + [bars_proxy], labels, loc='upper right', bbox_to_anchor=(0.96, 0.99), fontsize=12)
+
+# Tight layout and save
 fig.tight_layout()
+plt.savefig('/Users/shaokangyang/Downloads/model-free.svg', format='svg', dpi=300)
 plt.show()
 ```
 
