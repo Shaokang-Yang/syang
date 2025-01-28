@@ -11,10 +11,28 @@ format:
     page-layout: full
 ---
 
-Distribution of going to be times.
+## Distribution of Going to Bed Times
 
 ![](images/Go2Bed-02.png){fig-align="center"}
 
-Distribution of waking up times.
+It is not likely that social network activation affects screen time **right before sleep**.
+
+## Distribution of Waking Up Times
 
 ![](images/wake.png){fig-align="center"}
+
+## Results with 24 hours Screen Time Measurement
+
+![](images/clipboard-1540611184.png){fig-align="center"}
+
+## Screen Time \< 21:00
+
+![](images/clipboard-2412859547.png){fig-align="center"}
+
+Results with Lagged Core Number
+
+![](images/clipboard-310908795.png){fig-align="center"}
+
+## Potential Mediation Effects
+
+![](images/clipboard-4063857286.png){fig-align="center"}
