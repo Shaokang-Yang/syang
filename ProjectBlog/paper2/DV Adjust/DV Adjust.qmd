@@ -1,0 +1,20 @@
+---
+title: "DV Adjustment"
+date: 01/29/2024
+date-modified: last-modified
+date-format: full
+categories: [Paper2]
+#image: "cluster1.png"
+tbl-colwidths: [5,30,125]
+format: 
+  html:
+    page-layout: full
+---
+
+Distribution of going to be times.
+
+![](images/Go2Bed-02.png){fig-align="center"}
+
+Distribution of waking up times.
+
+![](images/wake.png){fig-align="center"}
