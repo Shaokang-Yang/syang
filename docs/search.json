@@ -1468,5 +1468,19 @@
     "title": "Social Network Activation: Application in Smartphone Use",
     "section": "Connectedness",
     "text": "Connectedness\n\n\nH2: Activating social networks with a higher Degree Centrality score reduces the time spent on a smartphone."
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#section",
+    "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#section",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "",
+    "text": "Study/Methodology\n\nWe leverage data sets collected from a series of longitudinal studies that tracked participants’ smartphone use, social networks, and physical activities. We measure social network activation in real-time and track its evolution for each participant, combining self-reported social network structure information and real-time mobile communications.\n\nSocial isolation ➟ Smartphone Addiction"
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#section-4",
+    "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#section-4",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "",
+    "text": "Garnett F., Matthew, and Sally Curtin C. 2023. “Suicide Mortality in the United States, 20012021.” https://stacks.cdc.gov/view/cdc/125705.\n\n\nLuo, Mengyun, Ding Ding, Adrian Bauman, Joel Negin, and Philayrath Phongsavan. 2020. “Social Engagement Pattern, Health Behaviors and Subjective Well-Being of Older Adults: An International Perspective Using WHO-SAGE Survey Data.” BMC Public Health 20 (1): 99. https://doi.org/10.1186/s12889-019-7841-7.\n\n\nRobb, Catherine E., Celeste A. De Jager, Sara Ahmadi-Abhari, Parthenia Giannakopoulou, Chinedu Udeh-Momoh, James McKeand, Geraint Price, et al. 2020. “Associations of Social Isolation with Anxiety and Depression During the Early COVID-19 Pandemic: A Survey of Older Adults in London, UK.” Frontiers in Psychiatry 11 (September): 591120. https://doi.org/10.3389/fpsyt.2020.591120."
   }
 ]

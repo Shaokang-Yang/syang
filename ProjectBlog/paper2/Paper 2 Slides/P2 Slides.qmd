@@ -12,19 +12,25 @@ smaller: true
 bibliography: references.bib
 ---
 
-### Background
+### Motivation
 
 -   Humans are inherently **social beings**. Social engagement improves feeling of belongingness, social fulfillment, etc., which enhance mental health. [@luo2020].
 
 -   In contrast, social isolation can results in anxiety, depression [@robb2020], and suicide [@garnettf.2023].
 
-### **Research Gap**
+### **Gap**
 
--   To address the consequences of lack of social engagement, prior studies primarily focus on social interaction volume. However, little attention is paid the the structure of one's social network.
+-   To address the consequences of lack of social engagement, prior studies primarily focus on social interaction volume.
 
--   Specifically, it is not clear whether activating different parts (e.g., core vs.periphery) of social network impact individuals differently.
+-   However, little attention is paid the the structure of one's social network. Specifically, it is not clear whether activating different parts (e.g., core vs.periphery) of social network impact individuals differently.
 
-### Context:
+### Study/Methodology
+
+-   We examine whether activating the core parts of social networks, as measured by K-Core, affects smartphone usage activities differently than activating peripheral parts.
+
+##
+### Study/Methodology
+-   We leverage data sets collected from a series of longitudinal studies that tracked participants’ smartphone use, social networks, and physical activities. We measure social network activation in real-time and track its evolution for each participant, combining self-reported social network structure information and real-time mobile communications.
 
 Social isolation ➟ Smartphone Addiction
 
