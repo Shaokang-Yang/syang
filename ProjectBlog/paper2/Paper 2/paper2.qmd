@@ -47,7 +47,7 @@ Identification of Social Influence
 -   Social person VS. Non-social person
 -   Central VS. Peripheral
 
-## Conectedness
+## Connectedness
 
 ![](images/centrality-01.png){fig-align="center"}
 

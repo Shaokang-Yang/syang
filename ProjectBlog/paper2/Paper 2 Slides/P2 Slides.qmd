@@ -28,11 +28,16 @@ bibliography: references.bib
 
 -   We examine whether activating the core parts of social networks, as measured by K-Core, affects smartphone usage activities differently than activating peripheral parts.
 
-##
-### Study/Methodology
--   We leverage data sets collected from a series of longitudinal studies that tracked participants’ smartphone use, social networks, and physical activities. We measure social network activation in real-time and track its evolution for each participant, combining self-reported social network structure information and real-time mobile communications.
+## 
 
-Social isolation ➟ Smartphone Addiction
+### Study/Methodology
+
+-   We leverage data sets collected from a series of longitudinal studies that tracked participants’ smartphone use, social networks, and physical activities. We measure social network activation in real-time and track its evolution for each participant, combining self-reported social network structure information and real-time mobile communications.
+-   Related studies:
+
+<iframe src="pdfs/Yan et al. - 2015 - Network Dynamics How Can We Find Patients Like Us.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
 
 ## 
 

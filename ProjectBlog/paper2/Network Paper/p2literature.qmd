@@ -1,0 +1,21 @@
+---
+title: "IS Studies on Social Network"
+date: 02/04/2025
+date-modified: last-modified
+draft: true
+date-format: full
+categories: [Others]
+#image: "search.png"
+tbl-colwidths: [5,50,75]
+format: 
+  html:
+    page-layout: full
+---
+
+# Network Dynamics: How Can We Find Patients Like Us
+
+**Lu (Lucy) Yan, Jianping Peng, Yong Tan**
+
+<iframe src="pdfs/Yan et al. - 2015 - Network Dynamics How Can We Find Patients Like Us.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>

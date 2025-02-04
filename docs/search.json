@@ -864,15 +864,15 @@
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#hypothesis-1",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#hypothesis-1",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Hypothesis 1",
-    "text": "Hypothesis 1\n\nH1: Activating social networks reduces smartphone screen time; the reduction in screen time increases with the number of contacts activated."
+    "section": "2 Hypothesis 1",
+    "text": "2 Hypothesis 1\n\nH1: Activating social networks reduces smartphone screen time; the reduction in screen time increases with the number of contacts activated."
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#whom-to-activate",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#whom-to-activate",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Whom to activate?",
-    "text": "Whom to activate?\nIdentification of Social Influence\n\nSocial person VS. Non-social person\nCentral VS. Peripheral"
+    "section": "3 Whom to activate?",
+    "text": "3 Whom to activate?\nIdentification of Social Influence\n\nSocial person VS. Non-social person\nCentral VS. Peripheral"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#conectedness",
@@ -885,120 +885,120 @@
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#consider-group-cohesiveness",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#consider-group-cohesiveness",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Consider group cohesiveness",
-    "text": "Consider group cohesiveness\n\n\nH3: Activating social networks with a higher K-Core score reduces the time spent on a smartphone."
+    "section": "5 Consider group cohesiveness",
+    "text": "5 Consider group cohesiveness\n\n\n\n\n\n\nH3: Activating social networks with a higher K-Core score reduces the time spent on a smartphone."
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#methodology",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#methodology",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Methodology",
-    "text": "Methodology"
+    "section": "6 Methodology",
+    "text": "6 Methodology"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#how-sna-features-are-calculated",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#how-sna-features-are-calculated",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "How SNA features are calculated",
-    "text": "How SNA features are calculated\n\nSurvey t-1"
+    "section": "7 How SNA features are calculated",
+    "text": "7 How SNA features are calculated\n\n\n\nSurvey t-1"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#how-sna-features-are-calculated-1",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#how-sna-features-are-calculated-1",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "How SNA features are calculated",
-    "text": "How SNA features are calculated\n\nSurvey t-1\n\n\nNode\nConnections\nMax Degree N−1\nDegree Centrality\n\n\n\n\nA\n2\n3\n2/3\n\n\nB\n2\n3\n2/3\n\n\nC\n3\n3\n1\n\n\nParticipant\n3\n3\n1"
+    "section": "8 How SNA features are calculated",
+    "text": "8 How SNA features are calculated\n\n\n\nSurvey t-1\n\n\n\n\n\nNode\nConnections\nMax Degree N−1\nDegree Centrality\n\n\n\n\nA\n2\n3\n2/3\n\n\nB\n2\n3\n2/3\n\n\nC\n3\n3\n1\n\n\nParticipant\n3\n3\n1"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#how-sna-features-are-calculated-2",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#how-sna-features-are-calculated-2",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "How SNA features are calculated",
-    "text": "How SNA features are calculated\n\nSurvey t"
+    "section": "9 How SNA features are calculated",
+    "text": "9 How SNA features are calculated\n\n\n\nSurvey t"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#how-sna-features-are-extracted",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#how-sna-features-are-extracted",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "How SNA features are extracted",
-    "text": "How SNA features are extracted\n\nSurvey t+1"
+    "section": "10 How SNA features are extracted",
+    "text": "10 How SNA features are extracted\n\n\n\nSurvey t+1"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#specification-1",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#specification-1",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Specification 1",
-    "text": "Specification 1\n\n\n\\(\\begin{equation} \\begin{split} \\text{Screen Time}_{it} = \\beta_0 + \\beta_1 \\cdot \\text{Social Network Features}_{it} + \\alpha \\cdot X_{it} + \\theta_i + \\lambda_t + \\varepsilon_{it} \\end{split} \\label{e1}\\end{equation}\\)\n\n\n\\(\\text{Screen Time}_{it}\\): Smartphone use time before users fall asleep\n\\(\\text{Social Network Features}_{it}\\): Degree Centrality and K-Core\n\\(\\text{X}_{it}\\): Control variables: Steps, sleep duration, naps, etc.\n\\(\\theta_i\\): Individual fixed effect (students)\n\\(\\lambda_t\\): Time fixed effect (week)"
+    "section": "11 Specification 1",
+    "text": "11 Specification 1\n\n\n\\(\\begin{equation} \\begin{split} \\text{Screen Time}_{it} = \\beta_0 + \\beta_1 \\cdot \\text{Social Network Features}_{it} + \\alpha \\cdot X_{it} + \\theta_i + \\lambda_t + \\varepsilon_{it} \\end{split} \\label{e1}\\end{equation}\\)\n\n\n\\(\\text{Screen Time}_{it}\\): Smartphone use time before users fall asleep\n\\(\\text{Social Network Features}_{it}\\): Degree Centrality and K-Core\n\\(\\text{X}_{it}\\): Control variables: Steps, sleep duration, naps, etc.\n\\(\\theta_i\\): Individual fixed effect (students)\n\\(\\lambda_t\\): Time fixed effect (week)"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#result-1-2-centrality-k-core",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#result-1-2-centrality-k-core",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Result 1 & 2 (Centrality & K-Core):",
-    "text": "Result 1 & 2 (Centrality & K-Core):"
+    "section": "12 Result 1 & 2 (Centrality & K-Core):",
+    "text": "12 Result 1 & 2 (Centrality & K-Core):"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#interpretation",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#interpretation",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Interpretation",
-    "text": "Interpretation\n \n\n\nDegree Centrality does not affect non-communication smartphone use but improves overall smartphone use by increasing the time spent on communication. H1 is not supported.\nK-Core reduces overall smartphone use( Communication, others and overall).  H2 is supported."
+    "section": "13 Interpretation",
+    "text": "13 Interpretation\n \n\n\nDegree Centrality does not affect non-communication smartphone use but improves overall smartphone use by increasing the time spent on communication. H1 is not supported.\nK-Core reduces overall smartphone use( Communication, others and overall).  H2 is supported."
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#mediation-of-physical-activity",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#mediation-of-physical-activity",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Mediation of Physical Activity",
-    "text": "Mediation of Physical Activity"
+    "section": "14 Mediation of Physical Activity",
+    "text": "14 Mediation of Physical Activity"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#sobel-goodman-mediation-tests",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#sobel-goodman-mediation-tests",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Sobel-Goodman Mediation Tests",
-    "text": "Sobel-Goodman Mediation Tests"
+    "section": "15 Sobel-Goodman Mediation Tests",
+    "text": "15 Sobel-Goodman Mediation Tests"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#mediation-of-physical-activity-1",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#mediation-of-physical-activity-1",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Mediation of Physical Activity",
-    "text": "Mediation of Physical Activity"
+    "section": "16 Mediation of Physical Activity",
+    "text": "16 Mediation of Physical Activity"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#interpretation-1",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#interpretation-1",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Interpretation",
-    "text": "Interpretation\n \n\n\n\nCore number reduces screen time by increasing individuals’ physical active level\n15.8% of reductive effects of core number come from steps"
+    "section": "17 Interpretation",
+    "text": "17 Interpretation\n \n\n\n\nCore number reduces screen time by increasing individuals’ physical active level\n15.8% of reductive effects of core number come from steps"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#result-4-addiction-esimation-logistic",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#result-4-addiction-esimation-logistic",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Result 4: Addiction Esimation (Logistic)",
-    "text": "Result 4: Addiction Esimation (Logistic)\n\nAddiction is defined as:\n\nOverall addiction: overall screen time &gt; 300 min\nNon-communication-drive addiction: Non-communication screen time &gt; 240 min\nCommunication-drive addiction: Communication screen time &gt; 40 min"
+    "section": "18 Result 4: Addiction Esimation (Logistic)",
+    "text": "18 Result 4: Addiction Esimation (Logistic)\n\nAddiction is defined as:\n\nOverall addiction: overall screen time &gt; 300 min\nNon-communication-drive addiction: Non-communication screen time &gt; 240 min\nCommunication-drive addiction: Communication screen time &gt; 40 min"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#specification-2",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#specification-2",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Specification 2",
-    "text": "Specification 2\n\\(\\begin{equation} \\begin{split} \\ln \\left(\\frac{\\operatorname{Pr}\\left(\\text { Addiction }_{it}=1 \\mid \\boldsymbol{X}_{i t}\\right)}{1-\\operatorname{Pr}\\left(\\text { Addiction }_{it}=1 \\mid \\boldsymbol{X}_{i t}\\right)}\\right) = \\beta_{0}+ \\beta_{1} \\cdot \\text{Social Network Features}_{it}+ \\\\ \\alpha \\cdot X_{it}+\\theta_{i} +\\lambda_{t}+\\varepsilon_{it} \\end{split} \\label{e2} \\end{equation}\\)\n\n\n\\(\\text{Screen Time}_{it}\\): Smartphone use time before users fall asleep\n\\(\\text{Social Network Features}_{it}\\): Degree Centrality and K-Core\n\\(\\text{X}_{it}\\): Control variables: Steps, sleep duration, naps, etc.\n\\(\\theta_i\\): Individual fixed effect (students)\n\\(\\lambda_t\\): Time fixed effect (day)"
+    "section": "19 Specification 2",
+    "text": "19 Specification 2\n\\(\\begin{equation} \\begin{split} \\ln \\left(\\frac{\\operatorname{Pr}\\left(\\text { Addiction }_{it}=1 \\mid \\boldsymbol{X}_{i t}\\right)}{1-\\operatorname{Pr}\\left(\\text { Addiction }_{it}=1 \\mid \\boldsymbol{X}_{i t}\\right)}\\right) = \\beta_{0}+ \\beta_{1} \\cdot \\text{Social Network Features}_{it}+ \\\\ \\alpha \\cdot X_{it}+\\theta_{i} +\\lambda_{t}+\\varepsilon_{it} \\end{split} \\label{e2} \\end{equation}\\)\n\n\n\\(\\text{Screen Time}_{it}\\): Smartphone use time before users fall asleep\n\\(\\text{Social Network Features}_{it}\\): Degree Centrality and K-Core\n\\(\\text{X}_{it}\\): Control variables: Steps, sleep duration, naps, etc.\n\\(\\theta_i\\): Individual fixed effect (students)\n\\(\\lambda_t\\): Time fixed effect (day)"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#smartphone-addiction-esimation-logistic",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#smartphone-addiction-esimation-logistic",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Smartphone Addiction Esimation (Logistic)",
-    "text": "Smartphone Addiction Esimation (Logistic)\nglobal id egoid\nglobal t date2\nglobal ylist addic_noncom90\nglobal mainIV  active_nodes out_contacts  num_edges  steps minsasleep trust close position duration\nglobal Social_Control degree_centrality core_number\nglobal Other_Control i.insession i.weekday community naps nap_minsasleep\nglobal fe i.studyweek\n*Set data as panel data\nsort $id $t\nxtset $id $t\n\nxtreg $ylist $fe  $Other_Control $Social_Control  $mainIV , fe cluster($id) \nxtlogit $ylist $fe  $Other_Control $Social_Control  $mainIV , fe cluster($id) or\noutreg2 using SoUnAcSl.tex, append dec(3) addtext(Communication, Full, Unit F.E., YES, Week F.E, YES) keep($mainIV $Social_Control)  title(\"90 Addiction Estimation\")"
+    "section": "20 Smartphone Addiction Esimation (Logistic)",
+    "text": "20 Smartphone Addiction Esimation (Logistic)\nglobal id egoid\nglobal t date2\nglobal ylist addic_noncom90\nglobal mainIV  active_nodes out_contacts  num_edges  steps minsasleep trust close position duration\nglobal Social_Control degree_centrality core_number\nglobal Other_Control i.insession i.weekday community naps nap_minsasleep\nglobal fe i.studyweek\n*Set data as panel data\nsort $id $t\nxtset $id $t\n\nxtreg $ylist $fe  $Other_Control $Social_Control  $mainIV , fe cluster($id) \nxtlogit $ylist $fe  $Other_Control $Social_Control  $mainIV , fe cluster($id) or\noutreg2 using SoUnAcSl.tex, append dec(3) addtext(Communication, Full, Unit F.E., YES, Week F.E, YES) keep($mainIV $Social_Control)  title(\"90 Addiction Estimation\")"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#result-4-addiction-esimation-logistic-1",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#result-4-addiction-esimation-logistic-1",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Result 4: Addiction Esimation (Logistic)",
-    "text": "Result 4: Addiction Esimation (Logistic)"
+    "section": "21 Result 4: Addiction Esimation (Logistic)",
+    "text": "21 Result 4: Addiction Esimation (Logistic)"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#section-2",
@@ -1011,8 +1011,8 @@
     "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#interpretation-2",
     "href": "ProjectBlog/paper2/Paper 2/paper2.html#interpretation-2",
     "title": "Social Network Activation: Application in Smartphone Use",
-    "section": "Interpretation",
-    "text": "Interpretation\n \n\n\nNetwork features outperform traditional constructs (Trust, Social Distance (Closeness))."
+    "section": "23 Interpretation",
+    "text": "23 Interpretation\n \n\n\nNetwork features outperform traditional constructs (Trust, Social Distance (Closeness))."
   },
   {
     "objectID": "ProjectBlog/paper2/SP2 Review Response/ReviewResponse.html",
@@ -1075,7 +1075,7 @@
     "href": "ProjectBlog/paper2.html",
     "title": "Smartphone Use, Social Support, and Sleep Health",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nSocial Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nFeb 4, 2025\n\n\n\n\n\n\nModified\n\n\nFeb 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDV Adjustment\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\nModified\n\n\nJan 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContact Information Look UP\n\n\n\n\n\n\n\n\n\nMar 10, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMediation Effect of Steps\n\n\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNetwork Overlapping\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSP2 Reveiw Response: Social Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nDec 23, 2023\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nOct 9, 2023\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nSocial Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nFeb 4, 2025\n\n\n\n\n\n\nModified\n\n\nFeb 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nOct 9, 2023\n\n\n\n\n\n\nModified\n\n\nFeb 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDV Adjustment\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\nModified\n\n\nJan 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContact Information Look UP\n\n\n\n\n\n\n\n\n\nMar 10, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMediation Effect of Steps\n\n\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNetwork Overlapping\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSP2 Reveiw Response: Social Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nDec 23, 2023\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ProjectBlog/paper1.html",
@@ -1474,7 +1474,7 @@
     "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#section",
     "title": "Social Network Activation: Application in Smartphone Use",
     "section": "",
-    "text": "Study/Methodology\n\nWe leverage data sets collected from a series of longitudinal studies that tracked participants’ smartphone use, social networks, and physical activities. We measure social network activation in real-time and track its evolution for each participant, combining self-reported social network structure information and real-time mobile communications.\n\nSocial isolation ➟ Smartphone Addiction"
+    "text": "Study/Methodology\n\nWe leverage data sets collected from a series of longitudinal studies that tracked participants’ smartphone use, social networks, and physical activities. We measure social network activation in real-time and track its evolution for each participant, combining self-reported social network structure information and real-time mobile communications.\nRelated studies:"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#section-4",
@@ -1482,5 +1482,12 @@
     "title": "Social Network Activation: Application in Smartphone Use",
     "section": "",
     "text": "Garnett F., Matthew, and Sally Curtin C. 2023. “Suicide Mortality in the United States, 20012021.” https://stacks.cdc.gov/view/cdc/125705.\n\n\nLuo, Mengyun, Ding Ding, Adrian Bauman, Joel Negin, and Philayrath Phongsavan. 2020. “Social Engagement Pattern, Health Behaviors and Subjective Well-Being of Older Adults: An International Perspective Using WHO-SAGE Survey Data.” BMC Public Health 20 (1): 99. https://doi.org/10.1186/s12889-019-7841-7.\n\n\nRobb, Catherine E., Celeste A. De Jager, Sara Ahmadi-Abhari, Parthenia Giannakopoulou, Chinedu Udeh-Momoh, James McKeand, Geraint Price, et al. 2020. “Associations of Social Isolation with Anxiety and Depression During the Early COVID-19 Pandemic: A Survey of Older Adults in London, UK.” Frontiers in Psychiatry 11 (September): 591120. https://doi.org/10.3389/fpsyt.2020.591120."
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2/paper2.html#connectedness",
+    "href": "ProjectBlog/paper2/Paper 2/paper2.html#connectedness",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "4 Connectedness",
+    "text": "4 Connectedness\n\n\n\n\n\n\nH2: Activating social networks with a higher Degree Centrality score reduces the time spent on a smartphone."
   }
 ]
