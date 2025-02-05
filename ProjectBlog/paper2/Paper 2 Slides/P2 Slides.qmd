@@ -39,34 +39,11 @@ bibliography: references.bib
 
 </iframe>
 
-## 
-
 ### 
-
-![](inout.png){fig-align="center"}
 
 ## Hypothesis 1
 
 -   **H1:** Activating social networks reduces smartphone screen time; the reduction in screen time increases with the number of contacts activated. <br /> <br /> <br />
-
-## Whom to activate?
-
-Identification of Social Influence
-
--   Social person VS. Non-social person
--   Central VS. Peripheral
-
-## Connectedness
-
-![](images/centrality-01.png){fig-align="center"}
-
--   **H2:** Activating social networks with a higher **Degree Centrality** score **reduces** the time spent on a smartphone.
-
-## Consider group cohesiveness
-
-![](images/core_number.png){fig-align="center"}
-
--   **H3:** Activating social networks with a higher **K-Core** score **reduces** the time spent on a smartphone.
 
 ## Specification 1
 
