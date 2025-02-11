@@ -59,7 +59,7 @@ $\begin{equation} \begin{split} \text{Screen Time}_{it} = \beta_0 + \beta_1 \cdo
 
 ## Alternative Explanation
 
-![](images/clipboard-3408104519.png){fig-align="center"}
+![](images/clipboard-446827943.png){fig-align="center"}
 
 -   Extraverted individuals may incline to activate embeded contacts for group activities.
 
