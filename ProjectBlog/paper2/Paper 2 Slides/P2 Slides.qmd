@@ -80,3 +80,9 @@ $\begin{equation} \begin{split} \text{Screen Time}_{it} = \beta_0 + \beta_1 \cdo
 ![](images/clipboard-894895312.png){fig-align="center"}
 
 -   K-Core is more effective in reducing screen time for heavy screen users**.**
+
+## Subsample Analysis (Screen Time)
+
+![](images/clipboard-894895312.png){fig-align="center"}
+
+-   K-Core is more effective in reducing screen time for heavy screen users**.**
