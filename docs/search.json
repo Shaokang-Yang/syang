@@ -1075,7 +1075,7 @@
     "href": "ProjectBlog/paper2.html",
     "title": "Smartphone Use, Social Support, and Sleep Health",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nSocial Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nFeb 4, 2025\n\n\n\n\n\n\nModified\n\n\nFeb 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIS Studies on Social Network\n\n\n\n\n\n\n\n\n\nFeb 4, 2025\n\n\n\n\n\n\nModified\n\n\nFeb 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nOct 9, 2023\n\n\n\n\n\n\nModified\n\n\nFeb 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDV Adjustment\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\nModified\n\n\nJan 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContact Information Look UP\n\n\n\n\n\n\n\n\n\nMar 10, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMediation Effect of Steps\n\n\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNetwork Overlapping\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSP2 Reveiw Response: Social Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nDec 23, 2023\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nSocial Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nFeb 4, 2025\n\n\n\n\n\n\nModified\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIS Studies on Social Network\n\n\n\n\n\n\n\n\n\nFeb 4, 2025\n\n\n\n\n\n\nModified\n\n\nFeb 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nOct 9, 2023\n\n\n\n\n\n\nModified\n\n\nFeb 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDV Adjustment\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\nModified\n\n\nJan 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContact Information Look UP\n\n\n\n\n\n\n\n\n\nMar 10, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMediation Effect of Steps\n\n\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNetwork Overlapping\n\n\n\n\n\n\n\n\n\nJan 29, 2024\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSP2 Reveiw Response: Social Network Activation: Application in Smartphone Use\n\n\n\n\n\n\n\n\n\nDec 23, 2023\n\n\n\n\n\n\nModified\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ProjectBlog/paper1.html",
@@ -1376,7 +1376,7 @@
     "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#specification-1",
     "title": "Social Network Activation: Application in Smartphone Use",
     "section": "Specification 1",
-    "text": "Specification 1\n\n\n\\(\\begin{equation} \\begin{split} \\text{Screen Time}_{it} = \\beta_0 + \\beta_1 \\cdot \\text{Social Network Features}_{it} + \\alpha \\cdot X_{it} + \\theta_i + \\lambda_t + \\varepsilon_{it} \\end{split} \\label{e1}\\end{equation}\\)\n\n\n\\(\\text{Screen Time}_{it}\\): Smartphone use time before users fall asleep\n\\(\\text{Social Network Features}_{it}\\): Degree Centrality and K-Core\n\\(\\text{X}_{it}\\): Control variables: Steps, sleep duration, naps, etc.\n\\(\\theta_i\\): Individual fixed effect (students)\n\\(\\lambda_t\\): Time fixed effect (week)"
+    "text": "Specification 1\n\n\n\\(\\begin{equation} \\begin{split} \\text{Screen Time}_{it} = \\beta_0 + \\beta_1 \\cdot \\text{Social Network Features}_{it} + \\alpha \\cdot X_{it} + \\theta_i + \\lambda_t + \\varepsilon_{it} \\end{split} \\label{e1}\\end{equation}\\)\n\n\n\\(\\text{Screen Time}_{it}\\): Smartphone use time before users fall asleep\n\\(\\text{Social Network Features}_{it}\\): Degree Centrality and K-Core\n\\(\\text{X}_{it}\\): Control variables: Steps, sleep duration, naps, etc.\n\\(\\theta_i\\): Individual fixed effect (students)\n\\(\\lambda_t\\): Time fixed effect (day)"
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#result-1-2-centrality-k-core",
@@ -1390,7 +1390,7 @@
     "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#interpretation",
     "title": "Social Network Activation: Application in Smartphone Use",
     "section": "Interpretation",
-    "text": "Interpretation\n \n\n\nDegree Centrality does not affect non-communication smartphone use but improves overall smartphone use by increasing the time spent on communication. H1 is not supported.\nK-Core reduces overall smartphone use( Communication, others and overall).  H2 is supported."
+    "text": "Interpretation\n \n\n\nK-Core is more effective in reducing screen time for one with small social network."
   },
   {
     "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#mediation-of-physical-activity",
@@ -1496,5 +1496,47 @@
     "title": "IS Studies on Social Network",
     "section": "",
     "text": "1 Network Dynamics: How Can We Find Patients Like Us\nLu (Lucy) Yan, Jianping Peng, Yong Tan\n\n\n\n\n2 Feeling Blue? Go Online: An Empirical Study of Social Support Among Patients\nLu (Lucy) Yan, Yong Tan\n\n\n\n\n3 Social Networks and the Diffusion of UserGenerated Content: Evidence from YouTube\nAnjana Susarla, Jeong-Ha Oh, Yong Tan\n\n\n\n\n4 Network Effects: The Influence of Structural Capital on Open Source Project Success\nParam Vir Singh, Yong Tan, Vijay Mookerjee\n\n\n\n\n5 Location, Location, Location: How Network Embeddedness Affects Project Success in Open Source Systems\nRajdeep Grewal, Gary L. Lilien, Girish Mallapragada, &lt;/p&gt;"
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#subsample-analysis-based-on-network-size",
+    "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#subsample-analysis-based-on-network-size",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "Subsample Analysis Based on Network Size",
+    "text": "Subsample Analysis Based on Network Size"
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#subsample-analysis-network-size",
+    "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#subsample-analysis-network-size",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "Subsample Analysis (Network Size)",
+    "text": "Subsample Analysis (Network Size)\n\n\nK-Core is more effective in reducing screen time for one with small social network."
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#subsample-analysis-steps",
+    "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#subsample-analysis-steps",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "Subsample Analysis (Steps)",
+    "text": "Subsample Analysis (Steps)\n\n\nK-Core is more effective in reducing screen time for one with high level steps."
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#subsample-analysis-screen-time",
+    "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#subsample-analysis-screen-time",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "Subsample Analysis (Screen Time)",
+    "text": "Subsample Analysis (Screen Time)\n\n\nK-Core is more effective in reducing screen time for heavy screen users.\n\n\n\n\n\n\n\nGarnett F., Matthew, and Sally Curtin C. 2023. “Suicide Mortality in the United States, 20012021.” https://stacks.cdc.gov/view/cdc/125705.\n\n\nLuo, Mengyun, Ding Ding, Adrian Bauman, Joel Negin, and Philayrath Phongsavan. 2020. “Social Engagement Pattern, Health Behaviors and Subjective Well-Being of Older Adults: An International Perspective Using WHO-SAGE Survey Data.” BMC Public Health 20 (1): 99. https://doi.org/10.1186/s12889-019-7841-7.\n\n\nRobb, Catherine E., Celeste A. De Jager, Sara Ahmadi-Abhari, Parthenia Giannakopoulou, Chinedu Udeh-Momoh, James McKeand, Geraint Price, et al. 2020. “Associations of Social Isolation with Anxiety and Depression During the Early COVID-19 Pandemic: A Survey of Older Adults in London, UK.” Frontiers in Psychiatry 11 (September): 591120. https://doi.org/10.3389/fpsyt.2020.591120."
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#section-2",
+    "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#section-2",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "",
+    "text": "Garnett F., Matthew, and Sally Curtin C. 2023. “Suicide Mortality in the United States, 20012021.” https://stacks.cdc.gov/view/cdc/125705.\n\n\nLuo, Mengyun, Ding Ding, Adrian Bauman, Joel Negin, and Philayrath Phongsavan. 2020. “Social Engagement Pattern, Health Behaviors and Subjective Well-Being of Older Adults: An International Perspective Using WHO-SAGE Survey Data.” BMC Public Health 20 (1): 99. https://doi.org/10.1186/s12889-019-7841-7.\n\n\nRobb, Catherine E., Celeste A. De Jager, Sara Ahmadi-Abhari, Parthenia Giannakopoulou, Chinedu Udeh-Momoh, James McKeand, Geraint Price, et al. 2020. “Associations of Social Isolation with Anxiety and Depression During the Early COVID-19 Pandemic: A Survey of Older Adults in London, UK.” Frontiers in Psychiatry 11 (September): 591120. https://doi.org/10.3389/fpsyt.2020.591120."
+  },
+  {
+    "objectID": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#alternative-explanation",
+    "href": "ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html#alternative-explanation",
+    "title": "Social Network Activation: Application in Smartphone Use",
+    "section": "Alternative Explanation",
+    "text": "Alternative Explanation\n\n\nExtraverted individuals may incline to activate embeded contacts for group activities."
   }
 ]
