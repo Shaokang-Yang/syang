@@ -27,3 +27,21 @@ format:
 </iframe>
 
 Conference: https://2025.cswimworkshop.org/
+
+# Mechanism Paper
+
+
+<iframe src="pdfs/send-down.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
+
+
+
+
+
+# Causal Inference Methods
+
+
+<iframe src="pdfs/Machine learning in causal inference for epidemiology.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
