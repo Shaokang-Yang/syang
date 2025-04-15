@@ -12,6 +12,12 @@ format:
     page-layout: full
 ---
 
+# Mechanism
+
+![](images/clipboard-4127087002.png){fig-align="center"}
+
+![](images/clipboard-2231454442.png){fig-align="center"}
+
 # Restults with Comm Vs NoComm Screen Time
 
 ![](images/clipboard-1110454764.png){fig-align="center"}
@@ -20,7 +26,7 @@ format:
 
 # Slides for Social Network Paper
 
-<iframe src="pdfs/Social_Network_Paper_Slides.pdf" style="width:100%; height:1500px;" frameborder="0">
+<iframe src="pdfs/Social_Network_Paper_Slides___CHITA.pdf" style="width:100%; height:1500px;" frameborder="0">
 
 </iframe>
 
@@ -37,6 +43,10 @@ Conference: https://2025.cswimworkshop.org/
 <iframe src="pdfs/send-down.pdf" style="width:100%; height:1500px;" frameborder="0">
 
 </iframe>
+
+## Economic Analysis and Policy
+
+![](images/Camera_XHS_17447327922881040g2sg312icvo3s0c7g48uveq05df6k24ft9o8.jpg){fig-align="center"}
 
 # Causal Inference Methods
 
