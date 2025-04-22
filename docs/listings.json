@@ -75,7 +75,10 @@
   {
     "listing": "/ProjectBlog/paper1.html",
     "items": [
+<<<<<<< HEAD
       "/ProjectBlog/paper1/Pre3HoursSleep/chita.html",
+=======
+>>>>>>> 9fb7db76d8cc8015e60c2bbe5db6f52723cb8ab0
       "/ProjectBlog/paper1/Clustering Anlysis/cluster.html",
       "/ProjectBlog/paper1/P1 Review Response/ReviewResponse.html",
       "/ProjectBlog/paper1/IV/IV.html",

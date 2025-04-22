@@ -44,7 +44,11 @@ Conference: https://2025.cswimworkshop.org/
 
 </iframe>
 
+<<<<<<< HEAD
 ## Journal: Economic Analysis and Policy
+=======
+## Economic Analysis and Policy
+>>>>>>> 9fb7db76d8cc8015e60c2bbe5db6f52723cb8ab0
 
 ![](images/Camera_XHS_17447327922881040g2sg312icvo3s0c7g48uveq05df6k24ft9o8.jpg){fig-align="center"}
 
