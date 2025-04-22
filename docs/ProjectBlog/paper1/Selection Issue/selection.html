@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Selection Issues</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Virginia_Tech_seal.svg.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../Horizontal_VT_Full_Color_RGB.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../research.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../teaching.html" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts.html" rel="" target="">
+ <span class="menu-text">Project Blog</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/shaokang-y-52b633162/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Selection Issues</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Paper1</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Monday, February 26, 2024</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">Friday, November 8, 2024</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#confounders" id="toc-confounders" class="nav-link active" data-scroll-target="#confounders"><span class="header-section-number">1</span> Confounders</a></li>
+  <li><a href="#category-of-confounders" id="toc-category-of-confounders" class="nav-link" data-scroll-target="#category-of-confounders"><span class="header-section-number">2</span> Category of Confounders</a>
+  <ul class="collapse">
+  <li><a href="#busyness" id="toc-busyness" class="nav-link" data-scroll-target="#busyness"><span class="header-section-number">2.1</span> Busyness</a></li>
+  <li><a href="#reverse-causalityinsomniaroommateschildren" id="toc-reverse-causalityinsomniaroommateschildren" class="nav-link" data-scroll-target="#reverse-causalityinsomniaroommateschildren"><span class="header-section-number">2.2</span> Reverse Causality/Insomnia/Roommates/Children</a></li>
+  <li><a href="#depressionces-d" id="toc-depressionces-d" class="nav-link" data-scroll-target="#depressionces-d"><span class="header-section-number">2.3</span> Depression(CES-D)</a></li>
+  <li><a href="#depression-bdi" id="toc-depression-bdi" class="nav-link" data-scroll-target="#depression-bdi"><span class="header-section-number">2.4</span> Depression (BDI)</a></li>
+  <li><a href="#children-at-residential" id="toc-children-at-residential" class="nav-link" data-scroll-target="#children-at-residential"><span class="header-section-number">2.5</span> Children at Residential</a></li>
+  <li><a href="#socioeconomic-status" id="toc-socioeconomic-status" class="nav-link" data-scroll-target="#socioeconomic-status"><span class="header-section-number">2.6</span> Socioeconomic Status</a></li>
+  <li><a href="#fitbit-work-status-during-night-shift" id="toc-fitbit-work-status-during-night-shift" class="nav-link" data-scroll-target="#fitbit-work-status-during-night-shift"><span class="header-section-number">2.7</span> Fitbit Work Status During night shift</a></li>
+  <li><a href="#part-time-job" id="toc-part-time-job" class="nav-link" data-scroll-target="#part-time-job"><span class="header-section-number">2.8</span> Part-time Job</a></li>
+  <li><a href="#social-network-control" id="toc-social-network-control" class="nav-link" data-scroll-target="#social-network-control"><span class="header-section-number">2.9</span> Social Network Control</a></li>
+  </ul></li>
+  <li><a href="#alternative-specification" id="toc-alternative-specification" class="nav-link" data-scroll-target="#alternative-specification"><span class="header-section-number">3</span> Alternative Specification</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+<p>In this update, we try to identify the confounding factors for the three major independent variables: screen time, unlock frequency and message.</p>
+<section id="confounders" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="confounders"><span class="header-section-number">1</span> Confounders</h2>
+<ol type="1">
+<li><p><strong>Busynesin the evening.</strong>&nbsp;For example, when a student has to prepare for an exam the next day, he/she may need to focus on studying and reduce smartphone use the night before the exam. In the meantime, the student’s sleep debt may increase as he/she spends more time studying on that day.</p></li>
+<li><p><strong>Busyness of the next day.</strong> The schedule of the next day may impact students’ smartphone use and sleep debt of the previous day. For instance, when students know they have an early class the next day, they may consciously reduce smartphone use and sleep earlier.</p></li>
+<li><p><strong>Social activities at night.</strong>&nbsp;Social activities, including parties and dating, may impact both smartphone use and sleep debt. When students have parties scheduled at night, instead of using smartphones, they may spend more time on social activities. Their sleep debt may increase correspondingly due to the</p></li>
+<li><p><strong>Tiredness of the day.</strong>&nbsp;One may reduce smartphone use and sleep earlier and more when he/she feels very tired on that day.</p></li>
+<li><p><strong>Health status of the day.</strong> When an individual is sick, she/he may have to reduce smartphone use and spend more time on sleep.</p></li>
+<li><p><strong>Accident or emergency.</strong>&nbsp;When an individual meets unexpected emergent events, she/he may have to reduce smartphone use. In the meantime, his/her sleep may be deprived.</p></li>
+<li><p><strong>Travelling/Flight.</strong> Traveling may impact both smartphone use and sleep debt negatively. When an individual is on a flight, his/her access to a smartphone is limited. Also, the individual’s sleep may be disturbed due to the turbulence during flight.</p></li>
+<li><p><strong>Change of lifestyle.</strong> When one realizes the harm of smartphone overuse and the importance of healthy sleep, he/she may decide to regulate his/her lifestyle, resulting in less screen time and sleep debt.</p></li>
+<li><p><strong>Computer games.</strong> Playing computer games may have impacts on both smartphone use and sleep debt. For example, a student who is addicted to computer games may spend less time on a smartphone and sleep.</p></li>
+<li><p><strong>Fitness at night.</strong> Some individuals have the habit of working out in the evening or at night. This lifestyle may reduce screen time before sleep and extend sleep duration, as tiredness may help individuals fall asleep earlier.</p></li>
+<li><p><strong>Insomnia.</strong> Having insomnia issues may impact both smartphone use and sleep. Individuals may have difficulties in falling asleep when they have insomnia issues. Staying awake may leave individuals time to use their smartphones.</p></li>
+<li><p><strong>Entertainment at night.</strong> Having entertainment activities at night may impact both smartphone use and sleep debt. For example, one may watch TV and stay up late, resulting in less smartphone use and more sleep debt.</p></li>
+<li><p><strong>Caffeine and Alcohol Consumption</strong>. These substances can affect sleep quality and are related to lifestyle choices that may correlate with smartphone use habits. For example, drinking alcohol may help individuals fall asleep faster and use less smartphone.</p></li>
+<li><p><strong>Stress Levels</strong>. Overall stress levels can impact both sleep quality and the amount/type of smartphone usage. For instance, when an individual is stressed out due to academic tasks, it may be harder for him/her to fall asleep. In the meantime, the individual may use a smartphone to kill time.</p></li>
+<li><p><strong>Socioeconomic Status</strong>. This can influence access to smartphones, as well as sleep environments and overall health. For example, students who face financial issues may need to do part-time jobs, which sometimes happens at night (e.g., waiters). This may reduce their smartphone use at night and increase sleep debt.</p></li>
+<li><p><strong>Marital Status</strong>. Being married or having a partner may influence sleep patterns due to shared sleeping environments and responsibilities that might affect smartphone use before bed.</p></li>
+<li><p><strong>Children in Household</strong>. The presence of children, especially young ones, can significantly affect sleep patterns and opportunities for smartphone use.</p></li>
+<li><p><strong>Roommate.</strong> Having roommates may impact individuals’ smartphone use and sleep cycle. For example, an individual living with roommates may spend more time face-to-face chatting than on a smartphone screen. Moreover, interacting with roommates may impact sleep duration.</p></li>
+</ol>
+</section>
+<section id="category-of-confounders" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="category-of-confounders"><span class="header-section-number">2</span> Category of Confounders</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/confounders.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="busyness" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="busyness"><span class="header-section-number">2.1</span> Busyness</h3>
+<p>Weekends</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-432615052.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Weekdays</p>
+<p><img src="images/clipboard-1300913234.png" class="img-fluid"></p>
+<p>In Semesters</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2634925452.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>In Breaks</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2739325680.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="reverse-causalityinsomniaroommateschildren" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="reverse-causalityinsomniaroommateschildren"><span class="header-section-number">2.2</span> Reverse Causality/Insomnia/Roommates/Children</h3>
+<p>To test the potential impact of insomnia on the relationship between smartphone use and sleep debt, we look at the students’ insomnia level. In the first five waves of socil surveys, students took the <strong>Pittsburgh Sleep Quality Index (PSQI)</strong> test to measure their insomnia level. For the specific questions of the survey,please refer to the questionnaireof PSQI in this <a href="https://drive.google.com/file/d/1bRWbcFo_mFa9SeZOeC5AiIczccl1xaqE/view">link</a> and its <a href="https://drive.google.com/file/d/1wSZjLEjG4ISVGIiKkX036s0pzmAqpCpy/view">references</a>. The PSQI test consists of 19 self-rated questions that generate seven component scores: subjective sleep quality, sleep latency, sleep duration, habitual sleep efficiency, sleep disturbances, use of sleeping medication, and daytime dysfunction. The sum of these seven component scores yields one global score. The global score ranges from 0 to 21, with higher scores indicating worse sleep quality. The PSQI test has been widely used in the literature to measure sleep quality and insomnia level. The following figure shows the distribution of individuals’ average PSQI scores of based on the surveys they took.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2084538279.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Based on PSQI score, a binary PSQIGroup is created to indicate an individual’s overall sleep quality. When PSQI is &lt;= 5, the student is labeled as <strong>‘Good Sleep’,</strong> otherwise, the student is labeled as <strong>‘Disturbed Sleep’.</strong> To test the consistency between Fitbit measured sleep quality and self-reported sleep quality, we compare the sleep debt between the two distinct PSQIGroup groups:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-125115316.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The above figure shows that ‘Disturbed Sleep’ group has a 10-minute higher sleep debt than “Good Sleep” group.</p>
+<section id="descriptive-results-with-total-observations" class="level4" data-number="2.2.1">
+<h4 data-number="2.2.1" class="anchored" data-anchor-id="descriptive-results-with-total-observations"><span class="header-section-number">2.2.1</span> Descriptive Results with Total Observations</h4>
+<p>To evaluate whether our main results are influenced by the potential confounder “Insomnia”, we conduct the estimation separately for “Good Sleep” and ‘Disturbed Sleep’ groups. First, we recall the main descriptive results with total observations:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-641235887.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="descriptive-results-by-psqigroup" class="level4" data-number="2.2.2">
+<h4 data-number="2.2.2" class="anchored" data-anchor-id="descriptive-results-by-psqigroup"><span class="header-section-number">2.2.2</span> Descriptive Results by PSQIGroup</h4>
+<p>Next, we turn to the separate estimations grouped by PSQI level.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1245868360.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The blue lines in the figures show the sleep debt and orange lines show the message frequency. Lines with circle refer to the ‘Disturbed Sleep’ group. Lines with square refers to the ‘Good Sleep’ group. The results suggest that our main estimation results persist in both “Good Sleep” and ‘Disturbed Sleep’ groups.</p>
+</section>
+<section id="estimation-by-insomnia-level" class="level4" data-number="2.2.3">
+<h4 data-number="2.2.3" class="anchored" data-anchor-id="estimation-by-insomnia-level"><span class="header-section-number">2.2.3</span> Estimation by Insomnia Level</h4>
+<p>To validate the descriptive results above, we run the estimation separately for “Good Sleep” and ‘Disturbed Sleep’ groups.</p>
+<section id="good-sleep-group" class="level5" data-number="2.2.3.1">
+<h5 data-number="2.2.3.1" class="anchored" data-anchor-id="good-sleep-group"><span class="header-section-number">2.2.3.1</span> Good Sleep Group</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-74609558.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="disturbed-sleep-group" class="level5" data-number="2.2.3.2">
+<h5 data-number="2.2.3.2" class="anchored" data-anchor-id="disturbed-sleep-group"><span class="header-section-number">2.2.3.2</span> Disturbed Sleep Group</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1535161308.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The estimation results for “Good Sleep” group and “Disturbed Sleep” group are consistent with our main estimation results with full observations. The turning points of the “Disturbed Sleep” group are located <strong>slightly lefter</strong> (81.92 minutes &lt; 83.33 minutes)than those of the “Good Sleep” group, suggesting that sleep debt of “Disturbed Sleep” group increases earlier than the “Disturbed Sleep” group with the increase of screen time.</p>
+</section>
+</section>
+<section id="predicted-sleep-debt" class="level4" data-number="2.2.4">
+<h4 data-number="2.2.4" class="anchored" data-anchor-id="predicted-sleep-debt"><span class="header-section-number">2.2.4</span> Predicted Sleep Debt</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/PSQI.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The above figure show the predicted sleep debt for “Good Sleep” group and “Disturbed Sleep” group. We observe that the predicted sleep debt of “Good Sleep” is <strong>lower</strong> than the “Disturbed Sleep” group. Both of them show a U-shape relationship between sleep debt and screen time. Overall, we observe that our main findings are not significantly influenced by insomnia.</p>
+</section>
+</section>
+<section id="depressionces-d" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="depressionces-d"><span class="header-section-number">2.3</span> Depression(CES-D)</h3>
+<p>Depression might be a confounder for the relation between smartphone use and sleep debt. Evidence suggest that around 75% depressed patients have difficulties falling asleep to some degree<span class="citation" data-cites="nutt2008">(<a href="#ref-nutt2008" role="doc-biblioref">Nutt, Wilson, and Paterson 2008</a>)</span>. In this section, we examine whether our main results are influenced by individuals’ depression level. Fortunately, students took standardized depression surveys named <a href="https://drive.google.com/file/d/1UgC-6Qv7lB3e7LizyRAUcFGz5BZ4IMad/view">Center for Epidemiologic Studies Depression Scale (CES-D)</a> in the study, which is a screening test for depression and depressive disorder. CES-D measures depress symptoms defined by the American Psychiatric Association’ Diagnostic and Statistical Manual (DSM-V), this <a href="https://cesd-r.com/">website</a> shows the detail of the scale. The higher the CES-D score, the higher the depression level an individual has. Total Score of 16 or higher is considered depressed, otherwise, it is not depressed. The following figure shows the distribution of participants’ CES-D scores.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1199029835.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>CES-D depression scale covered survey 1, 2, 4, 6 and 8. We check whether sleep debt differ between the depressed group and non-depressed group:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1469132000.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The above figure shows that “Not Depressed” group has an average sleep debt of 49.69 minutes, which is 3.5 minutes lower than that of “Depressed” group.</p>
+<section id="descriptive-results-by-depression-group" class="level4" data-number="2.3.1">
+<h4 data-number="2.3.1" class="anchored" data-anchor-id="descriptive-results-by-depression-group"><span class="header-section-number">2.3.1</span> Descriptive Results by Depression Group</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2883898341.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The above figure shows how sleep debt change over screen time for individuals with different depress levels. We observe that depressed individuals have an overall <strong>higher sleep debt</strong> and <strong>lower message frequency</strong>.</p>
+</section>
+<section id="estimation-by-depression-level" class="level4" data-number="2.3.2">
+<h4 data-number="2.3.2" class="anchored" data-anchor-id="estimation-by-depression-level"><span class="header-section-number">2.3.2</span> Estimation by Depression Level</h4>
+<p><img src="images/CESD.png" class="img-fluid"></p>
+<p>Not Depressed Group</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1275868022.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Depressed Group</p>
+<p><img src="images/clipboard-3857348345.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="depression-bdi" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="depression-bdi"><span class="header-section-number">2.4</span> Depression (BDI)</h3>
+<p>Beck Depression Inventory （BDI) is another standerdized survey for measuring depression level. The BDI survey was conducted in the second, third, fifth and seventh wave of the study. The BDI survey consists of 21 questions, each with four possible responses ranging from 0 to 3. The total score of the BDI survey ranges from 0 to 63, with higher scores indicating higher depression levels. The following figure shows the distribution of participants’ BDI scores. Please refer to the <a href="https://drive.google.com/file/d/1OrG87R2E4VOJ5gvT_U9EZPYL1OMnXIcb/view">link</a> for the detailed questionnaires.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2833947798.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The above figure shows the depression levels based on BDI index. [0-13] belongs to minimal depression category, [14-19] refers to mid depression level, [20-28] refers to moderate depression level and [29-63] refers to severe depression level.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-340590785.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>We combine mild, moderate and severe categories as depressed group and take minimal level category as non-depressed group. The above figure shows that the depressed group has a higher sleep debt.</p>
+<section id="descriptive-results-by-depression-group-1" class="level4" data-number="2.4.1">
+<h4 data-number="2.4.1" class="anchored" data-anchor-id="descriptive-results-by-depression-group-1"><span class="header-section-number">2.4.1</span> Descriptive Results by Depression Group</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3369355500.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The above figure shows that descriptive trend of sleep debt varying over screen time. It suggests that dethe pressed group has a overall higher sleep debt than the non-depressed group.</p>
+</section>
+<section id="predicted-sleep-debt-1" class="level4" data-number="2.4.2">
+<h4 data-number="2.4.2" class="anchored" data-anchor-id="predicted-sleep-debt-1"><span class="header-section-number">2.4.2</span> Predicted Sleep Debt</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/BDI.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The above figure show the predicted sleep debt based on two-way fixed effect mdel. The figure shows that depressed group has an overall l higher sleep debt. Woe observe that the Ushape the relationship persists.</p>
+</section>
+<section id="estimation-by-depression-level-1" class="level4" data-number="2.4.3">
+<h4 data-number="2.4.3" class="anchored" data-anchor-id="estimation-by-depression-level-1"><span class="header-section-number">2.4.3</span> Estimation by Depression Level</h4>
+<p>Not Depresssed Group</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1856480893.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Depressed Group</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3789206540.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The estimation results show that the impact of screen time are consistent in not depressed group and depressed group. However, we observe that the impact of message is not significant for depressed group not matter depression is measured by the CESD or BDI.</p>
+</section>
+</section>
+<section id="children-at-residential" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="children-at-residential"><span class="header-section-number">2.5</span> Children at Residential</h3>
+</section>
+<section id="socioeconomic-status" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="socioeconomic-status"><span class="header-section-number">2.6</span> Socioeconomic Status</h3>
+<p>Socioeconomic status could be a confounder for the relationship between smartphone use and sleep debt. For example, students in low-income family may need to do part-time jobs to pay for their student loan debt. In this section, we examine whether our main results are influenced by individuals’ socioeconomic status. Specifically, we use parents’ income level to measure socioeconomic status. The following figure shows the sleep debt varying over participants’ parents’ income level.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-523211155.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>We observe that students with parents’ income greater than $250K has 38.66 minutes sleep debt, which is much higher than other categories. While students whose parents’ income are lower than $50K have sleep debts of 53.24 and 66.37 minutes, which are higher than the average. We merge the categories with income less than $50K as low income group, categories with income between $50K~$250K as medium income, and take category with income higher than $250K as high income. The following figure shows sleep debt with three groups:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2770700742.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Next, we show how sleep debt vary with screen time differentiated by parents’ income level:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-453175552.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>We observe that students with low income have a significantly higher sleep debt when screen time is between 10-20 minutes. We speculate that those students may have <strong>part-time jobs</strong> to do <strong>at night</strong>, which limit their phone use time and sleep duration. We also observe that students with high household income have a <strong>higher</strong> message level, indicating that they may spend more time on <strong>networking</strong>.</p>
+<section id="predicted-sleep-debt-2" class="level4" data-number="2.6.1">
+<h4 data-number="2.6.1" class="anchored" data-anchor-id="predicted-sleep-debt-2"><span class="header-section-number">2.6.1</span> Predicted Sleep Debt</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/income.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Sleep Debt by Parents’ Income Level</figcaption>
+</figure>
+</div>
+</section>
+<section id="estimation-by-household-income-level" class="level4" data-number="2.6.2">
+<h4 data-number="2.6.2" class="anchored" data-anchor-id="estimation-by-household-income-level"><span class="header-section-number">2.6.2</span> Estimation by Household Income Level</h4>
+<section id="high-income" class="level5" data-number="2.6.2.1">
+<h5 data-number="2.6.2.1" class="anchored" data-anchor-id="high-income"><span class="header-section-number">2.6.2.1</span> High Income</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1798400788.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="medium-income" class="level5" data-number="2.6.2.2">
+<h5 data-number="2.6.2.2" class="anchored" data-anchor-id="medium-income"><span class="header-section-number">2.6.2.2</span> Medium Income</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2401068854.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="low-income" class="level5" data-number="2.6.2.3">
+<h5 data-number="2.6.2.3" class="anchored" data-anchor-id="low-income"><span class="header-section-number">2.6.2.3</span> Low Income</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1508493203.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="fitbit-work-status-during-night-shift" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="fitbit-work-status-during-night-shift"><span class="header-section-number">2.7</span> Fitbit Work Status During night shift</h3>
+<p>Whether Fitbit works during night shift could be a confounder for the relationship between smartphone use and sleep debt. In this section, we examine whether our main results are influenced by individuals’ Fitbit work status during night shift. In the survey, participants were asked whether they wear Fitbit during night shift. The following figure shows the sleep debt varying over participants’ Fitbit work status during night shift: Does Fitbit work a night shift? The following figure shows the sleep debt varying over participants’ Fitbit work status during night shift.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3989197516.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>We observe that individuals whose Fitbit work during night shit has a average sleep debt of 55.7 minutes, which is about 5 minutes higher than those whose Fitbit did not work during night shift.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1822524005.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="estimation-by-fitbit-status-during-night-shift" class="level4" data-number="2.7.1">
+<h4 data-number="2.7.1" class="anchored" data-anchor-id="estimation-by-fitbit-status-during-night-shift"><span class="header-section-number">2.7.1</span> Estimation by Fitbit Status During Night Shift</h4>
+<section id="not-work" class="level5" data-number="2.7.1.1">
+<h5 data-number="2.7.1.1" class="anchored" data-anchor-id="not-work"><span class="header-section-number">2.7.1.1</span> Not work</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-391694283.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="work" class="level5" data-number="2.7.1.2">
+<h5 data-number="2.7.1.2" class="anchored" data-anchor-id="work"><span class="header-section-number">2.7.1.2</span> Work</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2730077641.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="part-time-job" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="part-time-job"><span class="header-section-number">2.8</span> Part-time Job</h3>
+<p>Students do part-time job from time to time to pay for their student loan debt or release financial pressure. In the survey, students are asked the following question:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3680031307.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Doing part-time could be a confounder for the causal inference between screen time and sleep debt as doing part-time jobs at night could limit individuals’ time spent on screen and sleep.</p>
+<p>To address the selection issue of part-time job, we first investigate the relationship between sleep debt and the weekly part-time hours.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-617484130.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>We observe that sleep debt increases slightly with the weekly work hours. We then create a dummy variable to further check the results:</p>
+<p><img src="images/clipboard-1119310652.png" class="img-fluid"></p>
+<p>We find that students with part-time jobs have over 6.57 minutes higher sleep debt than students without part-time job. Net we explore how sleep debt vary with screen time for the two groups:</p>
+<p><img src="images/clipboard-4185291164.png" class="img-fluid"></p>
+<p>The above figure suggests that students with part-time jobs have higher sleep debt although both groups represent a U-shaped relationship.</p>
+<section id="estimation-by-part-time-job" class="level4" data-number="2.8.1">
+<h4 data-number="2.8.1" class="anchored" data-anchor-id="estimation-by-part-time-job"><span class="header-section-number">2.8.1</span> Estimation by Part-Time Job</h4>
+<section id="without-part-time-job" class="level5" data-number="2.8.1.1">
+<h5 data-number="2.8.1.1" class="anchored" data-anchor-id="without-part-time-job"><span class="header-section-number">2.8.1.1</span> Without Part-Time Job</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2906772081.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="with-part-time-job" class="level5" data-number="2.8.1.2">
+<h5 data-number="2.8.1.2" class="anchored" data-anchor-id="with-part-time-job"><span class="header-section-number">2.8.1.2</span> With Part-Time Job</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-321156171.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The sub-group analysis shows that the estimation results are consistent with our earlier results.</p>
+</section>
+</section>
+<section id="predicted-sleep-debt-by-part-time-job" class="level4" data-number="2.8.2">
+<h4 data-number="2.8.2" class="anchored" data-anchor-id="predicted-sleep-debt-by-part-time-job"><span class="header-section-number">2.8.2</span> Predicted Sleep Debt by Part-Time Job</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/partime_job.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The figure above shows that the predicted sleep debt of students without part-time job is significantly lower than that of students with part-time job.</p>
+</section>
+</section>
+<section id="social-network-control" class="level3" data-number="2.9">
+<h3 data-number="2.9" class="anchored" data-anchor-id="social-network-control"><span class="header-section-number">2.9</span> Social Network Control</h3>
+<section id="social-closeness" class="level4" data-number="2.9.1">
+<h4 data-number="2.9.1" class="anchored" data-anchor-id="social-closeness"><span class="header-section-number">2.9.1</span> Social Closeness</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2945320106.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="duration-social-relationship" class="level4" data-number="2.9.2">
+<h4 data-number="2.9.2" class="anchored" data-anchor-id="duration-social-relationship"><span class="header-section-number">2.9.2</span> Duration Social Relationship</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1966662110.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="centrality-of-social-networks" class="level4" data-number="2.9.3">
+<h4 data-number="2.9.3" class="anchored" data-anchor-id="centrality-of-social-networks"><span class="header-section-number">2.9.3</span> Centrality of Social Networks</h4>
+</section>
+<section id="core-number-of-social-networks" class="level4" data-number="2.9.4">
+<h4 data-number="2.9.4" class="anchored" data-anchor-id="core-number-of-social-networks"><span class="header-section-number">2.9.4</span> <img src="images/clipboard-435771002.png" class="img-fluid"> Core Number of Social Networks</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2412866658.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="trust" class="level4" data-number="2.9.5">
+<h4 data-number="2.9.5" class="anchored" data-anchor-id="trust"><span class="header-section-number">2.9.5</span> Trust</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-838501164.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="social-network-nodes" class="level4" data-number="2.9.6">
+<h4 data-number="2.9.6" class="anchored" data-anchor-id="social-network-nodes"><span class="header-section-number">2.9.6</span> Social Network Nodes</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3129141658.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="social-network-edges" class="level4" data-number="2.9.7">
+<h4 data-number="2.9.7" class="anchored" data-anchor-id="social-network-edges"><span class="header-section-number">2.9.7</span> Social Network Edges</h4>
+<p><img src="images/clipboard-1877886823.png" class="img-fluid"></p>
+</section>
+<section id="control-for-social-network" class="level4" data-number="2.9.8">
+<h4 data-number="2.9.8" class="anchored" data-anchor-id="control-for-social-network"><span class="header-section-number">2.9.8</span> Control for Social Network</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1538491404.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="control-for-social-networkwithout-structure-features" class="level4" data-number="2.9.9">
+<h4 data-number="2.9.9" class="anchored" data-anchor-id="control-for-social-networkwithout-structure-features"><span class="header-section-number">2.9.9</span> Control for Social Network(without Structure Features)</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3705985854.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="subgroup-analysis-by-network-features" class="level4" data-number="2.9.10">
+<h4 data-number="2.9.10" class="anchored" data-anchor-id="subgroup-analysis-by-network-features"><span class="header-section-number">2.9.10</span> Subgroup Analysis by Network Features</h4>
+<p>We observe that the group with a <strong>long-relationship</strong> social network group has less sleep debt than the group with a short-relationship social network, which supports our “social support” argument. I also conducted subgroup analysis based on the <strong>size, closeness, degree centrality, core number</strong> of the social network, however, their prediction curve do <strong>not support</strong> our “social support” argument. In addition, we can also find the difference between different groups reflected by the <strong>height</strong> of the predicted cure of sleep debt, it is not reflected in <strong>when the turning point appears</strong> (turning point at 80 minutes or 100 minutes).</p>
+<ol type="1">
+<li><p>Subgroup Analysis by Relationship Length of Social Network</p>
+<p><img src="images/relationlength-02.png" class="img-fluid"></p></li>
+<li><p>Subgroup Analysis by the Size of Social Network</p>
+<p><img src="images/bigsmall net.png" class="img-fluid"></p></li>
+<li><p>Subgroup Analysis by the Closeness of Social Network</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/close.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="alternative-specification" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="alternative-specification"><span class="header-section-number">3</span> Alternative Specification</h2>
+<p>We estimate sleep debt with alternative specification taking “contacts” as main independent variables.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1650227112.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1320778945.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The results with alternative specification are consistent with our main specification.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-nutt2008" class="csl-entry" role="listitem">
+Nutt, David, Sue Wilson, and Louise Paterson. 2008. <span>“Sleep Disorders as Core Symptoms of Depression.”</span> <em>Dialogues in Clinical Neuroscience</em> 10 (3): 329–36. <a href="https://doi.org/10.31887/DCNS.2008.10.3/dnutt">https://doi.org/10.31887/DCNS.2008.10.3/dnutt</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

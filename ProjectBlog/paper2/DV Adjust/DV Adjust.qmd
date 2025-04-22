@@ -1,0 +1,38 @@
+---
+title: "DV Adjustment"
+date: 01/29/2024
+date-modified: last-modified
+date-format: full
+categories: [Paper2]
+#image: "cluster1.png"
+tbl-colwidths: [5,30,125]
+format: 
+  html:
+    page-layout: full
+---
+
+## Distribution of Going to Bed Times
+
+![](images/Go2Bed-02.png){fig-align="center"}
+
+It is not likely that social network activation affects screen time **right before sleep**.
+
+## Distribution of Waking Up Times
+
+![](images/wake.png){fig-align="center"}
+
+## Results with 24 hours Screen Time Measurement
+
+![](images/clipboard-1540611184.png){fig-align="center"}
+
+## Screen Time \< 21:00
+
+![](images/clipboard-2412859547.png){fig-align="center"}
+
+Results with Lagged Core Number
+
+![](images/clipboard-310908795.png){fig-align="center"}
+
+## Potential Mediation Effects
+
+![](images/clipboard-4063857286.png){fig-align="center"}
