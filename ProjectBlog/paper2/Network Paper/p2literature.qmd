@@ -1,0 +1,55 @@
+---
+title: "IS Studies on Social Network"
+date: 02/04/2025
+date-modified: last-modified
+draft: false
+date-format: full
+categories: [Others]
+#image: "search.png"
+tbl-colwidths: [5,50,75]
+format: 
+  html:
+    page-layout: full
+---
+
+# Network Dynamics: How Can We Find Patients Like Us
+
+**Lu (Lucy) Yan, Jianping Peng, Yong Tan**
+
+<iframe src="pdfs/Yan et al. - 2015 - Network Dynamics How Can We Find Patients Like Us.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
+
+# Feeling Blue? Go Online: An Empirical Study of Social Support Among Patients
+
+**Lu (Lucy) Yan, Yong Tan**
+
+<iframe src="pdfs/Yan and Tan - 2014 - Feeling Blue Go Online An Empirical Study of Social Support Among Patients.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
+
+# Social Networks and the Diffusion of UserGenerated Content: Evidence from YouTube
+
+**Anjana Susarla, Jeong-Ha Oh, Yong Tan**
+
+<iframe src="pdfs/Susarla et al. - 2012 - Social Networks and the Diffusion of User-Generated Content Evidence from YouTube.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
+
+# Network Effects: The Influence of Structural Capital on Open Source Project Success
+
+**Param Vir Singh, Yong Tan, Vijay Mookerjee**
+
+<iframe src="pdfs/Singh et al. - 2011 - Network Effects The Influence of Structural Capital on Open Source Project Success.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
+
+# Location, Location, Location: How Network Embeddedness Affects Project Success in Open Source Systems
+
+**Rajdeep Grewal, Gary L. Lilien, Girish Mallapragada,**
+<iframe src="pdfs/Grewal et al. - 2006 - Location, Location, Location How Network Embeddedness Affects Project Success in Open Source System.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
+
+
+

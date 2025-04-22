@@ -1,0 +1,88 @@
+---
+title: "Social Network Activation: \\The Application in Smartphone Use"
+date: 02/04/2025
+date-modified: last-modified
+date-format: full
+categories: [Paper2]
+image: "inout.png"
+format:
+  revealjs: 
+    theme: default
+smaller: true
+bibliography: references.bib
+---
+
+### Motivation
+
+-   Humans are inherently **social beings**. Social engagement improves feeling of belongingness, social fulfillment, etc., which enhance mental health. [@luo2020].
+
+-   In contrast, social isolation can results in anxiety, depression [@robb2020], and suicide [@garnettf.2023].
+
+### **Gap**
+
+-   To address the consequences of lack of social engagement, prior studies primarily focus on social interaction volume.
+
+-   However, little attention is paid the the structure of one's social network. Specifically, it is not clear whether activating different parts (e.g., core vs.periphery) of social network impact individuals differently.
+
+### Study/Methodology
+
+-   We examine whether activating the core parts of social networks, as measured by K-Core, affects smartphone usage activities differently than activating peripheral parts.
+
+## 
+
+### Study/Methodology
+
+-   We leverage data sets collected from a series of longitudinal studies that tracked participants’ smartphone use, social networks, and physical activities. We measure social network activation in real-time and track its evolution for each participant, combining self-reported social network structure information and real-time mobile communications.
+-   Related studies:
+
+<iframe src="pdfs/Yan et al. - 2015 - Network Dynamics How Can We Find Patients Like Us.pdf" style="width:100%; height:1500px;" frameborder="0">
+
+</iframe>
+
+### 
+
+## Hypothesis 1
+
+-   **H1:** Activating social networks reduces smartphone screen time; the reduction in screen time increases with the number of contacts activated. <br /> <br /> <br />
+
+## Specification 1
+
+\
+
+$\begin{equation} \begin{split} \text{Screen Time}_{it} = \beta_0 + \beta_1 \cdot \text{Social Network Features}_{it} + \alpha \cdot X_{it} + \theta_i + \lambda_t + \varepsilon_{it} \end{split} \label{e1}\end{equation}$\
+
+-   $\text{Screen Time}_{it}$: Smartphone use time before users fall asleep
+-   $\text{Social Network Features}_{it}$: Degree Centrality and K-Core
+-   $\text{X}_{it}$: Control variables: Steps, sleep duration, naps, etc.
+-   $\theta_i$: Individual fixed effect (students)
+-   $\lambda_t$: Time fixed effect (day)
+
+## Alternative Explanation
+
+![](images/clipboard-446827943.png){fig-align="center"}
+
+-   Extraverted individuals may incline to activate embeded contacts for group activities.
+
+## Subsample Analysis (Network Size)
+
+![](images/clipboard-2421990295.png){fig-align="center"}
+
+-   K-Core is more effective in reducing screen time for one with small social network**.**
+
+## Subsample Analysis (Steps)
+
+![](images/clipboard-997836528.png){fig-align="center"}
+
+-   K-Core is more effective in reducing screen time for one with high level steps**.**
+
+## Subsample Analysis (Screen Time)
+
+![](images/clipboard-894895312.png){fig-align="center"}
+
+-   K-Core is more effective in reducing screen time for heavy screen users**.**
+
+## Subsample Analysis (Screen Time)
+
+![](images/clipboard-894895312.png){fig-align="center"}
+
+-   K-Core is more effective in reducing screen time for heavy screen users**.**

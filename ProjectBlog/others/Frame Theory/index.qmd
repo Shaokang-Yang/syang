@@ -1,0 +1,28 @@
+---
+title: "Frame Theory"
+date: 02/04/2024
+date-modified: last-modified
+date-format: full
+categories: [Others]
+website:
+  comments: 
+    utterances:
+      repo: quarto-dev/quarto-web
+#image: "cluster1.png"
+tbl-colwidths: [5,30,125]
+format: 
+  html:
+    page-layout: full
+---
+
+## Understanding involution with mental accounting 
+
+The term involution is originally used to describe a society or economic system that becomes increasingly competitive inside but does not generate more output. Nowadays, it has been adopted to describe a situation where intense competition and the pressure to succeed lead to overwork at the cost of personal well-being and quality of life, without resulting in meaningful societal or individual advancement. In some contexts, involution is interpreted as "rat race". Involution may cause negative mental outcomes such as anxiety and derpression.
+
+In the context of involution, individuals may disproportionately allocate their time and effort towards activities that are believed to enhance their competitiveness, like studying for entrance exams or working overtime. Evidence implies that the situation may be driven by individuals' homogeneous goals and perceived social expectations.
+
+Since mental accounting describes the way people categorize, perceive and prioritize money, time or effort. We conjecture that homogeneous mental accounting strategy increases involution in a occupational setting and thus increase anxiety level. In contrast, heterogeneous mental accounting strategy decreases involution and thus reduce anxiety. In this paper, our objective is to understand how mental accounting impact the involution within a team.
+
+## Does social media make anxiety?
+
+In the era of digitalization, social media has become so pervasive that the number of users has reached 5.04 billion as of January, 2024, which accounts for 62.3% of the total population. While multiple studies show that using social media may cause anxiety for users,. One reason is that individuals tend to selectively post or disclose the best about themselves, which may change other users' reference points. For example, job candidates may share their offers and packages on social media. However, those who are willing to share the information are usually those above average. This may improve the other individual's reference point , decrease their self-efficacy, and increase anxiety. According to social comparison theory, this may impact an individual's self-evaluation. Therefore, we conjecture that social media positively improves individuals reference points and increases anxiety levels. 
