@@ -7,13 +7,10 @@ website:
 
   # sidebar:
   #   contents:
-  #     - href: index.qmd
-  #       text: Home
-  #     - research.qmd
-  #     - teaching.qmd
-  #     - posts.qmd
-  #     - text: Github
+  #   tools:
+  #     - icon: github
   #       href: https://github.com/Shaokang-Yang
+
   navbar:
     #title: My Website
     pinned: true
@@ -24,10 +21,10 @@ website:
       - research.qmd
       - teaching.qmd
       - project.qmd # add your posts.qmd file to your navbar!
-      # - icon: github
-      #   href: https://github.com/
-      # - icon: linkedin
-      #   href: https://www.linkedin.com/in/shaokang-y-52b633162/
+      - icon: github
+        href: https://github.com/Shaokang-Yang
+      - icon: linkedin
+        href: https://www.linkedin.com/in/shaokang-y-52b633162/
 format:
   html:
     theme: cosmo
@@ -42,6 +39,8 @@ body-header: |
   This page brought to you by <https://example.com>
 #margin-header: |
   #![](/Horizontal_VT_Full_Color_RGB.png)
+
+
 
 
 
