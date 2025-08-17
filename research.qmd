@@ -6,4 +6,29 @@ format:
 class: custom-font-pos
 ---
 
+## Research Interests
 
+-   Topics: Healthcare policy analysis, healthcare IT
+-   Methodologies: Causal inference with econometrics, machine learning, statistical learning
+
+## Working Papers
+
+-   **Smartphone Use, Social Support, and Sleep Health** Shaokang Yang, Idris Adjerid. \[[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5368531)\] –*Under Review at Information Systems Research*
+
+-   **Friends over Feeds: How Social Smartphone Use Reduces Screen Time** Shaokang Yang, Idris Adjerid. – *In preparation for submission*\
+
+<!-- -->
+
+-   ***The Abortion War: When Restrictions Meet Technology** Shaokang Yang, Idris Adjerid.* – *In preparation for submission*
+
+## Presentations
+
+-   **Friends over Feeds: How Social Smartphone Use Reduces Screen Time.**\
+    Shaokang Yang, Idris Adjerid
+    -   Conference on Health IT and Analytics (CHITA) — Apr 2025, Austin, TX
+    -   INFORMS Annual Meeting — Oct 2024, Seattle, WA
+-   **Smartphone Use, Social Support, and Sleep Health.**\
+    Shaokang Yang, Idris Adjerid
+    -   Conference on Health IT and Analytics (CHITA) — May 2024, Washington, DC
+    -   33rd Annual POMS Conference — May 2023, Orlando, FL
+    -   Conference on Health IT and Analytics (CHITA) — May 2023, Washington, DC

@@ -6,4 +6,14 @@ format:
 class: custom-font-pos
 ---
 
+## Instructor
 
+-   **BIT 3424 — Intro to Business Analytics Modelling** — Summer 2024
+
+*Undergraduate advanced course; programming with VBA, Python, and R*
+
+## Tutorial Instructor
+
+-   **BIT 4624 — Cybersecurity Analytics** — Fall 2022; Spring 2023; Fall 2024
+
+*Taught tutorials of Cybersecurity Analytics (machine learning) with R*

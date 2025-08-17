@@ -6,14 +6,24 @@ format:
 class: custom-font-pos
 ---
 
--   **Ph.D. in Business Information Technology (Expected)**
+Department of Business Information Technology
 
-Virginia Polytechnic Institute and State University
+Pamplin College of Business, Virginia Tech
 
--   **M.Sc. in Data Science and Economics**
+Blacksburg, VA 24061
 
-University of Milan
+Website: [shaokang-yang.net](shaokang-yang.net)
 
--   **Bachelor of Engineering/Bachelor of Economics**
+-   **Virginia Polytechnic Institute and State University**
 
-Jimei University
+    Ph.D. in Business Information Technology (2026, Expected)
+
+    M.A. in Data Analysis and Applied Statistics
+
+-   **University of Milan**
+
+    M.Sc. in Data Science and Economics
+
+-   **Jimei University**
+
+    Bachelor of Engineering; Bachelor of Economics
