@@ -6,11 +6,23 @@ format:
 class: custom-font-pos
 ---
 
-Department of Business Information Technology
+<table style="width:100%">
+  <tr>
+    <td>Department of Business Information Technology</td>
+    <td align="right">Tel: 540-824-8612</td>
+  </tr>
+  <tr>
+    <td>Pamplin College of Business, Virginia Tech</td>
+    <td align="right">Email: shaokang@vt.edu</td>
+  </tr>
+  <tr>
+    <td>Blacksburg, VA 24061</td>
+    <td align="right"><a href="https://wholehealth.isce.vt.edu/members-directory/yang-shaokang-bio.html">Whole Health Consortium</a></td>
+  </tr>
+</table>
 
-Pamplin College of Business, Virginia Tech
 
-Blacksburg, VA 24061
+------------------------------------------------------------------------
 
 **Virginia Polytechnic Institute and State University**
 
