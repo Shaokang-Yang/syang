@@ -1,0 +1,96 @@
+[
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/Robustness Checks/Robustness.html",
+      "/posts/Hypotheses/hypo.html",
+      "/posts/screen time/screentime.html",
+      "/posts/Daylight Saving Time/daylight.html",
+      "/posts/CHITA/chita.html",
+      "/posts/Algorithmic Nudge/nudge.html",
+      "/posts/outline/outline.html",
+      "/posts/Battery levels as IV (3 hours)/batteryIV.html",
+      "/posts/Network Looking up/lookup.html",
+      "/posts/Selection Issue/selection.html",
+      "/posts/IV/IV.html",
+      "/posts/Mediation Effect of Steps/index.html",
+      "/posts/Frame Theory/index.html",
+      "/posts/Survey Overlap/index.html",
+      "/posts/Meidation/Mediation.html",
+      "/posts/SP2 Review Response/ReviewResponse.html",
+      "/posts/Clustering Anlysis/cluster.html",
+      "/posts/Paper 2/paper2.html",
+      "/posts/Paper 1/paper1.html"
+    ]
+  },
+  {
+    "listing": "/ProjectBlog/sleep.html",
+    "items": [
+      "/ProjectBlog/paper1/IV/IV.html",
+      "/ProjectBlog/paper1/Clustering Anlysis/cluster.html",
+      "/ProjectBlog/paper1/Robustness Checks/Robustness.html",
+      "/ProjectBlog/paper1/Hypotheses/hypo.html",
+      "/ProjectBlog/paper1/screen time/screentime.html",
+      "/ProjectBlog/paper1/Daylight Saving Time/daylight.html",
+      "/ProjectBlog/paper1/CHITA/chita.html",
+      "/ProjectBlog/paper1/outline/outline.html",
+      "/ProjectBlog/paper1/Battery levels as IV (3 hours)/batteryIV.html",
+      "/ProjectBlog/paper1/Selection Issue/selection.html",
+      "/ProjectBlog/paper1/Paper 1/paper1.html"
+    ]
+  },
+  {
+    "listing": "/ProjectBlog/network.html",
+    "items": [
+      "/ProjectBlog/paper2/Network Looking up/lookup.html",
+      "/ProjectBlog/paper2/Mediation Effect of Steps/index.html",
+      "/ProjectBlog/paper2/Survey Overlap/index.html",
+      "/ProjectBlog/paper2/SP2 Review Response/ReviewResponse.html",
+      "/ProjectBlog/paper2/Paper 2/paper2.html"
+    ]
+  },
+  {
+    "listing": "/ProjectBlog/others.html",
+    "items": [
+      "/ProjectBlog/others/Abortion/abortion.html",
+      "/ProjectBlog/others/Natality/natality.html",
+      "/ProjectBlog/others/Algorithmic Nudge/nudge.html",
+      "/ProjectBlog/others/Frame Theory/index.html"
+    ]
+  },
+  {
+    "listing": "/ProjectBlog/paper2.html",
+    "items": [
+      "/ProjectBlog/paper2/Paper 2 Slides 2/p2literature.html",
+      "/ProjectBlog/paper2/Paper 2 Slides/P2 Slides.html",
+      "/ProjectBlog/paper2/Network Paper/p2literature.html",
+      "/ProjectBlog/paper2/Paper 2/paper2.html",
+      "/ProjectBlog/paper2/DV Adjust/DV Adjust.html",
+      "/ProjectBlog/paper2/Network Looking up/lookup.html",
+      "/ProjectBlog/paper2/Mediation Effect of Steps/index.html",
+      "/ProjectBlog/paper2/Survey Overlap/index.html",
+      "/ProjectBlog/paper2/SP2 Review Response/ReviewResponse.html"
+    ]
+  },
+  {
+    "listing": "/ProjectBlog/paper1.html",
+    "items": [
+<<<<<<< HEAD
+      "/ProjectBlog/paper1/Pre3HoursSleep/chita.html",
+=======
+>>>>>>> 9fb7db76d8cc8015e60c2bbe5db6f52723cb8ab0
+      "/ProjectBlog/paper1/Clustering Anlysis/cluster.html",
+      "/ProjectBlog/paper1/P1 Review Response/ReviewResponse.html",
+      "/ProjectBlog/paper1/IV/IV.html",
+      "/ProjectBlog/paper1/Robustness Checks/Robustness.html",
+      "/ProjectBlog/paper1/Hypotheses/hypo.html",
+      "/ProjectBlog/paper1/screen time/screentime.html",
+      "/ProjectBlog/paper1/Daylight Saving Time/daylight.html",
+      "/ProjectBlog/paper1/CHITA/chita.html",
+      "/ProjectBlog/paper1/outline/outline.html",
+      "/ProjectBlog/paper1/Battery levels as IV (3 hours)/batteryIV.html",
+      "/ProjectBlog/paper1/Selection Issue/selection.html",
+      "/ProjectBlog/paper1/Paper 1/paper1.html"
+    ]
+  }
+]

@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Robustness Checks</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Virginia_Tech_seal.svg.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../Horizontal_VT_Full_Color_RGB.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project.html" rel="" target="">
+ <span class="menu-text">Project</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Robustness Checks</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Paper1</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Saturday, July 27, 2024</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">Sunday, August 17, 2025</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#test-of-u-shaped-relationship" id="toc-test-of-u-shaped-relationship" class="nav-link active" data-scroll-target="#test-of-u-shaped-relationship"><span class="header-section-number">1</span> Test of U-Shaped Relationship</a>
+  <ul class="collapse">
+  <li><a href="#treatment-of-outliers" id="toc-treatment-of-outliers" class="nav-link" data-scroll-target="#treatment-of-outliers"><span class="header-section-number">1.1</span> Treatment of Outliers</a>
+  <ul class="collapse">
+  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data"><span class="header-section-number">1.1.1</span> Raw Data</a></li>
+  <li><a href="#winsorization" id="toc-winsorization" class="nav-link" data-scroll-target="#winsorization"><span class="header-section-number">1.1.2</span> Winsorization</a></li>
+  <li><a href="#trimming" id="toc-trimming" class="nav-link" data-scroll-target="#trimming"><span class="header-section-number">1.1.3</span> Trimming</a></li>
+  <li><a href="#variable-ranks" id="toc-variable-ranks" class="nav-link" data-scroll-target="#variable-ranks"><span class="header-section-number">1.1.4</span> Variable Ranks</a></li>
+  <li><a href="#outlier-treatment-based-on-individual-average" id="toc-outlier-treatment-based-on-individual-average" class="nav-link" data-scroll-target="#outlier-treatment-based-on-individual-average"><span class="header-section-number">1.1.5</span> Outlier Treatment Based on Individual Average</a></li>
+  </ul></li>
+  <li><a href="#spline-regressions" id="toc-spline-regressions" class="nav-link" data-scroll-target="#spline-regressions"><span class="header-section-number">1.2</span> Spline Regressions</a></li>
+  <li><a href="#addition-checks" id="toc-addition-checks" class="nav-link" data-scroll-target="#addition-checks"><span class="header-section-number">1.3</span> Addition Checks</a></li>
+  </ul></li>
+  <li><a href="#model-selection." id="toc-model-selection." class="nav-link" data-scroll-target="#model-selection."><span class="header-section-number">2</span> <strong>Model Selection.</strong></a>
+  <ul class="collapse">
+  <li><a href="#evaluation-of-model-fit" id="toc-evaluation-of-model-fit" class="nav-link" data-scroll-target="#evaluation-of-model-fit"><span class="header-section-number">2.1</span> <strong>Evaluation of Model Fit</strong></a></li>
+  <li><a href="#deviation-measure-of-screen-time-1" id="toc-deviation-measure-of-screen-time-1" class="nav-link" data-scroll-target="#deviation-measure-of-screen-time-1"><span class="header-section-number">2.2</span> <strong>Deviation Measure of Screen Time</strong></a></li>
+  </ul></li>
+  <li><a href="#endogeneity" id="toc-endogeneity" class="nav-link" data-scroll-target="#endogeneity"><span class="header-section-number">3</span> Endogeneity</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">3.1</span> Introduction</a></li>
+  <li><a href="#dynamic-panel-model" id="toc-dynamic-panel-model" class="nav-link" data-scroll-target="#dynamic-panel-model"><span class="header-section-number">3.2</span> Dynamic Panel Model</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+<section id="test-of-u-shaped-relationship" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Test of U-Shaped Relationship</h1>
+<p>In this section, we discuss whether the U-shaped relationship is caused by outliers in the data. First of all, we take a look at the descriptive statistics of the main variables:</p>
+<section id="treatment-of-outliers" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="treatment-of-outliers"><span class="header-section-number">1.1</span> Treatment of Outliers</h2>
+<section id="raw-data" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="raw-data"><span class="header-section-number">1.1.1</span> Raw Data</h3>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sleep_debt</th>
+<th data-quarto-table-cell-role="th">screen_time</th>
+<th data-quarto-table-cell-role="th">unlock</th>
+<th data-quarto-table-cell-role="th">message</th>
+<th data-quarto-table-cell-role="th">message_q</th>
+<th data-quarto-table-cell-role="th">screen_com</th>
+<th data-quarto-table-cell-role="th">screen_nocom</th>
+<th data-quarto-table-cell-role="th">sms</th>
+<th data-quarto-table-cell-role="th">mms</th>
+<th data-quarto-table-cell-role="th">whatsapp</th>
+<th data-quarto-table-cell-role="th">length</th>
+<th data-quarto-table-cell-role="th">bytes</th>
+<th data-quarto-table-cell-role="th">sc_com_pct</th>
+<th data-quarto-table-cell-role="th">screen_com_level2</th>
+<th data-quarto-table-cell-role="th">com_level</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>50.70</td>
+<td>39.27</td>
+<td>13.91</td>
+<td>20.54</td>
+<td>1.45</td>
+<td>12.48</td>
+<td>26.79</td>
+<td>19.31</td>
+<td>0.73</td>
+<td>0.50</td>
+<td>675.84</td>
+<td>630.28</td>
+<td>27.66</td>
+<td>0.26</td>
+<td>0.26</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>102.28</td>
+<td>38.62</td>
+<td>14.26</td>
+<td>41.73</td>
+<td>1.49</td>
+<td>25.25</td>
+<td>36.43</td>
+<td>40.26</td>
+<td>3.11</td>
+<td>6.77</td>
+<td>1706.43</td>
+<td>3575.41</td>
+<td>41.55</td>
+<td>0.44</td>
+<td>0.44</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>-778.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5%</td>
+<td>-110.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">10%</td>
+<td>-69.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">15%</td>
+<td>-45.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">20%</td>
+<td>-26.00</td>
+<td>3.70</td>
+<td>2.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>-11.00</td>
+<td>8.23</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>48.00</td>
+<td>29.23</td>
+<td>11.00</td>
+<td>3.00</td>
+<td>1.00</td>
+<td>0.00</td>
+<td>11.13</td>
+<td>3.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>39.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>110.00</td>
+<td>58.32</td>
+<td>20.00</td>
+<td>23.00</td>
+<td>3.00</td>
+<td>12.98</td>
+<td>40.98</td>
+<td>21.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>737.00</td>
+<td>0.00</td>
+<td>61.38</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">90%</td>
+<td>172.00</td>
+<td>94.93</td>
+<td>31.00</td>
+<td>61.00</td>
+<td>4.00</td>
+<td>44.95</td>
+<td>79.25</td>
+<td>57.00</td>
+<td>2.00</td>
+<td>0.00</td>
+<td>2047.00</td>
+<td>1281.11</td>
+<td>100.00</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">95%</td>
+<td>222.00</td>
+<td>120.68</td>
+<td>40.00</td>
+<td>95.00</td>
+<td>4.00</td>
+<td>68.22</td>
+<td>106.88</td>
+<td>91.00</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>3221.95</td>
+<td>3055.67</td>
+<td>100.00</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>479.00</td>
+<td>179.99</td>
+<td>817.00</td>
+<td>1015.00</td>
+<td>4.00</td>
+<td>179.99</td>
+<td>179.99</td>
+<td>1009.00</td>
+<td>278.00</td>
+<td>327.00</td>
+<td>297239.00</td>
+<td>266279.66</td>
+<td>100.00</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>We observe that there are some outliers in the data. For example, the maximum value of sleep debt is about 8 hours (479 minutes), suggesting that one did not sleep at all on that day. The minimal value of sleep debt is -12.96 hours (-778 minutes), suggesting that one slept for 20.96 hours, which is quite unusual. Moreover, the maximum screen time is 179.99 minutes; the maximum message is 1015 and the maximum unlock actions is 817 times, which could barely happen.</p>
+<p>Recall the model-free analysis about the relationship among sleep debt, screen time and message:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/model-free.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The margins plot based on fixed effect model with the above data is as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/estimation.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Considering the existence of outliers, the upwarding part of the U-shape might be caused by the outliers at the tail (the rightmost few bars). To check whether the U-shaped relationship is caused by outliers, we reviewed the literature about the treatement of outliers and identified the following outlier treatment strategies: <strong>winsorization, trimming, and interquartile range method</strong> <span class="citation" data-cites="leone2019 mitton2022 vinutha2018">(<a href="#ref-leone2019" role="doc-biblioref">Leone, Minutti-Meza, and Wasley 2019</a>; <a href="#ref-mitton2022" role="doc-biblioref">Mitton 2022</a>; <a href="#ref-vinutha2018" role="doc-biblioref">Vinutha, Poornima, and Sagar 2018</a> )</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3892815503.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="winsorization" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="winsorization"><span class="header-section-number">1.1.2</span> Winsorization</h3>
+<p>Winsorization replaces the extreme values with values at certain quartile cutoffs. The most commonly used cutoffs in business research is 1st and 99th percentiles, 5th/95th and 10th/90th are used as well <span class="citation" data-cites="mitton2022">(<a href="#ref-mitton2022" role="doc-biblioref">Mitton 2022</a>)</span>. We winsorize the continuous variables in our specification at cutoffs of 1st/99tth, 2.5th/97.5th, 5th/95th and 10th/90th. The following table shows the descriptive statistics after winsorization at cutoffs of 5th/95th.</p>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sleep_debt</th>
+<th data-quarto-table-cell-role="th">screen_time</th>
+<th data-quarto-table-cell-role="th">unlock</th>
+<th data-quarto-table-cell-role="th">message</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+<td>114762.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>50.34</td>
+<td>38.09</td>
+<td>13.20</td>
+<td>17.25</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>87.80</td>
+<td>35.42</td>
+<td>11.44</td>
+<td>26.84</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>-111.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>-11.00</td>
+<td>8.23</td>
+<td>4.00</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>48.00</td>
+<td>29.23</td>
+<td>11.00</td>
+<td>3.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>110.00</td>
+<td>58.32</td>
+<td>20.00</td>
+<td>23.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>224.00</td>
+<td>121.46</td>
+<td>40.00</td>
+<td>95.00</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>We can find that range of sleep debt changes to [-111, 224] minutes from [-778, 479] minutes; the maximum screen time decreased to 121.46 minutes from 179.99 minutes; the maximum unlock decreased to 40 from 817; the maximum message decreased to 95 from 1015, which are relatively normal. The following table shows the descriptive statistics with winsorization at cutoffs of 1st/99tth, 2.5th/97.5th, 5th/95th and 10th/90th.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4106334890.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="trimming" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="trimming"><span class="header-section-number">1.1.3</span> Trimming</h3>
+<p>Trimming deals with the outliers by simply dropping the observations with extreme values. Different from winsorization, trimming reduces the number of observations. We trim the data based on screen time at cutoffs of 1st/99tth, 2.5th/97.5th, 5th/95th and 10th/90th.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-407226497.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="variable-ranks" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="variable-ranks"><span class="header-section-number">1.1.4</span> Variable Ranks</h3>
+<p>The interquartile range (IQR) method is a variable rank strategy that rules out the outliers by calculating the upper and lower fence based on quartile values (<a href="https://www.scribbr.com/statistics/outliers/">link</a>).</p>
+<ul>
+<li><p>Interquartile Range (IQR)=Q3-Q1</p></li>
+<li><p>Upper fence = Q3+1.5×IQR</p></li>
+<li><p>Lower fence = Q1-1.5×IQR</p></li>
+</ul>
+<p>Recall the descriptive statistics of raw data, the IQR for screen time = Q3-Q1 = 58.32 - 8.23 = 50.09 minutes. Thus, the upper and lower fences for screen time are calculated as:</p>
+<ul>
+<li><p>Upper fence = 58.32+1.5×50.09 = 133.455 minutes</p></li>
+<li><p>Lower fence = 8.23-1.5×50.09 = -66.891 minutes</p></li>
+</ul>
+<p>Considering that screen time should a non-negative value, the range for screen time is <strong>[0, 133. 455]</strong> minutes. The descriptive statistics for the main variables are as follows:</p>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sleep_debt</th>
+<th data-quarto-table-cell-role="th">screen_time</th>
+<th data-quarto-table-cell-role="th">unlock</th>
+<th data-quarto-table-cell-role="th">message</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>110915.00</td>
+<td>110915.00</td>
+<td>110915.00</td>
+<td>110915.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>51.00</td>
+<td>35.29</td>
+<td>14.09</td>
+<td>20.29</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>102.17</td>
+<td>32.64</td>
+<td>14.39</td>
+<td>40.81</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>-778.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>-11.00</td>
+<td>7.50</td>
+<td>4.00</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>49.00</td>
+<td>27.68</td>
+<td>11.00</td>
+<td>3.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>110.00</td>
+<td>54.45</td>
+<td>20.00</td>
+<td>23.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>479.00</td>
+<td>133.43</td>
+<td>817.00</td>
+<td>1015.00</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>We then estimate the sleep debt based on the data after winsorization, trimming and IQR method with the fixed effect model.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-36233801.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The results are as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3325119646.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The estimated coefficients for screen time and its quadratic terms are significant suggesting that the existence of turning points. The following figure visualize the margin plot based on the above outlier treatment strategies:</p>
+<p><img src="images/combined_graph.png" class="img-fluid"></p>
+<p>The margins plot supports the existence of U-shaped relationship and the turning point are within the range of measurement windows (180 minutes).</p>
+</section>
+<section id="outlier-treatment-based-on-individual-average" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="outlier-treatment-based-on-individual-average"><span class="header-section-number">1.1.5</span> Outlier Treatment Based on Individual Average</h3>
+<section id="screen-time" class="level4" data-number="1.1.5.1">
+<h4 data-number="1.1.5.1" class="anchored" data-anchor-id="screen-time"><span class="header-section-number">1.1.5.1</span> Screen Time</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2336158588.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="deviation-measure-of-screen-time" class="level4" data-number="1.1.5.2">
+<h4 data-number="1.1.5.2" class="anchored" data-anchor-id="deviation-measure-of-screen-time"><span class="header-section-number">1.1.5.2</span> Deviation Measure of Screen Time</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1329186503.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="spline-regressions" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="spline-regressions"><span class="header-section-number">1.2</span> Spline Regressions</h2>
+<p>Spline regressions estimate the coefficients of screen time on sleep debt piecewisely. Spline regressions are widely used to test the existence of U- and inverted U-Shaped relationships <span class="citation" data-cites="kesavan2014 huang2023 tan2019 xu2022 zou2023">(<a href="#ref-kesavan2014" role="doc-biblioref">Kesavan, Staats, and Gilland 2014</a>; <a href="#ref-huang2023" role="doc-biblioref">Huang et al. 2023</a>; <a href="#ref-tan2019" role="doc-biblioref">Tan and Netessine 2019</a>; <a href="#ref-xu2022" role="doc-biblioref">Xu, Tan, and Netessine 2022</a>; <a href="#ref-zou2023" role="doc-biblioref">Zou et al. 2023</a>)</span>. For example, the following equation estimated the coefficients with 4 knots.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4088933022.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>We vary the number of knots from 1 to 5 and obtained the following results:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3259393049.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>We observe that the estimated coefficient transit from negative to positive regardless of the number of spline knots. The following figure visualize the transition for the spline regression with 5 knots, which supports the U-Shaped relationship.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1164654317.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="addition-checks" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="addition-checks"><span class="header-section-number">1.3</span> Addition Checks</h2>
+<p>In addition to the above checks for U-Shaped relationships, <span class="citation" data-cites="haans2016">(<a href="#ref-haans2016" role="doc-biblioref">Haans, Pieters, and He 2016</a>)</span> sgguested the following checks:</p>
+<ol type="1">
+<li><p>The turning point should be within the range of observations. We can observe that both the turning points above are within the measurement window.</p></li>
+<li><p>Theoretical support for the U-shaped relationship. Moderate smartphone use makes users relax and reduces sleep debt. After the turning point, the crowding out effect of screen time and blue light effects dominate the impact of screen time and increases sleep debt.</p></li>
+</ol>
+<p>The above checks support the U-Shaped relationship in our main specification.</p>
+</section>
+</section>
+<section id="model-selection." class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> <strong>Model Selection.</strong></h1>
+<section id="evaluation-of-model-fit" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="evaluation-of-model-fit"><span class="header-section-number">2.1</span> <strong>Evaluation of Model Fit</strong></h2>
+<p>In this section, we compare the performance of various models based on Akaike information criterion (AIC) and Bayesian information criterion (BIC) <span class="citation" data-cites="karhade2021">(<a href="#ref-karhade2021" role="doc-biblioref">Karhade and Qi Dong 2021</a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2996370340.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Based on the estimation results above, the AIC and BIC values in the curvilinear model are smaller than those of the control and linear models, suggesting that the curvilinear model outperforms the control and linear models.</p>
+</section>
+<section id="deviation-measure-of-screen-time-1" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="deviation-measure-of-screen-time-1"><span class="header-section-number">2.2</span> <strong>Deviation Measure of Screen Time</strong></h2>
+<p>In this section, we consider individuals’ different levels of smartphone use or use habits since individuals’ dependence levels on smartphone may differ. For example, one’s smartphone use amount may be systematically above the population’s average while his use level is below her/his own use level on a particular day.&nbsp;</p>
+<p>To address this concern, we create a deviation measure for screen time:&nbsp;<strong>Screen Time Deviation = Screen Time - Unit Average Screen Time</strong><span class="citation" data-cites="ho2017 karhade2021">(<a href="#ref-ho2017" role="doc-biblioref">Ho et al. 2017</a>; <a href="#ref-karhade2021" role="doc-biblioref">Karhade and Qi Dong 2021</a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-163764688.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The estimation results above support the existence of U-shaped relationship and curvilinear model outperforms the control and linear models.</p>
+</section>
+</section>
+<section id="endogeneity" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Endogeneity</h1>
+<section id="introduction" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
+<p>In the blog <a href="https://shaokang-yang.net/posts/Selection%20Issue/selection.html">selection issues</a>, we discussed the confounders that may threaten the causal relationship in the study. In this section, we discuss the different types of causes of endogeneity and their corresponding remedy strategies . Overall, there are four types of causes of endogeneity: omitted variable, simultaneity, measurement Error, and selection (of treatment and/or into sample)<span class="citation" data-cites="hill2021">(<a href="#ref-hill2021" role="doc-biblioref">Hill et al. 2021</a>)</span>.</p>
+<table class="table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 39%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Endogeneity Cause</th>
+<th>Description</th>
+<th>Threaten Lvel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Omitted Variable</td>
+<td><p>There could be factors that are <code>missed</code> in the model. For example:</p>
+<ul>
+<li><p>Sleep debt of previous day. An individual may need to make up sleep today if she/he had more sleep debt than average yesterday.</p></li>
+<li><p>Party. Participating in a party may impact smartphone use and sleep simultaneously.</p></li>
+</ul></td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>Simultaneity</td>
+<td>Smartphone users play smartphones as they cannot fall asleep.</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>Measurement Error</td>
+<td>Since subjects in the study wear the same devices (Fitbit) and primarly use same phones (iPhones), the measurement errors are supposed to be <strong>systematic</strong> if there were. This might not impact the causal effects of our argument.</td>
+<td>Low</td>
+</tr>
+<tr class="even">
+<td>Selection (of treatment and/or into sample)</td>
+<td>For the Nethealth project, students were informed that the research team would collect their social networks, physical activity and sleep obtained from Fitbit devices, physical and mental health, social-psychological states, tastes and various self-reported behaviours, and demographics and background traits through surveys. There seems not likely to be significant selection bias in terms of sleep quality and smartphone use amount when recruiting students.</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dynamic-panel-model" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="dynamic-panel-model"><span class="header-section-number">3.2</span> Dynamic Panel Model</h2>
+<p>One’s sleep debt today may be influenced by the sleep debt <strong>yesterday</strong> and even the sleep debt of previous few days. For example, an individual may need to sleep more and reduce phone use to make up sleep today if she/he had significant high sleep debt yesterday.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Dynamic Panel Model.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>To control for the dynamic endogeneity, we introduce the dynamic panel model by adding the lagged dependent variables:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1927004410.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>However, adding lagged dependent variables may introduce extra endogeneity as lagged dependent variables may be correlated with error term<span class="citation" data-cites="nickell1981">(<a href="#ref-nickell1981" role="doc-biblioref">Nickell 1981</a>)</span>. To overcome this issue, we apply the Arellano–Bond estimator, which is a general method of moments (GMM) estimator based on dynamic panel data with first differences <span class="citation" data-cites="huang2023">(<a href="#ref-huang2023" role="doc-biblioref">Huang et al. 2023</a>)</span>. Arellano–Bond estimator uses the lagged variables as instruments to address the endogeneity bias. For example, suppose that the sleep debt today is affected by the sleep debt yesterday but not the one of the day before yesterday. In another word, <span class="math inline">\(Sleep\ Debt_{i,t-2}\)</span> only affect <span class="math inline">\(Sleep\ Debt_{i,t}\)</span> by affecting <span class="math inline">\(Sleep\ Debt_{i,t-1}\)</span>. Thus, <span class="math inline">\(Sleep\ Debt_{i,t-2}\)</span> can work as an instrument variable for <span class="math inline">\(Sleep\ Debt_{i,t-1}\)</span>, namely “internal instrument” <span class="citation" data-cites="roodman2009">(<a href="#ref-roodman2009" role="doc-biblioref">Roodman 2009</a>)</span> which is shown in the following figure.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/AB.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The situation becomes complicated if the <span class="math inline">\(Sleep\ Debt_{i,t-2}\)</span> can directly affect <span class="math inline">\(Sleep\ Debt_{i,t}\)</span>, as shown below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/AB2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>We can identify the <span class="math inline">\(Sleep\ Debt_{i,t-n}\)</span> that does not affect <span class="math inline">\(Sleep\ Debt_{i,t}\)</span> directly and take it as instrument for variables from <span class="math inline">\(Sleep\ Debt_{i,t-1}\)</span> to <span class="math inline">\(Sleep\ Debt_{i,t-n-1}\)</span>. The Arellano–Bond test checks the exogeneity assumption and can tell us whether the lagged variables are correlated with error term. A Sargan test tells us whether the instruments are correctly specified.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1903385873.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The Arellano–Bond test above for AR (1) is significant while AR(2) is not, indicating that the lagged one period of sleep debt is a significant estimator for the current sleep debt. We include lagged (1) sleep debt into our main estimation and obtained the following results:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-761639513.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p><strong>Arellano-Bond test for AR(1) in first differences</strong>:</p>
+<ul>
+<li><p>z = -5.76</p></li>
+<li><p>p-value = 0.000</p></li>
+<li><p>Interpretation: This test checks for the presence of first-order serial correlation. The null hypothesis of no first-order serial correlation is rejected because the p-value is less than 0.05. This suggests that there is first-order serial correlation in the differenced errors, which is expected in first-differenced models.</p></li>
+</ul></li>
+<li><p><strong>Arellano-Bond test for AR(2) in first differences</strong>:</p>
+<ul>
+<li><p>z = 0.53</p></li>
+<li><p>p-value = 0.594</p></li>
+<li><p>Interpretation: This test checks for the presence of second-order serial correlation. The null hypothesis of no second-order serial correlation cannot be rejected because the p-value is greater than 0.05. This suggests that there is no second-order serial correlation in the differenced errors.</p></li>
+</ul></li>
+<li><p><strong>Sargan test of overidentifying restrictions</strong>:</p>
+<ul>
+<li><p>chi2(2) = 45.42</p></li>
+<li><p>p-value = 0.000</p></li>
+<li><p>Interpretation: This test checks the overall validity of the instruments. The null hypothesis is that the instruments are valid (i.e., they are not correlated with the error term). The p-value is less than 0.05, so the null hypothesis is rejected, indicating that the instruments may be invalid.</p></li>
+</ul></li>
+<li><p><strong>Hansen test of overidentifying restrictions</strong>:</p>
+<ul>
+<li><p>chi2(2) = 0.00</p></li>
+<li><p>p-value = 1.000</p></li>
+<li><p>Interpretation: Similar to the Sargan test, but robust to heteroskedasticity. The p-value is much greater than 0.05, so the null hypothesis cannot be rejected, indicating that the instruments are valid.</p></li>
+</ul></li>
+</ul>
+<p>We find that one minute increase in the sleep debt of the previous day can lead to <strong>0.095</strong> minute decrease in the current sleep debt. We also observe that the estimation for screen time terms are significant, supporting the existence of U-shaped relationship between sleep debt and screen time.</p>
+<p>The above process shows how GMM address endogeneity caused by <strong>omitted variable</strong>. In addition, The GMM model removes other <strong>reverse causality</strong> by “internally transforming the data”-taking the first difference of variables in the model<span class="citation" data-cites="ullah2018">(<a href="#ref-ullah2018" role="doc-biblioref">Ullah, Akhtar, and Zaefarian 2018</a>)</span>.</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-haans2016" class="csl-entry" role="listitem">
+Haans, Richard F. J., Constant Pieters, and Zi-Lin He. 2016. <span>“Thinking about U: Theorizing and Testing U- and Inverted U-Shaped Relationships in Strategy Research.”</span> <em>Strategic Management Journal</em> 37 (7): 1177–95. <a href="https://doi.org/10.1002/smj.2399">https://doi.org/10.1002/smj.2399</a>.
+</div>
+<div id="ref-hill2021" class="csl-entry" role="listitem">
+Hill, Aaron D., Scott G. Johnson, Lindsey M. Greco, Ernest H. O’Boyle, and Sheryl L. Walter. 2021. <span>“Endogeneity: A Review and Agenda for the Methodology-Practice Divide Affecting Micro and Macro Research.”</span> <em>Journal of Management</em> 47 (1): 105–43. <a href="https://doi.org/10.1177/0149206320960533">https://doi.org/10.1177/0149206320960533</a>.
+</div>
+<div id="ref-ho2017" class="csl-entry" role="listitem">
+Ho, Joanna, Feng Tian, Anne Wu, and Sean Xin Xu. 2017. <span>“Seeking Value Through Deviation? Economic Impacts of IT Overinvestment and Underinvestment.”</span> <em>Information Systems Research</em> 28 (4): 850–62. <a href="https://doi.org/10.1287/isre.2017.0710">https://doi.org/10.1287/isre.2017.0710</a>.
+</div>
+<div id="ref-huang2023" class="csl-entry" role="listitem">
+Huang, Herbie, Nur Sunar, Jayashankar M. Swaminathan, and Rahul Roy. 2023. <span>“Do Noisy Customer Reviews Discourage Platform Sellers? Empirical Analysis of an Online Solar Marketplace.”</span> <em>Manufacturing &amp; Service Operations Management</em> 25 (6): 2195–215. <a href="https://doi.org/10.1287/msom.2021.0104">https://doi.org/10.1287/msom.2021.0104</a>.
+</div>
+<div id="ref-karhade2021" class="csl-entry" role="listitem">
+Karhade, Prasanna, and John Qi Dong. 2021. <span>“Information Technology Investment and Commercialized Innovation Performance: Dynamic Adjustment Costs and Curvilinear Impacts.”</span> <em>MIS Quarterly</em> 45 (3): 1007–24. <a href="https://doi.org/10.25300/MISQ/2021/14368">https://doi.org/10.25300/MISQ/2021/14368</a>.
+</div>
+<div id="ref-kesavan2014" class="csl-entry" role="listitem">
+Kesavan, Saravanan, Bradley R. Staats, and Wendell Gilland. 2014. <span>“Volume Flexibility in Services: The Costs and Benefits of Flexible Labor Resources.”</span> <em>Management Science</em> 60 (8): 1884–1906. <a href="https://doi.org/10.1287/mnsc.2013.1844">https://doi.org/10.1287/mnsc.2013.1844</a>.
+</div>
+<div id="ref-leone2019" class="csl-entry" role="listitem">
+Leone, Andrew J., Miguel Minutti-Meza, and Charles E. Wasley. 2019. <span>“Influential Observations and Inference in Accounting Research.”</span> <em>The Accounting Review</em> 94 (6): 337–64. <a href="https://doi.org/10.2308/accr-52396">https://doi.org/10.2308/accr-52396</a>.
+</div>
+<div id="ref-mitton2022" class="csl-entry" role="listitem">
+Mitton, Todd. 2022. <span>“Methodological Variation in Empirical Corporate Finance.”</span> Edited by Itay Goldstein. <em>The Review of Financial Studies</em> 35 (2): 527–75. <a href="https://doi.org/10.1093/rfs/hhab030">https://doi.org/10.1093/rfs/hhab030</a>.
+</div>
+<div id="ref-nickell1981" class="csl-entry" role="listitem">
+Nickell, Stephen. 1981. <span>“Biases in Dynamic Models with Fixed Effects.”</span> <em>Econometrica</em> 49 (6): 1417–26. <a href="https://doi.org/10.2307/1911408">https://doi.org/10.2307/1911408</a>.
+</div>
+<div id="ref-roodman2009" class="csl-entry" role="listitem">
+Roodman, David. 2009. <span>“How to Do Xtabond2: An Introduction to Difference and System GMM in Stata.”</span> <em>The Stata Journal</em> 9 (1): 86–136. <a href="https://doi.org/10.1177/1536867X0900900106">https://doi.org/10.1177/1536867X0900900106</a>.
+</div>
+<div id="ref-tan2019" class="csl-entry" role="listitem">
+Tan, Tom Fangyun, and Serguei Netessine. 2019. <span>“When You Work with a Superman, Will You Also Fly? An Empirical Study of the Impact of Coworkers on Performance.”</span> <em>Management Science</em> 65 (8): 3495–3517. <a href="https://doi.org/10.1287/mnsc.2018.3135">https://doi.org/10.1287/mnsc.2018.3135</a>.
+</div>
+<div id="ref-ullah2018" class="csl-entry" role="listitem">
+Ullah, Subhan, Pervaiz Akhtar, and Ghasem Zaefarian. 2018. <span>“Dealing with Endogeneity Bias: The Generalized Method of Moments (GMM) for Panel Data.”</span> <em>Industrial Marketing Management</em> 71 (May): 69–78. <a href="https://doi.org/10.1016/j.indmarman.2017.11.010">https://doi.org/10.1016/j.indmarman.2017.11.010</a>.
+</div>
+<div id="ref-vinutha2018" class="csl-entry" role="listitem">
+Vinutha, H. P., B. Poornima, and B. M. Sagar. 2018. <span>“Detection of Outliers Using Interquartile Range Technique from Intrusion Dataset.”</span> In, edited by Suresh Chandra Satapathy, Joao Manuel R. S. Tavares, Vikrant Bhateja, and J. R. Mohanty, 511–18. Singapore: Springer. <a href="https://doi.org/10.1007/978-981-10-7563-6_53">https://doi.org/10.1007/978-981-10-7563-6_53</a>.
+</div>
+<div id="ref-xu2022" class="csl-entry" role="listitem">
+Xu, Yuqian, Tom Fangyun Tan, and Serguei Netessine. 2022. <span>“The Impact of Workload on Operational Risk: Evidence from a Commercial Bank.”</span> <em>Management Science</em> 68 (4): 2668–93. <a href="https://doi.org/10.1287/mnsc.2021.4019">https://doi.org/10.1287/mnsc.2021.4019</a>.
+</div>
+<div id="ref-zou2023" class="csl-entry" role="listitem">
+Zou, Fan, Yan Dong, Sining Song, and Manus Rungtusanatham. 2023. <span>“Product Recalls and Supply Base Innovation.”</span> <em>Manufacturing &amp; Service Operations Management</em> 25 (5): 1931–46. <a href="https://doi.org/10.1287/msom.2023.1213">https://doi.org/10.1287/msom.2023.1213</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

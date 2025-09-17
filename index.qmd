@@ -1,0 +1,31 @@
+---
+title: "Shaokang Yang"
+format:
+  html:
+    css: styles2.css
+class: custom-font-pos
+---
+
++-----------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| Department of Business Information Technology | Tel: 540-824-8612                                                                                   |
++-----------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| Pamplin College of Business, Virginia Tech    | Email: shaokang\@vt.edu                                                                             |
++-----------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| Blacksburg, VA 24061                          | [Whole Health Consortium](https://wholehealth.isce.vt.edu/members-directory/yang-shaokang-bio.html) |
++-----------------------------------------------+-----------------------------------------------------------------------------------------------------+
+
+------------------------------------------------------------------------
+
+**Virginia Polytechnic Institute and State University**
+
+-   Ph.D. in Business Information Technology (2026, Expected)
+
+-   M.A. in Data Analysis and Applied Statistics
+
+**University of Milan**
+
+-   M.Sc. in Data Science and Economics
+
+**Jimei University**
+
+-   Bachelor of Engineering; Bachelor of Economics

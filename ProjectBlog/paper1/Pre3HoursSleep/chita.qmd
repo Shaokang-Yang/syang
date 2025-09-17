@@ -1,0 +1,56 @@
+---
+title: "Screen Time Before Sleep"
+date: 04/22/2025
+date-modified: last-modified
+date-format: full
+categories: [Paper1]
+#image: "search.png"
+tbl-colwidths: [5,50,75]
+format: 
+  html:
+    page-layout: full
+---
+
+# Measurement Window
+
+![](images/clipboard-727691413.png){fig-align="center"}
+
+## Descriptive Statistics
+
+```{python}
+#| echo: false
+#| warning: false
+#| output: true
+import time;import pandas as pd;import numpy as np;import datetime
+from datetime import datetime;from datetime import timedelta;import sqlite3;import warnings
+import matplotlib.pyplot as plt;import seaborn as sns;warnings.filterwarnings('ignore')
+
+df=pd.read_csv("/Users/shaokangyang/Library/CloudStorage/GoogleDrive-sky.ang510@gmail.com/My Drive/Nethealth/Data/CNSA/combine/7/df_pre_3hr.csv")
+
+df[['major_minstofallasleep', 'sleep_duration','major_minsawake','sleep_debt', 
+    'major_minsafterwakeup',  'major_bedtime',]].describe().round(2)
+```
+
+## Model-Free Evidence
+
+![](images/clipboard-3316574643.png){fig-align="center"}
+
+## Waking Up Time as DV
+
+![](images/clipboard-3013034043.png){fig-align="center"}
+
+## Confidence Intervals Plot
+
+![](images/clipboard-3836821377.png){fig-align="center"}
+
+![](images/clipboard-2494050607.png){fig-align="center"}
+
+# CHTIA
+
+The slides for CHITA 2024 are below:
+
+<iframe src="pdfs/Social_Network_Paper_Slides___Yang_Adjerid_Liu.pdf" style="width:150%; height:1500px;" frameborder="0">
+
+</iframe>
+
+You can download it [here](pdfs/CHITA2024.pdf).

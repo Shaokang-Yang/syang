@@ -1,0 +1,23 @@
+---
+title: "Teaching"
+format:
+  html:
+    css: styles2.css
+class: custom-font-pos
+---
+
+## Instructor
+
+-   **BIT 3424 — Intro to Business Analytics Modelling** — Summer 2024
+
+*Undergraduate advanced course; programming with VBA, Python, and R*
+
+## Tutorial Instructor
+
+-   **BIT 4624 — Cybersecurity Analytics**
+
+Cybersecurity tutorials in data analytics and machine learning with R — Fall 2024
+
+Cybersecurity tutorials in data analytics and machine learning with R — Spring 2023
+
+Cybersecurity tutorials in data analytics and machine learning with R — Fall 2022
