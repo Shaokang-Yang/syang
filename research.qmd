@@ -21,7 +21,7 @@ class: custom-font-pos
 
 3. **Pet Ownership and Mental Health During the Pandemic: Evidence from an E-Commerce Platform** Li Lin, Shaokang Yang -- *Data collection phase*
 
-### Public policy Evaluation on Health IT
+### Public Policy Evaluation on Health IT
 
 1. **The Abortion War: When Restrictions Meet Technology.** Shaokang Yang, Idris Adjerid. -- *Data collected, working on empirical analysis*
 
