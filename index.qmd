@@ -35,4 +35,5 @@ class: custom-font-pos
 
 **Jimei University**
 
--   Bachelor of Engineering; Bachelor of Economics
+- B.Eng. in Ship Electrical and Electronic Engineering
+- B.Econ. in Finance (Minor)
