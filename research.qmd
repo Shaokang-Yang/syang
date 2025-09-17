@@ -27,7 +27,7 @@ class: custom-font-pos
 
 2. **Pro-Choice Vs Pro-Life: The Impact of Telehealth Abortion on Infant Health.** -- *Data collected, working on empirical analysis*
 
-## Presentations
+## Talks
 
 - Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* **Scheduled on INFORMS Annual Meeting (2:09 PM – 2:27 PM)**, Atlanta, GA, Oct 28, 2025.
 
