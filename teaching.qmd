@@ -16,6 +16,8 @@ class: custom-font-pos
 
 -   **BIT 4624 — Cybersecurity Analytics**
 
+Cybersecurity tutorials in data analytics and machine learning with R — Fall 2025
+
 Cybersecurity tutorials in data analytics and machine learning with R — Fall 2024
 
 Cybersecurity tutorials in data analytics and machine learning with R — Spring 2023

@@ -8,37 +8,41 @@ class: custom-font-pos
 
 ## Research Interests
 
--   Topics: Public policy evaluation on health IT, Digital technologies, Economics of AI
--   Methodologies: Causal inference with econometrics, machine learning, statistical learning
+-   **Topics:** Public policy evaluation on health IT, Digital technologies, Artificial intelligence (AI) for Behavioral Decision-making, Economics of AI
+-   **Methodologies:** Applied econometrics, experiments, machine learning, statistical learning
 
 ## Working Papers
 
 ### Digital Technologies and Well-being
 
-1. **Smartphone Use, Social Support, and Sleep Health.** Shaokang Yang, Idris Adjerid. [SSRN](http://dx.doi.org/10.2139/ssrn.5368531) -- *Under Review at Information Systems Research*
+1.  **Smartphone Use, Social Support, and Sleep Health.** Shaokang Yang, Idris Adjerid. [SSRN](http://dx.doi.org/10.2139/ssrn.5368531) -- *Under Review at **Information Systems Research***
 
-2. **Friends over Feeds: How Social Smartphone Use Reduces Screen Time.** Shaokang Yang, Idris Adjerid. -- *In preparation for submission (target: Organization Science)*
+2.  **Friends over Feeds: How Social Smartphone Use Reduces Screen Time.** Shaokang Yang, Idris Adjerid. -- *In preparation for submission (target: Organization Science)*
 
-3. **Pet Ownership and Mental Health During the Pandemic: Evidence from an E-Commerce Platform** Li Lin, Shaokang Yang -- *Data collection phase*
+3.  **Pet Ownership and Mental Health During the Pandemic: Evidence from an E-Commerce Platform** Li Lin, Shaokang Yang -- *Data collection phase*
 
 ### Public Policy Evaluation on Health IT
 
-1. **The Abortion War: When Restrictions Meet Technology.** Shaokang Yang, Idris Adjerid. -- *Data collected, working on empirical analysis*
+1.  **The Abortion War: When Restrictions Meet Technology.** Shaokang Yang, Idris Adjerid. -- *Data collected, working on empirical analysis*
 
-2. **Pro-Choice Vs Pro-Life: The Impact of Telehealth Abortion on Infant Health.** -- *Data collected, working on empirical analysis*
+2.  **Pro-Choice Vs Pro-Life: The Impact of Healthcare Digitalization on Infant Health.** -- *Data collected, working on empirical analysis*
+
+### AI for Behavioral Decision-making
+
+1.  **Prevention is Better Than Cure: Artificial Intelligence-based Nudging to Prevent Digital Addiction.** -- *Ideation phase.*
 
 ## Talks
 
-- Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* **Scheduled on INFORMS Annual Meeting (2:09 PM – 2:27 PM)**, Atlanta, GA, Oct 28, 2025.
+-   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* **Scheduled on INFORMS Annual Meeting (2:09 PM – 2:27 PM)**, Atlanta, GA, Oct 28, 2025.
 
-- Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Conference on Health IT and Analytics (CHITA)*, Austin, TX, Apr 2025.
+-   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Conference on Health IT and Analytics (CHITA)*, Austin, TX, Apr 2025.
 
-- Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Doctoral Consortium of CHITA*, Austin, TX, Apr 2025.
+-   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Doctoral Consortium of CHITA*, Austin, TX, Apr 2025.
 
-- Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *INFORMS Annual Meeting*, Seattle, WA, Oct 2024.
+-   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *INFORMS Annual Meeting*, Seattle, WA, Oct 2024.
 
-- Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *Conference on Health IT and Analytics (CHITA)*, Washington, DC, May 2024.
+-   Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *Conference on Health IT and Analytics (CHITA)*, Washington, DC, May 2024.
 
-- Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *33rd Annual POMS Conference*, Orlando, FL, May 2023.
+-   Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *33rd Annual POMS Conference*, Orlando, FL, May 2023.
 
-- Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *Conference on Health IT and Analytics (CHITA)*, Washington, DC, May 2023.
+-   Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *Conference on Health IT and Analytics (CHITA)*, Washington, DC, May 2023.
