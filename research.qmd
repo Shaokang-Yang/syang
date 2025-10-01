@@ -33,7 +33,9 @@ class: custom-font-pos
 
 ## Talks
 
--   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* **Scheduled on INFORMS Annual Meeting (2:09 PM – 2:27 PM)**, Atlanta, GA, Oct 28, 2025.
+-   Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* **Workshop on Information Systems and Economics (WISE)**, Nashville, TN, Dec 17--19, 2025.
+
+-   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* **Scheduled on INFORMS Annual Meeting **, Atlanta, GA, 2:09 PM – 2:27 PM, Oct 28, 2025.
 
 -   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Conference on Health IT and Analytics (CHITA)*, Austin, TX, Apr 2025.
 
