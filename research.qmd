@@ -18,8 +18,8 @@ class: custom-font-pos
 1. **Smartphone Use, Social Support, and Sleep Health.** Shaokang Yang, Idris Adjerid. [SSRN](http://dx.doi.org/10.2139/ssrn.5368531) — *Under Review at **Information Systems Research***  
    - Accepted to WISE, Nashville, TN, Dec 17–19, 2025  
    - Accepted to Conference on Health IT and Analytics (CHITA), Washington, DC, May 2024  
-   - Presented to Doctoral Consortium of CHITA, Washington, DC, May 2024  
-   - Presented to 33rd Annual POMS Conference, Orlando, FL, May 2023  
+   - Presented at Doctoral Consortium of CHITA, Washington, DC, May 2024  
+   - Presented at 33rd Annual POMS Conference, Orlando, FL, May 2023  
    - Accepted to CHITA, Washington, DC, May 2023  
 
 2. **Friends over Feeds: How Social Smartphone Use Reduces Screen Time.** Shaokang Yang, Idris Adjerid. — *In preparation for submission (target: **Organization Science**)*  
@@ -56,7 +56,6 @@ class: custom-font-pos
 -   Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *Conference on Health IT and Analytics (CHITA)*, Washington, DC, May 2024.
 
 -   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Doctoral Consortium of CHITA*, Washington, DC, May 2024.
-
 
 -   Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *33rd Annual POMS Conference*, Orlando, FL, May 2023.
 
