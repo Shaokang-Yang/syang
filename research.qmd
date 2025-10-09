@@ -51,11 +51,12 @@ class: custom-font-pos
 
 -   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Conference on Health IT and Analytics (CHITA)*, Austin, TX, Apr 2025.
 
--   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Doctoral Consortium of CHITA*, Austin, TX, Apr 2025.
-
 -   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *INFORMS Annual Meeting*, Seattle, WA, Oct 2024.
 
 -   Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *Conference on Health IT and Analytics (CHITA)*, Washington, DC, May 2024.
+
+-   Shaokang Yang, Idris Adjerid. *Friends over Feeds: How Social Smartphone Use Reduces Screen Time.* *Doctoral Consortium of CHITA*, Washington, DC, May 2024.
+
 
 -   Shaokang Yang, Idris Adjerid. *Smartphone Use, Social Support, and Sleep Health.* *33rd Annual POMS Conference*, Orlando, FL, May 2023.
 
