@@ -21,7 +21,7 @@ class: custom-font-pos
    - Presented at Doctoral Consortium of CHITA, Washington, DC, May 2024  
    - Presented at 33rd Annual POMS Conference, Orlando, FL, May 2023  
    - Accepted to CHITA, Washington, DC, May 2023  
-
+   
 2. **Friends over Feeds: How Social Smartphone Use Reduces Screen Time.** Shaokang Yang, Idris Adjerid. — *In preparation for submission (target: **Organization Science**)*  
    - Scheduled at INFORMS, Atlanta, GA, Oct 28, 2025  
    - Accepted to CHITA, Austin, TX, Apr 2025  
