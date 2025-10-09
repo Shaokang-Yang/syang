@@ -6,6 +6,14 @@ format:
 class: custom-font-pos
 ---
 
+## Teaching Interests
+
+-   Data analytics, machine learning, and AI-powered programming
+
+-   Cybersecurity analytics, healthcare analytics and policy evaluation
+
+-   Econometrics for business research
+
 ## Instructor
 
 -   **BIT 3424 — Intro to Business Analytics Modelling** — Summer 2024
